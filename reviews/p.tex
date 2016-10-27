@@ -1,0 +1,106 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{geometry}
+\usepackage[square,sort,numbers]{natbib}
+\title{\Large{\textbf{Review of Relevance Judgment Variation}}} %\small{ziyingy@student.unimelb.edu.au}}
+%\geometry{left=4cm, right=4cm, top=4cm, bottom=4cm}
+\author{Ziying Yang\\\small{ziyingy@student.unimelb.edu.au}\\}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+   Relevance judgments, recording the pertinence of documents and topics, are widely used criterion for assessing the performance of \textit{Information Retrieval} (IR) systems by IR evaluation metrics. They should be objectively and reliably assessed by groups of real users. The viewpoints of relevance are different from user to user, which leads the variation of relevance judgments, and so the ordering of systems evaluated by metrics may vary. A probabilistic model for computing the chance of the systems ordering change using different judges is reviewed and analyzed in this article. In addition, certain factors such as the relevance scale used for judgments  potentially affect the relevance assessing because user's individual sense of distinction between relevance levels is various. We review an newly proposed approach, an psychophysical scaling technique, magnitude estimation, cooperating with a crowd sourcing platform, that tries to collect objective relevance judgments from real users.\\
+
+\end{abstract}
+
+
+ The performance of a new IR system design should be examined by retrieval experiments in order to decide if the new design has meaningful advantages. In this evaluation process, the system returns a ranked list containing the \textit{documents} (in text collections) topically related to the given topic. A variety of established evaluation \textit{metrics} can be used to examine the performance of IR systems by comparing the retrieved results with the relevance judgments. 
+
+ In text collections built for IR evaluation, relevance judgments are usually in the form of \textit{qrels} composed by a list of tuples, each containing a topic, a document and the \textit{relevance} score about how much overlap (pertinence) there is between the document and the topic. Conventionally, relevance judgments are assessed by human \textit{experts}. Relevance judgments are also heavily relied on by evaluation metrics to compute scores for IR systems. So it is crucial to keep relevance judgments relatively objective and representative of the opinions of real users with respect to the original information need. 
+
+\paragraph{Relevance Judgment Variation}
+In early work, \citet{influence.scale.form.rel.judge} stated that the reliability of relevance judgments was low. Relevance was usually subjectively judged by individuals (experts) independently. Even when relevance was assessed by groups, as was argued by \citet{variation.rel.judge.measure}, there were still great disparities between assessors' opinions \cite{judges.exchangeable.matter}. In the relevance assessment of TREC4, up to 200 relevant documents plus 200 randomly selected irrelevant documents judged by the primary assessor (who created the topic) became a \textit{pool} which was then passed over to another two secondary assessors \cite{variation.rel.judge.measure}. Although these assessors had similar background and were trained for TREC task, the studies showed that the \textit{overlaps} of their assessment agreements were under 50\% \cite{variation.rel.judge.measure}. \citet{disagree.btw.judges} carry out similar tests (using another data set, TREC GOV2) and concluded that assessors did not agree well with each other in both task and topic levels.
+
+There are several factors that may affect relevance assessments, including these noted by \citet{burgin.variation.rel.judge.measure}, \citet{disagree.btw.judges} and \citet{methods.for.IIR}:
+
+\begin{itemize}
+\item \textit{human}: gender, age, background, preference, experience;
+\item \textit{document}: representation, style, presented order, other documents in the set;
+\item \textit{task}: time limitation, expectation, relevance scale used; and
+\item \textit{topic}: rarity, saliency, ambiguity.
+\end{itemize}
+Users (or judges) may observe and measure \textit{relevance} according to their own definitions \cite{methods.for.IIR}, which may lead to conflicting results for the evaluation of IR systems.
+
+In contrast, other researchers such as \citet{comp.eval.index.proc}, have demonstrated that if the assessor consistency is low, their disagreements tend to be mostly found in deep ranks, and that the top relevant documents tended to be evaluated as relevant by most assessors, meaning that the variation of judges would not affect the system ranking in most cases.
+
+\paragraph{Modeling Relevance Variation}
+
+\citet{disagree.btw.judges} describe a probabilistic model of measuring the disagreement between relevance judges and how it affects the assessment of IR system performance made by batch-based evaluation. It estimates the agreement proportion between two judges (users): $\alpha_0$ is defined as the probability that the new judge agrees with the old judge that document is irrelevant to the query; and given the document which is judged as relevant to the query, the new judge has a probability of $\alpha_1$ to agree. That is, if the new judge always completely agrees with the old judge, then $\alpha_0 = \alpha_1 = 1$. If two judges always totally disagree with each other, then $\alpha_0 = \alpha_1 = 0$. 
+
+Given two systems A and B, denote the difference in their metric scores (measured using the old judge) cut off at depth $d$ as $\Delta(d)$. If $\Delta(d)>0$, system A is said to be better than B. Otherwise, the metric has voted for system B instead of A. Let $\Delta'(d)$ be their difference using the new judge, whose expectation is calculated as \cite{disagree.btw.judges}:
+\begin{align}
+E[\Delta'(d)] = (\alpha_0+\alpha_1-1)\Delta(d).
+\end{align}
+The variance of $\Delta'(d)$, Var$[\Delta'(d)]$, can be computed by E$[\Delta'(d)^2] - $ E$[\Delta'(d)]^2$ and further simplified with assumptions made by metrics. If the E$[\Delta'(d)]$ and Var$[\Delta'(d)]$ are both known, the probability of $\Delta'(d)\leq 0$ (that is, system A remains superior) can be found. 
+
+This model is found to be useful for selecting metrics when appropriate choice of depth $d$ and assumptions have been made. It tells the probability that the systems ranking varies according to the agreements $\alpha_0$, $\alpha_1$ of the new judge and the $\Delta(d)$ calculated by the old judge. So that the confidence of systems ordering using the old judge can be confirmed. %For example, \citet{disagree.btw.judges} tested various combinations of $\alpha_0$ and $\alpha_1$ values for \textit{Precision} at depth 1, assuming $\Delta(d)>0$. It shows that if $\alpha_0$ and $\alpha_1$ are both greater than 0.8, the confidence of $\Delta'(d)$ exceeding 0 will be more than 95\%.
+
+However the main problem of this model is that, except Precision (only extreme cases of which were tried in experiments by authors), it is hard to be extended for other metrics without proper assumptions that can simplify the calculation. The parameters of the general formula for Var$[\Delta'(d)]$ are difficult to be found or measured for metrics such as Normalized Discounted Cumulative Gain (nDCG). 
+
+Another issue for this model is to discover the values of $\alpha_0$ and $\alpha_1$, whose costs and results  are not predictable for distinct types and scales of users. The authors tried to discover the most likely value of $\alpha_0$ and $\alpha_1$ in the practical web-based search task via user experiments, although the numbers of topics and participated users in their experiments are both small, 24 and 40 respectively. They concluded that for different topics or tasks, the agreement of users varied above 50\%. That is, the values of $\alpha_0$ and $\alpha_1$ are not stable across topics or tasks, so they need to be re-examined for each user and topic, which is too expensive when the dataset is big.
+
+In general, this probabilistic model can be used to predict the chance that systems ordering varies using different judges. However, metrics are hard to fit in this model and discovering the values of parameters is too expensive. Thus this model is not practical in real cases without further improvement.
+
+
+\paragraph{Relevance Scales}
+On the other hand, researchers tried to reduce the judgment variation caused by objective factors, such as the relevance scale employed for the assessing.
+\subparagraph{Absolute Judgment}
+In early work, the binary relevance (0 for irrelevant, 1 for relevant) was commonly used for relevance assessing. From 1990s, more relevance scales, which divided relevance into multiple levels, allow users to measure the pertinence of document and topic in multiple degrees. The pertinence of documents and topics can be interpreted into several levels or categories. The judgments made using these scales are called \textit{absolute judgments}. For example in TREC2005 \cite{TREC.2005}, the relevance level for irrelevant documents is 0, for relevant documents is 1, and for highly relevant documents is 2. 
+
+However the criteria that users have to determine the distinctions of relevance levels is diverse. Some experiment results \cite{measure.rel.criteria} have shown that \textit{generous} users (defined as assessing more than 50\% of level 0 documents as relevant) are more likely to judge documents as relevant, but \textit{parsimonious} users (defined as assigning less than 50\% of level 1 documents as relevant) usually only judge the level 2 documents as relevant \cite{metric.rel.mismatch}.
+
+The relevance scale used for judgment assessing is usually preset by experiment creators instead of users. But the distinction between relevance levels expected by users may be disparate. Users perceptions of relevance are hard to incorporate into a single relevance scale \citet{benefits.ME}. Thus using single absolute relevance scales for relevance assessing can still cause judgment variation. 
+
+%\citet{metric.rel.mismatch} investigated the average time that users spend to assess documents of different levels as relevant. Their results show that the time for documents in level 0 being judged as relevant by users is the longest. The highly relevant documents (level 2) required the least time to be judged relevant, as expected.
+\subparagraph{Preference Judgment}
+\citet{here.or.there} proposed \textit{preference judgments} that breaks all the documents into pairs, and the binary preference of each pair, that is which document is considered to be more relevant than the other one by assessors, is recorded. Judges only need to make a preference choice for each pair instead of assigning relevance score for each document in the conventional relevance assessing.
+
+Compared to absolute judgments using scales such as binary, graded and multi-level, using preference judgment,
+
+(a) the assessing accuracy can be improved by reducing the noise associated with the distinction of users' perceptions of relevance. 
+
+(b) the organizer do not need to choose a specific relevance scale for the assessing task, which may lead relevance judgment variations. 
+
+(c) preference between any two documents can be discovered and so an ideal ranking list can be generated, so that there is no ties of document relevance. But if absolute judgment is used, it is impossible to tell which document is preferred to another if they received the same relevance score (or classified into a same category). 
+
+(d) assessors spend less time using preference judgments due to the reduction of assessing complexity. 
+
+(e) the number of comparisons grows, at least in $O(n\log n)$ if the total number of documents is $n$. In the conventional judging, assessors only need to assign relevance scores for $n$ documents in some order.
+
+
+\paragraph{Magnitude Estimation}
+Since user perception of relevance is various and it is hard to choose a single absolute judgment scale to incorporate. Preference judgment costs excessive number of assessments and has still been on the development. \citet{benefits.ME} involved a psychophysical technique, \textit{magnitude estimation} (ME), working with a crowd sourcing platform (users of which are paid to complete human intelligence tasks (HIT)), CrowdFlower, to collect relevance judgments from users. 
+
+ME is a scaling technique used to estimate the magnitude of answers based on the ratio by comparing the current subject with the previous one, which allows replication across subject groups an{}d keeps the measurement consistent \cite{bard1996magnitude}.
+
+In the HIT task designed by \citet{benefits.ME}, \textit{units}, each of which is composed by 8 documents, are randomly assigned to participants. Participants need to assess the relevance of 8 documents (contain a known highly relevant document and a not relevant one) to a topic. If participants pass two tests for quality control (to ensure that participants have been familiar with ME and understood the topic), documents in the unit will be presented to them in random order. They can assign any positive score to the first assessed document. And then judge the next document with regard to the previous one during at least 20 seconds. For instance, if the document is twice as relevant as the previous one, its score should be double the assigned score of the previous document. The scores of two documents whose relevance level are known will be checked (that is, the score of highly relevant document should be greater) to ensure the judgment quality. 
+
+The score of document $i$ assigned by a participant is denoted as $S_i$. Suppose the arithmetic mean of log scores of 8 documents in a unit $u$ is $\mu_u$, and of all the documents judged for a topic is $\mu$, the final score of document $i$ is normalized by
+\begin{align}
+S_i'=\exp(\log{S_i}-\mu_u+\mu).
+\end{align}
+
+Magnitude estimation is considered as a suitable relevance scale for IR evaluation by \citet{benefits.ME}, since its judgments are consistent with ordinal judgments. They agree more with each other than binary judgments in document orderings. 
+
+With different relevance scales and gain profiles (mapping functions for metrics such as nDCG) used, the system ordering is substantially disparate. But the distribution of magnitude demonstrates that user's perceptions of relevance are neither readily fitted by a single profile, nor easily captured by any approach. Therefore, breaking this limitation is a key to evaluate IR systems accurately. 
+
+WHEN TO USE IN PROC, Inf. ?
+
+
+\bibliographystyle{plainnat}
+\bibliography{string,b}
+
+\end{document}

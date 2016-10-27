@@ -1,0 +1,143 @@
+#myPage {
+    width: 100%;
+}
+
+#relVal {
+    cursor: text;
+    max-width: none;
+    text-align: center;
+    width: 350px;
+    font-size: 120%;
+    padding: 6px;
+    width: 200px;
+    background-color: #fcfcfc;
+}
+#comVal {
+    background-color: #fcfcfc;
+    cursor: text;
+    max-width: none;
+    font-size: 100%;
+    padding: 15px;
+    resize: none;
+    height: 80px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+#topicText {
+    width: initial;
+    overflow: auto;
+    max-height: 400px;
+    /*float: left;*/
+    cursor: text;
+    color: #4c4c4e !important;
+    background-color: #f8f8f8;
+    padding: 12px;
+    line-height: 16pt;
+    font-weight: 500;
+    margin-bottom: 15px;
+    border: 1px solid rgba(0,0,0,0.15);
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+}
+#doc_text {
+    padding: 12px;
+}
+
+#topicBox {
+    float: left;
+    width: 100%;
+}
+.hiddenMe {
+    visibility: hidden;
+    height: 0;
+    border: 0;
+    float: left;
+    width: 0;
+}
+
+/*  Pannello e bottoni sottostanti  */
+
+#btnBox {
+    margin-top: 20px;
+    float: left;
+    width: 100%;
+    text-align: center;
+}
+
+#btnBack {
+    float: left;
+}
+
+#btnNext {
+    float: right;
+}
+
+/*  Lines  */
+
+#lineBox {
+    display: block;
+    text-align: left;
+    float: left;
+}
+
+#lineVal {
+    cursor: text;
+    width: 200px;
+}
+
+.s {
+    width: 400px;
+    height: 18px;
+    background: url('https://dl.dropboxusercontent.com/u/18897774/Progetti/MM3_v4_sources/img/sml.png') 0 0;
+    margin: 35px 0 70px 0;
+}
+
+.m {
+    width: 400px;
+    height: 18px;
+    background: url('https://dl.dropboxusercontent.com/u/18897774/Progetti/MM3_v4_sources/img/sml.png') 0 -18px;
+    margin: 35px 0 70px 0;
+}
+
+.l {
+    width: 400px;
+    height: 18px;
+    background: url('https://dl.dropboxusercontent.com/u/18897774/Progetti/MM3_v4_sources/img/sml.png') 0 -36px;
+    margin: 35px 0 70px 0;
+}
+
+#lineErr {
+    display: none;
+    margin: 0px;
+    overflow: hidden;
+    height: 41px;
+}
+
+#l_0, #l_1, #l_2, #l_3 {
+    display: inline;
+    margin-left: 5px;
+}
+
+#errorBox, #warningBox, #endBox {
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+#relVarErr {
+    display: none;
+}
+
+#comValErr {
+    display: none;
+}
+
+pre {
+    text-align: justify;
+    white-space: normal;
+    /* white-space: pre; */
+    /* word-wrap: normal; */
+    word-break: break-word;
+}

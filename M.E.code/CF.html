@@ -1,0 +1,161 @@
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="./lib.js"></script>
+<script src="./esterno.js"></script>
+
+<input id="topic" class="hiddenMe" value="{{topic}}">
+  <input id="doc_1" class="hiddenMe" value="{{doc_1}}">
+    <input id="doc_2" class="hiddenMe" value="{{doc_2}}">
+      <input id="doc_3" class="hiddenMe" value="{{doc_3}}">
+        <input id="doc_4" class="hiddenMe" value="{{doc_4}}">
+          <input id="doc_5" class="hiddenMe" value="{{doc_5}}">
+            <input id="doc_6" class="hiddenMe" value="{{doc_6}}">
+              <input id="doc_7" class="hiddenMe" value="{{doc_7}}">
+                <input id="doc_8" class="hiddenMe" value="{{doc_8}}">
+
+                  <div id="myPage">
+
+                    <!-- Topic Box .. -->
+
+                    <div id="topicBox">
+                      <div class="legend">
+            Topic
+        </div>
+                      <div id="topicText">
+            descrizione
+        </div>
+                    </div>
+
+                    <!-- Document Box -->
+
+                    <div id="documentBox">
+                      <div id="my_doc">
+                        <div class="legend" id="doc_title" >
+                myTitle
+            </div>
+                        <!-- <pre class="dText" id="doc_text" > -->
+                        <pre id="doc_text" wrap="off" >
+                          <h1>Problem!</h1>
+                          <p>I can't show the document</p>
+                        </pre>
+                      </div>
+
+                      <span>
+                        <div class="legend" >
+                Relevance score
+            </div>
+                        <div id= "relVarErr" >
+                          <div class="errorMessage" style="margin: 0px; overflow: hidden;">
+                            <p>
+                        Please insert a number greater than zero
+                    </p>
+                          </div>
+                        </div>
+                        <input id="relVal" class="uneditable-input" />
+                      </span>
+                      <span>
+                        <div class="legend" >
+                Justification
+            </div>
+                        <div id= "comValErr" >
+                          <div class="errorMessage" style="margin: 0px; overflow: hidden;">
+                            <p>
+                        Please insert a meaningful comment here.
+                    </p>
+                          </div>
+                        </div>
+                        <textarea id="comVal"></textarea>
+                      </span>
+                    </div>
+
+                    <!-- Question Box -->
+
+                    <div id = "questionBox">
+                      <label id="question">No question </label>
+                      <br>
+                        <input type="radio" name="question" id="a_0" >
+                          <label id="l_0" for="a_0">000</label>
+                          <br>
+                            <input type="radio" name="question" id="a_1" >
+                              <label id="l_1" for="a_1">111</label>
+                              <br>
+                                <input type="radio" name="question" id="a_2" >
+                                  <label  id="l_2" for="a_2">222</label>
+                                  <br>
+                                    <input type="radio" name="question" id="a_3" >
+                                      <label id="l_3" for="a_3">333</label>
+
+                                    </div>
+
+                                    <!-- Line Box -->
+
+                                    <div id = "lineBox">
+
+                                      <label>Give a value to the length of this line:  </label>
+                                      <div id="line" class="s" ></div>
+                                      <span>Length:</span>
+
+                                      <span>
+                                        <div id= "lineErr" >
+                                          <div class="errorMessage" style="margin: 0px; overflow: hidden;">
+                                            <p>
+                        Please insert a number greater than zero
+                    </p>
+                                          </div>
+                                        </div>
+                                        <input id="lineVal" class="uneditable-input" />
+                                      </span>
+
+                                    </div>
+
+                                    <!-- divs -->
+
+                                    <div id="btnBox">
+                                      <div id="btnBack" class="btn">
+            Back
+        </div>
+                                      <div id="btnNext" class="btn">
+            Next
+        </div>
+                                    </div>
+
+                                    <!-- Error Page  -->
+                                    <div id="errorBox">
+                                      <h2>We are sorry :-(</h2>
+
+                                      <br>
+        Your work is not accurate enough.
+                                        <br>
+                                          <br>
+        You are not allowed to continue this task.
+                                          </div>
+
+                                          <!-- Warning Page  -->
+                                          <div id="warningBox">
+                                            <h2>Warning!</h2>
+
+                                            <br>
+        Your job is not accurate enough.
+                                              <br>
+                                                <br>
+
+        You can revise your work to finish the task.
+                                                  <br>
+                                                    <br>
+                                                      <div id="btnWarning" class="btn">
+            Go back
+        </div>
+
+                                                    </div>
+
+                                                    <!-- End Page  -->
+                                                    <div id="endBox">
+                                                      <div class="legend" >
+            Thank you!
+        </div>
+        Click in "Submit &#38; Continue" button to finish.
+                                                      <img src="https://dl.dropboxusercontent.com/u/18897774/Mitosi/icons/finishArrow.png" alt="Finish Arrow" >
+                                                      </div>
+                                                    </div>
+
+                                                    <cml:text validates="required" name="text_result" class="hiddenMe" label="test_result" />
+

@@ -1,0 +1,81 @@
+   Relevance corpus:
+
+   (1) The graded "TREC 7 AND 8" database contains 41 topics 
+   (topic numbers #351, #353, ... #448) and relevance judgments
+   with 4 relevance grades (i.e., non-relevant, marginally relevant,
+   fairly relevant, or highly relevant documents) intellectually
+   judged with respect to a database containing about half-a-million
+   English documents.
+
+   (2) 2400 documents of the collection are at least marginally 
+   relevant with respect to the the 41 topics.  These relevance 
+   judgments are distributed, regarding the four distinct
+   document sources (FBIS, FR94, FT, and LA Times) as follows:
+    FBIS: 759 documents,
+    FR94: 143 documents,
+    FT: 752 documents,
+    LA: 746 documents.
+    Sum total: 2400 documents.                                 .
+
+   13.6.2007 written by Eija Airio: inconsistences observed:
+
+The trec relevance file TrecUtaRels_41Topics.txt included three
+inconsistences.  They were corrected in a following way:
+408;FBIS4-26836;3
+408;FBIS4-26836;1
+-> 408;FBIS4-26836;2
+408;FR940114-0-00046;3
+408;FR940114-0-00046;2
+-> 408;FR940114-0-00046;2
+428;FT943-4802;3
+428;FT943-4802;2
+-> 428;FT943-4802;2
+
+   Trec multigraded relevance data in "trec_eval" format
+   is available in the following files:
+
+ Relevance grades 1, 2 and 3: file
+   "qrels_123"
+  
+ Relevance grades 2 and 3: file
+   "qrels_23"
+
+ Relevance grade 3: file
+   "qrels_3"
+
+ Based on these relevance corpus files one can observe that:
+ * 2400 relevant documents (at least marginally relevant) 
+   have been observed (out of 6122 reassessed documents)
+   as follows:
+     --  1196 marginally relevant documents (R=1)
+     --  813 fairly relevant documents (R=2)
+     --  391 highly relevant documents (R=3)
+   The remaining documents evaluated by the judges
+   (that is, 3722 documents) were deemed as non-relevant.
+
+  See also:
+
+https://groups.uta.fi/file.php/31/Labra/Aineistot/relevanssikorpukset_ja_topicit.html
+
+ 15 Mar 2012 written by Heikki Keskustalo:
+
+ The graded English UTA data is described in
+ Sormunen (2002) "Liberal Relevance Criteria of TREC -
+ Counting on Negligible Documents", SIGIR 2002;
+ at this stage the relevance figures reported were
+ smaller.
+
+ Before iconsistences were observed in June 2007, 
+ some publications report incorrect relevance figures
+ as follows:
+
+   2403 relevant documents (at least marginally relevant) out of 
+   6122 reassessed documents as follows:
+     -- 3719 non-relevant documents (R=0)
+     -- 1197 marginally relevant documents (R=1)
+     --  812 fairly relevant documents (R=2)
+     --  394 highly relevant documents (R=3)
+
+  However, since June 2007 these figures must NOT be reported.
+
+

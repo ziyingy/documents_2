@@ -1,0 +1,71 @@
+# Falk Scholer, 29/10/14
+#
+# Notes on Sormunen Relevance Judgements
+
+-------
+Summary
+-------
+
+   The Sormunen qrels are a re-judging of 41 topics from TREC-7 and
+   TREC-8 on a 4-point ordinal scale (0, 1, 2, 3). They are available
+   in the file
+      sormunen_qrels
+
+   Thanks to Eero Sormunen and Heikki Keskustalo for providing the 
+   data.
+
+-----------
+The Details
+-----------
+
+The file
+   src/trec41.tar
+contains the qrels created by Eero Sormunen (as described in Sormunen, "Liberal
+relevance criteria of TREC: Counting on negligible documents?", SIGIR 2002), 
+provided by Eero Sormunen and Heikki Keskustalo on 10/9/12.
+
+These files have been extracted into the directory 
+   sormunen_qrels_orig/
+
+The relevance assessment files are:
+   % wc sormunen_qrels_orig/qrels*
+
+    2400    9600   49621 sormunen_qrels_orig/qrels_123
+    1204    4816   25028 sormunen_qrels_orig/qrels_23
+     391    1564    8273 sormunen_qrels_orig/qrels_3
+
+Note that the qrels files only indicate binary relevance in trec_eval qrels
+format, and are "nested". For example, qrels_123 contains assessments for 2400
+documents, with a "1" for any documents rated 1, 2 or 3. The file qrels_23 contains
+assessments for  1204 documents, namely those with a rating of 2 or 3. Finally, qrels_3 
+contains 391 documents, only those with a rating of 3.
+
+Note that this tar file does *not* include explicitly re-judged
+non-relevant documents.  These were provided separately by Heikki
+Keskustalo (heikki.keskustalo@uta.fi) via email on 13/9/12, and are in
+the file 
+   sormunen_nonrel_orig/qrels_nonrel
+(The directory also contains the same data in HTML marked-up format.)
+
+As the content of this file is *not* in standard trec_eval format, the
+script 
+   process/convert_nonrel.sh 
+transforms the data as required, with the output stored in
+   process/conv/nonrel.conv
+
+   % wc process/conv/nonrel.conv
+    3715   14860  107735 nonrel.conv
+
+The R script process/merge.r unifies these relevance files into a single
+multi-level trec_eval format file, called
+   sormunen_qrels
+
+According to Heikki Keskustalo, "Please find attached the non-relevant
+judgments - same data in two different formats (2 files).  So, the final number
+of graded judgments is: 391 3-level, 813 2-level, 1196 1-level, and 3715
+0-level (non-relevant) judgements made." 
+
+This corresponds to the content of the file sormunen_qrels:
+   % awk '{if($4 == 0) A++; if ($4 == 1) B++; if ($4 == 2) C++; if ($4 == 3) D++}END{print A, B, C, D}' sormunen_qrels
+
+   3715 1196 813 391

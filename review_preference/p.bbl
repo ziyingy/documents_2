@@ -1,0 +1,37 @@
+\begin{thebibliography}{5}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Arguello et~al.(2011)Arguello, Diaz, Callan, and
+  Carterette]{eval.aggregated.search}
+Jaime Arguello, Fernando Diaz, Jamie Callan, and Ben Carterette.
+\newblock A methodology for evaluating aggregated search results.
+\newblock In \emph{Proc. ECIR}, pages 141--152, 2011.
+
+\bibitem[Bennett et~al.(2008)Bennett, Carterette, Chapelle, and
+  Joachims]{BennettCCJ08}
+Paul~N. Bennett, Ben Carterette, Olivier Chapelle, and Thorsten Joachims.
+\newblock Beyond binary relevance: preferences, diversity, and set-level
+  judgments.
+\newblock \emph{Proc. SIGIR}, pages 53--58, 2008.
+
+\bibitem[Carterette and Bennett(2008)]{eval.measure.pref.judge}
+Ben Carterette and Paul~N. Bennett.
+\newblock Evaluation measures for preference judgments.
+\newblock In \emph{Proc. SIGIR}, pages 685--686, 2008.
+
+\bibitem[Carterette and Petkova(2006)]{learn.ranking.pairwise}
+Ben Carterette and Desislava Petkova.
+\newblock Learning a ranking from pairwise preferences.
+\newblock In \emph{Proc. SIGIR}, pages 629--630, 2006.
+
+\bibitem[Carterette et~al.(2008)Carterette, Bennett, Chickering, and
+  Dumais]{here.or.there}
+Ben Carterette, Paul~N. Bennett, David~Maxwell Chickering, and Susan~T. Dumais.
+\newblock Here or there.
+\newblock In \emph{Proc. ECIR}, pages 16--27, 2008.
+
+\end{thebibliography}

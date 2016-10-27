@@ -1,0 +1,8 @@
+f_t: 
+	=> number of document(s) that this term t occurs
+	=> term frequency
+	=> number of pairs for this term
+
+< d, f_dt >: 
+	d => document id
+	f_dt => frequency that term t occurs in document d
