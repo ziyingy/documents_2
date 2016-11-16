@@ -1,0 +1,224 @@
+ 
+<!-- PJG STAG 4700 -->
+
+<!-- PJG ITAG l=11 g=1 f=1 -->
+(a) 
+<!-- PJG /ITAG -->
+
+<!-- PJG ITAG l=11 g=1 f=3 -->
+Space station application requirements. 
+<!-- PJG /ITAG -->
+
+<!-- PJG ITAG l=11 g=1 f=1 -->
+Each application for a space station license in the radiodetermination satellite service shall describe in detail
+the proposed radiodetermination satellite system, setting forth all pertinent technical and operational aspects
+of the system, including its capability for providing and controlling radiodetermination service on a geographic
+basis, and the technical, legal and financial qualifications of the applicant. In particular, each application
+shall include the information specified in Appendix B of Space Station Application Filing Procedures, 93 FCC 2d 1260,
+1265 (1983), except that in lieu of demonstrating compliance with item II.F (two degree spacing), applicants are
+required to demonstrate compatibility with licensed satellite systems in the same frequency band. Applicants must
+also file information demonstrating compliance with all requirements of this section, specifically including
+information demonstrating how the applicant has complied or plans to comply with the requirements of paragraph (f)
+of this section.
+<!-- PJG 0012 frnewline -->
+
+<!-- PJG 0012 frnewline -->
+
+<!-- PJG /ITAG -->
+
+<!-- PJG ITAG l=37 g=1 f=1 -->
+* * * * * 
+<!-- PJG 0012 frnewline -->
+
+<!-- PJG 0012 frnewline -->
+
+<!-- PJG /ITAG -->
+
+<!-- PJG ITAG l=11 g=1 f=1 -->
+(f) 
+<!-- PJG /ITAG -->
+
+<!-- PJG ITAG l=11 g=1 f=3 -->
+Radiodetermination satellite service.
+<!-- PJG /ITAG -->
+
+<!-- PJG ITAG l=11 g=1 f=1 -->
+ Licenses shall coordinate with radiodetermination satellite system licensees to avoid harmful interference to
+other radiodetermination satellite systems through:
+<!-- PJG 0012 frnewline -->
+
+<!-- PJG 0012 frnewline -->
+(1) Power flux density limits;
+<!-- PJG 0012 frnewline -->
+
+<!-- PJG 0012 frnewline -->
+(2) Use of pseudorandom-noise codes (for both the satellite-to-user link and for the user-to-satellite link); and
+<!-- PJG 0012 frnewline -->
+
+<!-- PJG 0012 frnewline -->
+(3) Random access, time division multiplex techniques.
+<!-- PJG /ITAG -->
+
+<!-- PJG QTAG 02 -->
+<!-- PJG /QTAG -->
+
+<!-- PJG 0012 frnewline -->
+
+<!-- PJG 0012 frnewline -->
+
+<!-- PJG ITAG l=10 g=1 f=1 -->
+Licensees shall coordinate with 1.6/2.4 GHz Mobile-Satellite Service system licensees to avoid interference to
+1.6/2.4 GHz Mobile-Satellite Service systems.
+<!-- PJG /ITAG -->
+
+<!-- PJG QTAG 02 -->
+<!-- PJG /QTAG -->
+
+<!-- PJG 0012 frnewline -->
+
+<!-- PJG 0012 frnewline -->
+
+<!-- PJG ITAG l=11 g=1 f=1 -->
+10. A new &sect;25.143 is added to read as follows:
+<!-- PJG 0012 frnewline -->
+
+<!-- PJG 0012 frnewline -->
+
+<!-- PJG /ITAG -->
+
+<!-- PJG ITAG l=80 g=1 f=1 -->
+&sect;25.143
+<!-- PJG 0012 frnewline -->
+
+<!-- PJG /ITAG -->
+
+<!-- PJG ITAG l=89 g=1 f=1 -->
+Licensing provisions for the 1.6/2.4 GHz Mobile-Satellite Service.
+<!-- PJG 0012 frnewline -->
+
+<!-- PJG 0012 frnewline -->
+
+<!-- PJG /ITAG -->
+
+<!-- PJG ITAG l=11 g=1 f=1 -->
+(a) 
+<!-- PJG /ITAG -->
+
+<!-- PJG ITAG l=11 g=1 f=3 -->
+System License:
+<!-- PJG /ITAG -->
+
+<!-- PJG ITAG l=11 g=1 f=1 -->
+ Applicants authorized to construct and launch a system of technically identical non-geostationary satellite orbit
+satellites will be awarded a single ``blanket'' license covering a specified number of space stations to operate
+in a specified number of orbital planes.
+<!-- PJG 0012 frnewline -->
+
+<!-- PJG 0012 frnewline -->
+(b) 
+<!-- PJG /ITAG -->
+
+<!-- PJG ITAG l=11 g=1 f=3 -->
+Qualification Requirements.
+<!-- PJG 0012 frnewline -->
+
+<!-- PJG 0012 frnewline -->
+(1) General Requirements:
+<!-- PJG /ITAG -->
+
+<!-- PJG ITAG l=11 g=1 f=1 -->
+ Each application for a space station system authorization in the 1.6/2.4 GHz mobile-satellite service shall describe
+in detail the proposed satellite system, setting forth all pertinent technical and operational aspects of the system,
+and the technical, legal, and financial qualifications of the applicant. In particular, each application shall
+include the information specified in &sect;25.114.
+<!-- PJG 0012 frnewline -->
+
+<!-- PJG 0012 frnewline -->
+(2) 
+<!-- PJG /ITAG -->
+
+<!-- PJG ITAG l=11 g=1 f=3 -->
+Technical Qualifications: 
+<!-- PJG /ITAG -->
+
+<!-- PJG ITAG l=11 g=1 f=1 -->
+In addition to providing the information specified in paragraph (b)(1) of this section, each applicant shall demonstrate
+the following:
+<!-- PJG 0012 frnewline -->
+
+<!-- PJG 0012 frnewline -->
+(i) That the proposed system employs a non-geostationary constellation or constellations of satellites;
+<!-- PJG 0012 frnewline -->
+
+<!-- PJG 0012 frnewline -->
+(ii) That the proposed system be capable of providing mobile satellite services to all locations as far north as 70
+<!-- PJG 0017 degreeslatlong -->
+&cir; latitude and as far south as 55
+<!-- PJG 0017 degreeslatlong -->
+&cir; latitude for at least 75% of every 24-hour period, 
+<!-- PJG /ITAG -->
+
+<!-- PJG ITAG l=11 g=1 f=3 -->
+i.e.,
+<!-- PJG /ITAG -->
+
+<!-- PJG ITAG l=11 g=1 f=1 -->
+ that at least one satellite will be visible above the horizon at an elevation angle of at least 5
+<!-- PJG 0017 degreeslatlong -->
+&cir; for at least 18 hours each day within the described geographic area;
+<!-- PJG 0012 frnewline -->
+
+<!-- PJG 0012 frnewline -->
+(iii) That the proposed system is capable of providing mobile satellite services on a continuous basis throughout
+the fifty states, Puerto Rico and the U.S. Virgin Islands, U.S., 
+<!-- PJG /ITAG -->
+
+<!-- PJG ITAG l=11 g=1 f=3 -->
+i.e.,
+<!-- PJG /ITAG -->
+
+<!-- PJG ITAG l=11 g=1 f=1 -->
+ that at least one satellite will be visible above the horizon at an elevation angle of at least 5
+<!-- PJG 0017 degreeslatlong -->
+&cir; at all times within the described geographic areas;
+<!-- PJG 0012 frnewline -->
+
+<!-- PJG 0012 frnewline -->
+(iv) That operations will not cause unacceptable interference to other authorized users of the spectrum. In particular,
+each application shall demonstrate that the space station(s) comply with the requirements specified in &sect;25.213.
+<!-- PJG 0012 frnewline -->
+
+<!-- PJG 0012 frnewline -->
+(3) 
+<!-- PJG /ITAG -->
+
+<!-- PJG ITAG l=11 g=1 f=3 -->
+Financial Qualifications:
+<!-- PJG /ITAG -->
+
+<!-- PJG ITAG l=11 g=1 f=1 -->
+ Each applicant for a space station system authorization in the 1.6/2.4 GHz mobile-satellite service must demonstrate,
+on the basis of the documentation contained in its application, that it is financially qualified to meet the estimated
+costs of the construction and launch of all proposed space stations in the system and the estimated operating expenses
+for one year after the launch of the initial space station. Financial qualifications must be demonstrated in the form
+specified in &sect;&sect;25.140(c) and (d). In addition, applicants relying on current assets or operating income
+must submit evidence of a management commitment to the proposed satellite system. Failure to make such a showing will
+result in the dismissal of the application.
+<!-- PJG 0012 frnewline -->
+
+<!-- PJG 0012 frnewline -->
+(c) 
+<!-- PJG /ITAG -->
+
+<!-- PJG ITAG l=11 g=1 f=3 -->
+Replacement of Space Stations Within the System License Term.
+<!-- PJG /ITAG -->
+
+<!-- PJG ITAG l=11 g=1 f=1 -->
+ Licensees of 1.6/2.4 GHz mobile-satellite systems authorized through a blanket license pursuant to paragraph (a)
+of this section need not file separate applications to construct, launch and operate technically identical replacement
+satellites within the term of the system authorization. However, the licensee shall certify to the Commission, at
+least thirty days prior to launch of such replacement(s) that:
+<!-- PJG /ITAG -->
+
+<!-- PJG /STAG -->

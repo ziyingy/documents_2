@@ -1,0 +1,379 @@
+ 
+<!-- PJG STAG 4700 -->
+
+<TABLE>
+
+<!-- PJG tableformat 7,L2,i1,s10,5,5,5,5,5,5 -->
+
+<!-- PJG 0012 frnewline -->
+
+<!-- PJG ITAG l=95 g=1 f=1 -->
+
+<!-- PJG /ITAG -->
+
+<!-- PJG ITAG l=95 g=1 f=4 -->
+Edmonson County VOC Emission Inventory Summary
+<!-- PJG 0012 frnewline -->
+
+<!-- PJG /ITAG -->
+
+<!-- PJG ITAG l=96 g=1 f=4 -->
+[Tons per day] 
+<!-- PJG 0012 frnewline -->
+
+<!-- PJG 007 0150 intable -->
+1&blank;
+<!-- PJG 007 0150 intable -->
+11990
+<!-- PJG 007 0150 intable -->
+11993
+<!-- PJG 007 0150 intable -->
+11996
+<!-- PJG 007 0150 intable -->
+11999
+<!-- PJG 007 0150 intable -->
+12002
+<!-- PJG 007 0150 intable -->
+12004
+<!-- PJG 007 0152 intable -->
+
+<!-- PJG 0012 frnewline -->
+
+<!-- PJG /ITAG -->
+
+<!-- PJG ITAG l=01 g=1 f=4 -->
+Point
+<!-- PJG 007 0104 intable -->
+0.00
+<!-- PJG 007 0104 intable -->
+0.00
+<!-- PJG 007 0104 intable -->
+0.00
+<!-- PJG 007 0104 intable -->
+0.00
+<!-- PJG 007 0104 intable -->
+0.00
+<!-- PJG 007 0104 intable -->
+0.00
+<!-- PJG 0012 frnewline -->
+Area
+<!-- PJG 007 0104 intable -->
+0.74
+<!-- PJG 007 0104 intable -->
+0.76
+<!-- PJG 007 0104 intable -->
+0.77
+<!-- PJG 007 0104 intable -->
+0.79
+<!-- PJG 007 0104 intable -->
+0.80
+<!-- PJG 007 0104 intable -->
+0.82
+<!-- PJG 0012 frnewline -->
+Mobile
+<!-- PJG 007 0104 intable -->
+1.14
+<!-- PJG 007 0104 intable -->
+1.16
+<!-- PJG 007 0104 intable -->
+1.12
+<!-- PJG 007 0104 intable -->
+1.05
+<!-- PJG 007 0104 intable -->
+1.08
+<!-- PJG 007 0104 intable -->
+1.10
+<!-- PJG 007 0162 intable -->
+n,s
+<!-- PJG 0012 frnewline -->
+
+<!-- PJG /ITAG -->
+
+<!-- PJG ITAG l=04 g=1 f=4 -->
+Total
+<!-- PJG 007 0104 intable -->
+1.88
+<!-- PJG 007 0104 intable -->
+1.92
+<!-- PJG 007 0104 intable -->
+1.89
+<!-- PJG 007 0104 intable -->
+1.84
+<!-- PJG 007 0104 intable -->
+1.88
+<!-- PJG 007 0104 intable -->
+1.92 
+<!-- PJG 0012 frnewline -->
+
+<!-- PJG /ITAG -->
+
+</TABLE>
+
+<!-- PJG 0012 frnewline -->
+
+<TABLE>
+
+<!-- PJG tableformat 7,L2,i1,s10,5,5,5,5,5,5 -->
+
+<!-- PJG 0012 frnewline -->
+
+<!-- PJG ITAG l=95 g=1 f=4 -->
+Edmonson NO
+<!-- PJG /ITAG -->
+
+<!-- PJG ITAG l=95 g=5 f=2 -->
+X
+<!-- PJG /ITAG -->
+
+<!-- PJG ITAG l=95 g=1 f=1 -->
+ Emission Inventory Summary
+<!-- PJG 0012 frnewline -->
+
+<!-- PJG /ITAG -->
+
+<!-- PJG ITAG l=96 g=1 f=1 -->
+[Tons per day] 
+<!-- PJG 0012 frnewline -->
+
+<!-- PJG 007 0150 intable -->
+1&blank;
+<!-- PJG 007 0150 intable -->
+11990
+<!-- PJG 007 0150 intable -->
+11993
+<!-- PJG 007 0150 intable -->
+11996
+<!-- PJG 007 0150 intable -->
+11999
+<!-- PJG 007 0150 intable -->
+12002
+<!-- PJG 007 0150 intable -->
+12004
+<!-- PJG 007 0152 intable -->
+
+<!-- PJG 0012 frnewline -->
+
+<!-- PJG /ITAG -->
+
+<!-- PJG ITAG l=01 g=1 f=1 -->
+Point
+<!-- PJG 007 0104 intable -->
+0.00
+<!-- PJG 007 0104 intable -->
+0.00
+<!-- PJG 007 0104 intable -->
+0.00
+<!-- PJG 007 0104 intable -->
+0.00
+<!-- PJG 007 0104 intable -->
+0.00
+<!-- PJG 007 0104 intable -->
+0.00
+<!-- PJG 0012 frnewline -->
+Area
+<!-- PJG 007 0104 intable -->
+0.04
+<!-- PJG 007 0104 intable -->
+0.04
+<!-- PJG 007 0104 intable -->
+0.04
+<!-- PJG 007 0104 intable -->
+0.04
+<!-- PJG 007 0104 intable -->
+0.04
+<!-- PJG 007 0104 intable -->
+0.04
+<!-- PJG 0012 frnewline -->
+Mobile
+<!-- PJG 007 0104 intable -->
+1.14
+<!-- PJG 007 0104 intable -->
+1.02
+<!-- PJG 007 0104 intable -->
+1.03
+<!-- PJG 007 0104 intable -->
+0.92
+<!-- PJG 007 0104 intable -->
+0.93
+<!-- PJG 007 0104 intable -->
+0.95
+<!-- PJG 007 0162 intable -->
+n,s
+<!-- PJG 0012 frnewline -->
+
+<!-- PJG /ITAG -->
+
+<!-- PJG ITAG l=04 g=1 f=1 -->
+Total
+<!-- PJG 007 0104 intable -->
+1.18
+<!-- PJG 007 0104 intable -->
+1.06
+<!-- PJG 007 0104 intable -->
+1.07
+<!-- PJG 007 0104 intable -->
+0.96
+<!-- PJG 007 0104 intable -->
+0.98
+<!-- PJG 007 0104 intable -->
+0.99
+<!-- PJG /ITAG -->
+
+</TABLE>
+
+<!-- PJG 0012 frnewline -->
+
+<!-- PJG 0012 frnewline -->
+
+<!-- PJG /STAG -->
+
+<!-- PJG STAG 4700 -->
+
+<!-- PJG 0012 frnewline -->
+
+<!-- PJG 0012 frnewline -->
+
+<!-- PJG ITAG l=11 g=1 f=1 -->
+As indicated in the following table, an emissions decrease in VOCs and NO
+<!-- PJG /ITAG -->
+
+<!-- PJG ITAG l=11 g=5 f=2 -->
+X
+<!-- PJG /ITAG -->
+
+<!-- PJG ITAG l=11 g=1 f=1 -->
+ in the Owensboro nonattainment area and an emissions decrease in NO
+<!-- PJG /ITAG -->
+
+<!-- PJG ITAG l=11 g=5 f=2 -->
+X
+<!-- PJG /ITAG -->
+
+<!-- PJG ITAG l=11 g=1 f=1 -->
+ in the Edmonson County nonattainment area are projected throughout the maintenance period. There is an increase
+in VOC emissions in the Edmonson County nonattainment area. However, the emissions increase of 0.04 tpd is not expected
+to affect maintenance of the O
+<!-- PJG /ITAG -->
+
+<!-- PJG ITAG l=11 g=5 f=2 -->
+3
+<!-- PJG /ITAG -->
+
+<!-- PJG ITAG l=11 g=1 f=1 -->
+ NAAQS in this rural area. EPA believes that these emissions projections demonstrate that the nonattainment areas
+will continue to maintain the O
+<!-- PJG /ITAG -->
+
+<!-- PJG ITAG l=11 g=5 f=2 -->
+3
+<!-- PJG /ITAG -->
+
+<!-- PJG ITAG l=11 g=1 f=1 -->
+ NAAQS. 
+<!-- PJG 0012 frnewline -->
+
+<!-- PJG /ITAG -->
+
+<TABLE>
+
+<!-- PJG tableformat 3,L2,i1,s25,8,8 -->
+
+<!-- PJG 0012 frnewline -->
+
+<!-- PJG ITAG l=95 g=1 f=1 -->
+
+<!-- PJG /ITAG -->
+
+<!-- PJG ITAG l=95 g=1 f=4 -->
+VOC and NO
+<!-- PJG /ITAG -->
+
+<!-- PJG ITAG l=95 g=5 f=2 -->
+X
+<!-- PJG /ITAG -->
+
+<!-- PJG ITAG l=95 g=1 f=1 -->
+ 
+<!-- PJG /ITAG -->
+
+<!-- PJG ITAG l=95 g=1 f=4 -->
+Projected Emissions Changes 
+<!-- PJG 0012 frnewline -->
+
+<!-- PJG 007 0150 intable -->
+1&blank;
+<!-- PJG 007 0150 intable -->
+1VOCs (percent)
+<!-- PJG 007 0150 intable -->
+1NO
+<!-- PJG /ITAG -->
+
+<!-- PJG ITAG l=95 g=5 f=2 -->
+X
+<!-- PJG /ITAG -->
+
+<!-- PJG ITAG l=95 g=1 f=1 -->
+ 
+<!-- PJG 007 0120 intable -->
+(percent)
+<!-- PJG 007 0152 intable -->
+
+<!-- PJG 0012 frnewline -->
+
+<!-- PJG /ITAG -->
+
+<!-- PJG ITAG l=01 g=1 f=1 -->
+Owensboro
+<!-- PJG 007 0104 intable -->
+^5.31
+<!-- PJG 007 0104 intable -->
+^3.04
+<!-- PJG 0012 frnewline -->
+Edmonson Co
+<!-- PJG 007 0104 intable -->
+3.17
+<!-- PJG 007 0104 intable -->
+^15.76
+<!-- PJG /ITAG -->
+
+</TABLE>
+
+<!-- PJG 0012 frnewline -->
+
+<!-- PJG ITAG l=83 g=1 f=1 -->
+C. Verification of Continued Attainment 
+<!-- PJG 0012 frnewline -->
+
+<!-- PJG /ITAG -->
+
+<!-- PJG ITAG l=11 g=1 f=1 -->
+Continued attainment of the O
+<!-- PJG /ITAG -->
+
+<!-- PJG ITAG l=11 g=5 f=2 -->
+3
+<!-- PJG /ITAG -->
+
+<!-- PJG ITAG l=11 g=1 f=1 -->
+ NAAQS in the marginal nonattainment areas depend, in part, on the Commonwealth of Kentucky's efforts toward tracking
+indicators of continued attainment during the maintenance period. The Commonwealth of Kentucky's contingency
+plan is triggered by two indicators, the emissions inventory for interim years exceeding the baseline emission inventory
+by more than 10% or an air quality violation. As stated in the maintenance plan, the Cabinet will be developing these
+emissions inventories every three years beginning in 1996. These periodic inventories will help to verify continued
+attainment. Refer to the TSD for a more complete discussion of the indicators the Commonwealth is tracking and the
+contingency measures. 
+<!-- PJG 0012 frnewline -->
+
+<!-- PJG 0012 frnewline -->
+
+<!-- PJG 0012 frnewline -->
+
+<!-- PJG 0012 frnewline -->
+
+<!-- PJG 0012 frnewline -->
+
+<!-- PJG 0012 frnewline -->
+
+<!-- PJG /ITAG -->
+
+<!-- PJG /STAG -->

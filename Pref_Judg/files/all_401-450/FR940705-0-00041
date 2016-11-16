@@ -1,0 +1,114 @@
+ 
+<!-- PJG STAG 4700 -->
+
+<TABLE>
+
+<!-- PJG tableformat 7,L2,i1,xls40,xl50,xl50,xl50,xl50,xl50,xl50 -->
+
+<!-- PJG 0012 frnewline -->
+
+<!-- PJG ITAG l=95 g=1 f=4 -->
+Temperature/Humidity Test_Single Mode Cable 
+<!-- PJG 0012 frnewline -->
+
+<!-- PJG 007 0150 intable -->
+1Fiber No. 
+<!-- PJG 007 0150 intable -->
+1Attenuation_1310 nm 
+<!-- PJG 007 0120 intable -->
+dB/km
+<!-- PJG 0012 frnewline -->
+
+<!-- PJG 007 0150 intable -->
+2Initial 
+<!-- PJG 007 0150 intable -->
+2Final 
+<!-- PJG 007 0150 intable -->
+2Change
+<!-- PJG 0012 frnewline -->
+
+<!-- PJG 0012 frnewline -->
+
+<!-- PJG 0012 frnewline -->
+
+<!-- PJG 007 0150 intable -->
+1Attenuation_1550 nm 
+<!-- PJG 007 0120 intable -->
+dB/km 
+<!-- PJG 0012 frnewline -->
+
+<!-- PJG 007 0150 intable -->
+2Initial 
+<!-- PJG 007 0150 intable -->
+2Final 
+<!-- PJG 007 0150 intable -->
+2Change
+<!-- PJG 007 0152 intable -->
+ 
+<!-- PJG 0012 frnewline -->
+
+<!-- PJG /ITAG -->
+
+<!-- PJG ITAG l=11 g=1 f=4 -->
+1
+<!-- PJG 007 0162 intable -->
+s 
+<!-- PJG 0012 frnewline -->
+2
+<!-- PJG 007 0162 intable -->
+s 
+<!-- PJG 0012 frnewline -->
+3
+<!-- PJG 007 0162 intable -->
+s 
+<!-- PJG 0012 frnewline -->
+4
+<!-- PJG 007 0162 intable -->
+s 
+<!-- PJG 0012 frnewline -->
+5
+<!-- PJG 007 0162 intable -->
+s 
+<!-- PJG 0012 frnewline -->
+6
+<!-- PJG 007 0162 intable -->
+s 
+<!-- PJG 0012 frnewline -->
+7
+<!-- PJG 007 0162 intable -->
+s 
+<!-- PJG 0012 frnewline -->
+8
+<!-- PJG 007 0162 intable -->
+s 
+<!-- PJG 0012 frnewline -->
+9
+<!-- PJG 007 0162 intable -->
+s 
+<!-- PJG 0012 frnewline -->
+10
+<!-- PJG 007 0162 intable -->
+s 
+<!-- PJG 0012 frnewline -->
+11
+<!-- PJG 007 0162 intable -->
+s 
+<!-- PJG 0012 frnewline -->
+12
+<!-- PJG 0012 frnewline -->
+
+<!-- PJG /ITAG -->
+
+</TABLE>
+ 
+<!-- PJG 0012 frnewline -->
+
+<!-- PJG 0012 frnewline -->
+
+<!-- PJG 0012 frnewline -->
+
+<!-- PJG 0012 frnewline -->
+
+<!-- PJG 0012 frnewline -->
+
+<!-- PJG /STAG -->

@@ -1,0 +1,363 @@
+ 
+<!-- PJG STAG 4700 -->
+
+<!-- PJG ITAG l=16 g=1 f=1 -->
+(v) Fuel injected = volume of methanol injected, ml. 
+<!-- PJG 0012 frnewline -->
+
+<!-- PJG 0012 frnewline -->
+(vi) Fuel density=density of methanol, 0.7914 g/ml. 
+<!-- PJG 0012 frnewline -->
+
+<!-- PJG 0012 frnewline -->
+(vii) Air volume=volume of zero-grade air, m
+<!-- PJG /ITAG -->
+
+<!-- PJG ITAG l=16 g=5 f=1 -->
+3
+<!-- PJG /ITAG -->
+
+<!-- PJG ITAG l=16 g=1 f=1 -->
+. 
+<!-- PJG 0012 frnewline -->
+
+<!-- PJG 0012 frnewline -->
+(viii) Mol. Wt. CH3OH=32.04.
+<!-- PJG /ITAG -->
+
+<!-- PJG QTAG 02 -->
+<!-- PJG /QTAG -->
+
+<!-- PJG 0012 frnewline -->
+
+<!-- PJG 0012 frnewline -->
+
+<!-- PJG ITAG l=11 g=1 f=1 -->
+(d) 
+<!-- PJG /ITAG -->
+
+<!-- PJG ITAG l=11 g=1 f=3 -->
+FID response factor to methane. 
+<!-- PJG /ITAG -->
+
+<!-- PJG ITAG l=11 g=1 f=1 -->
+When the FID analyzer is 
+<!-- PJG 0012 frnewline -->
+to be used for the analysis of natural gas-fueled vehicle 
+<!-- PJG 0012 frnewline -->
+hydrocarbon samples, the methane response factor of the analyzer 
+<!-- PJG 0012 frnewline -->
+shall be established. To determine the total hydrocarbon FID 
+<!-- PJG 0012 frnewline -->
+response to methane, known methane in air concentrations traceable 
+<!-- PJG 0012 frnewline -->
+to National Institute of Standards and Technology (NIST) shall be 
+<!-- PJG 0012 frnewline -->
+analyzed by the FID. Several methane concentrations shall be 
+<!-- PJG 0012 frnewline -->
+analyzed by the FID in the range of concentrations in the exhaust 
+<!-- PJG 0012 frnewline -->
+sample. The total hydrocarbon FID response to methane is 
+<!-- PJG 0012 frnewline -->
+calculated as follows: 
+<!-- PJG /ITAG -->
+
+<!-- PJG QTAG 02 -->
+<!-- PJG /QTAG -->
+
+<!-- PJG 0012 frnewline -->
+
+<!-- PJG 0012 frnewline -->
+
+<!-- PJG ITAG l=16 g=1 f=1 -->
+r
+<!-- PJG /ITAG -->
+
+<!-- PJG ITAG l=16 g=5 f=2 -->
+CH4
+<!-- PJG /ITAG -->
+
+<!-- PJG ITAG l=16 g=1 f=1 -->
+=FIDppm/SAMppm 
+<!-- PJG /ITAG -->
+
+<!-- PJG QTAG 02 -->
+<!-- PJG /QTAG -->
+
+<!-- PJG 0012 frnewline -->
+
+<!-- PJG 0012 frnewline -->
+
+<!-- PJG ITAG l=16 g=1 f=1 -->
+ Where: 
+<!-- PJG /ITAG -->
+
+<!-- PJG QTAG 02 -->
+<!-- PJG /QTAG -->
+
+<!-- PJG 0012 frnewline -->
+
+<!-- PJG 0012 frnewline -->
+
+<!-- PJG ITAG l=16 g=1 f=1 -->
+(1) r
+<!-- PJG /ITAG -->
+
+<!-- PJG ITAG l=16 g=5 f=2 -->
+CH4
+<!-- PJG /ITAG -->
+
+<!-- PJG ITAG l=16 g=1 f=1 -->
+=FID response factor to methane. 
+<!-- PJG 0012 frnewline -->
+
+<!-- PJG 0012 frnewline -->
+(2) FIDppm=FID reading in ppmC. 
+<!-- PJG 0012 frnewline -->
+
+<!-- PJG 0012 frnewline -->
+(3) SAMppm=the known methane concentration in ppmC.
+<!-- PJG /ITAG -->
+
+<!-- PJG QTAG 02 -->
+<!-- PJG /QTAG -->
+
+<!-- PJG 0012 frnewline -->
+
+<!-- PJG 0012 frnewline -->
+
+<!-- PJG ITAG l=11 g=1 f=1 -->
+105. A new section 86.1325&hyph;94 is added to subpart N to read as 
+<!-- PJG 0012 frnewline -->
+follows: 
+<!-- PJG 0012 frnewline -->
+
+<!-- PJG 0012 frnewline -->
+
+<!-- PJG /ITAG -->
+
+<!-- PJG ITAG l=80 g=1 f=1 -->
+&sect;86.1325&hyph;94 
+<!-- PJG /ITAG -->
+
+<!-- PJG ITAG l=89 g=1 f=1 -->
+Methane analyzer calibration. 
+<!-- PJG 0012 frnewline -->
+
+<!-- PJG 0012 frnewline -->
+
+<!-- PJG /ITAG -->
+
+<!-- PJG ITAG l=11 g=1 f=1 -->
+Prior to introduction into service and monthly thereafter, the 
+<!-- PJG 0012 frnewline -->
+methane analyzer shall be calibrated: 
+<!-- PJG 0012 frnewline -->
+
+<!-- PJG 0012 frnewline -->
+(a) Follow the manufacturer's instructions for instrument 
+<!-- PJG 0012 frnewline -->
+startup and operation. Adjust the analyzer to optimize 
+<!-- PJG 0012 frnewline -->
+performance. 
+<!-- PJG 0012 frnewline -->
+
+<!-- PJG 0012 frnewline -->
+(b) Zero the methane analyzer with zero-grade air. 
+<!-- PJG 0012 frnewline -->
+
+<!-- PJG 0012 frnewline -->
+(c) Calibrate on each normally used operating range with CH
+<!-- PJG /ITAG -->
+
+<!-- PJG ITAG l=11 g=5 f=2 -->
+4
+<!-- PJG /ITAG -->
+
+<!-- PJG ITAG l=11 g=1 f=1 -->
+ in 
+<!-- PJG 0012 frnewline -->
+air with nominal concentrations of 15, 30, 45, 60, 75 and 90 
+<!-- PJG 0012 frnewline -->
+percent of that range. Additional calibration points may be 
+<!-- PJG 0012 frnewline -->
+generated. For each range calibrated, if the deviation from a 
+<!-- PJG 0012 frnewline -->
+least-squares best-fit straight line is two percent or less of the 
+<!-- PJG 0012 frnewline -->
+value at each data point, concentration values may be calculated by 
+<!-- PJG 0012 frnewline -->
+use of a single calibration factor for that range. If the 
+<!-- PJG 0012 frnewline -->
+deviation exceeds two percent at any point, the best-fit non-linear 
+<!-- PJG 0012 frnewline -->
+equation which represents the data to within two percent of each 
+<!-- PJG 0012 frnewline -->
+test point shall be used to determine concentration. 
+<!-- PJG 0012 frnewline -->
+
+<!-- PJG 0012 frnewline -->
+106. A new section 86.1327&hyph;94 is added to subpart N to read as 
+<!-- PJG 0012 frnewline -->
+follows: 
+<!-- PJG 0012 frnewline -->
+
+<!-- PJG 0012 frnewline -->
+
+<!-- PJG /ITAG -->
+
+<!-- PJG ITAG l=80 g=1 f=1 -->
+&sect;86.1327&hyph;94 
+<!-- PJG /ITAG -->
+
+<!-- PJG ITAG l=89 g=1 f=1 -->
+Engine dynamometer test procedures; overview. 
+<!-- PJG 0012 frnewline -->
+
+<!-- PJG 0012 frnewline -->
+
+<!-- PJG /ITAG -->
+
+<!-- PJG ITAG l=11 g=1 f=1 -->
+ (a) The engine dynamometer test procedure is designed to 
+<!-- PJG 0012 frnewline -->
+determine the brake specific emissions of hydrocarbons, nonmethane 
+<!-- PJG 0012 frnewline -->
+hydrocarbons (for natural gas-fueled engines only), carbon 
+<!-- PJG 0012 frnewline -->
+monoxide, oxides of nitrogen, particulate (petroleum-fueled, 
+<!-- PJG 0012 frnewline -->
+natural gas-fueled, liquefied petroleum gas-fueled and 
+<!-- PJG 0012 frnewline -->
+methanol-fueled diesel engines), and methanol and formaldehyde (for 
+<!-- PJG 0012 frnewline -->
+methanol-fueled diesel engines). The test procedure consists of a 
+<!-- PJG 0012 frnewline -->
+``cold'' start test following either natural or forced cool-down 
+<!-- PJG 0012 frnewline -->
+periods described in &sect;&sect;86.1334 and 86.1335, respectively. A ``hot'' 
+<!-- PJG 0012 frnewline -->
+start test follows the ``cold'' start test after a hot soak of 20 
+<!-- PJG 0012 frnewline -->
+minutes. The idle test of Subpart P may be run after the ``hot'' 
+<!-- PJG 0012 frnewline -->
+start test. The exhaust emissions are diluted with ambient air and 
+<!-- PJG 0012 frnewline -->
+a continuous proportional sample is collected for analysis during 
+<!-- PJG 0012 frnewline -->
+both the cold- and hot-start tests. The composite samples 
+<!-- PJG 0012 frnewline -->
+collected are analyzed either in bags or continuously for 
+<!-- PJG 0012 frnewline -->
+hydrocarbons (HC), methane (CH
+<!-- PJG /ITAG -->
+
+<!-- PJG ITAG l=11 g=5 f=2 -->
+4
+<!-- PJG /ITAG -->
+
+<!-- PJG ITAG l=11 g=1 f=1 -->
+_for natural gas-fueled engines 
+<!-- PJG 0012 frnewline -->
+only), carbon monoxide (CO), carbon dioxide (CO
+<!-- PJG /ITAG -->
+
+<!-- PJG ITAG l=11 g=5 f=2 -->
+2
+<!-- PJG /ITAG -->
+
+<!-- PJG ITAG l=11 g=1 f=1 -->
+), and oxides of 
+<!-- PJG 0012 frnewline -->
+nitrogen (NO
+<!-- PJG /ITAG -->
+
+<!-- PJG ITAG l=11 g=5 f=2 -->
+X
+<!-- PJG /ITAG -->
+
+<!-- PJG ITAG l=11 g=1 f=1 -->
+), or in sample collection impingers for methanol 
+<!-- PJG 0012 frnewline -->
+(CH
+<!-- PJG /ITAG -->
+
+<!-- PJG ITAG l=11 g=5 f=2 -->
+3
+<!-- PJG /ITAG -->
+
+<!-- PJG ITAG l=11 g=1 f=1 -->
+OH) and sample collection impingers (or capsules) for 
+<!-- PJG 0012 frnewline -->
+formaldehyde (HCHO). Measurement of CH
+<!-- PJG /ITAG -->
+
+<!-- PJG ITAG l=11 g=5 f=2 -->
+3
+<!-- PJG /ITAG -->
+
+<!-- PJG ITAG l=11 g=1 f=1 -->
+OH and HCHO may be omitted 
+<!-- PJG 0012 frnewline -->
+for 1990 through 1994 model year methanol-fueled engines when a FID 
+<!-- PJG 0012 frnewline -->
+calibrated on methanol is used. A bag or continuous sample of the 
+<!-- PJG 0012 frnewline -->
+dilution air is similarly analyzed for background levels of 
+<!-- PJG 0012 frnewline -->
+hydrocarbon, methane, carbon monoxide, carbon dioxide and oxides of 
+<!-- PJG 0012 frnewline -->
+nitrogen and, if appropriate, methanol and formaldehyde. In 
+<!-- PJG 0012 frnewline -->
+addition, for petroleum-fueled, natural gas-fueled, liquefied 
+<!-- PJG 0012 frnewline -->
+petroleum gas-fueled and methanol-fueled diesel engines, 
+<!-- PJG 0012 frnewline -->
+particulates are collected on fluorocarbon-coated glass fiber 
+<!-- PJG 0012 frnewline -->
+filters or fluorocarbon-based (membrane) filters, and the dilution 
+<!-- PJG 0012 frnewline -->
+air may be prefiltered. 
+<!-- PJG 0012 frnewline -->
+
+<!-- PJG 0012 frnewline -->
+(b) Engine torque and rpm shall be recorded continuously during 
+<!-- PJG 0012 frnewline -->
+both the cold- and hot-start tests. Data points shall be recorded 
+<!-- PJG 0012 frnewline -->
+at least once every second. 
+<!-- PJG 0012 frnewline -->
+
+<!-- PJG 0012 frnewline -->
+(c) Using the torque and rpm feedback signals the brake 
+<!-- PJG 0012 frnewline -->
+horsepower is integrated with respect to time for the cold and hot 
+<!-- PJG 0012 frnewline -->
+cycles. This produces a brake horsepower-hour value that enables 
+<!-- PJG 0012 frnewline -->
+the brake-specific emissions to be determined (see &sect;86.1342, 
+<!-- PJG 0012 frnewline -->
+Calculations, gaseous exhaust emissions; and &sect;86.1343, 
+<!-- PJG 0012 frnewline -->
+Calculations, particulate exhaust emissions). 
+<!-- PJG 0012 frnewline -->
+
+<!-- PJG 0012 frnewline -->
+(d)(1) When an engine is tested for exhaust emissions or is 
+<!-- PJG 0012 frnewline -->
+operated for service accumulation on an engine dynamometer, the 
+<!-- PJG 0012 frnewline -->
+complete engine shall be tested, with all emission control devices 
+<!-- PJG 0012 frnewline -->
+installed and functioning. 
+<!-- PJG 0012 frnewline -->
+
+<!-- PJG 0012 frnewline -->
+
+<!-- PJG 0012 frnewline -->
+
+<!-- PJG 0012 frnewline -->
+
+<!-- PJG /ITAG -->
+
+<!-- PJG /STAG -->

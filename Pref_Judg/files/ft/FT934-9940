@@ -1,0 +1,91 @@
+ANY customer walking into a bank today has a distinct advantage over the
+bank staff. When customers ask for a new account or a loan, they know
+whether or not their account is in the red, or if they defaulted on the
+mortgage payment. They also know if they have a large stock portfolio and
+regular savings. The bank staff in the branch, do not.
+Risk management in such situations is becoming a high priority for banks
+which want to reduce their level of bad debt. Equally, the banks want to
+keep the business of the high net worth customers, who are more likely to
+move their accounts away, if they are not happy.
+The obvious solution is to put personal computer terminals in the branches,
+on which the customer's entire account details can be called up. When the
+customer walks in, branch staff can call up all of their accounts on screen.
+But implementing such a solution is not so easy.
+According to Morley Holliday, principal consultant with Hoskyns financial
+consultancy, it presents a technical challenge which most banks have not yet
+solved - 'you are trying to link together old systems and new technology,'
+he says.
+The new branch systems use client-server computing techniques, which permit
+the PCs to make database queries without overloading the system. However,
+they need to link in to the existing databases, which run on proprietary
+mainframe software, getting the two to work together is the crux of the
+issue.
+Mainframe systems are sequential - that is, one items is done after the
+other, in strict order of occurence. Client-server systems operate on a
+relational structure, which permits random queries - 'it is a major design
+re-think to overlay client-server technology on to the old sequential
+mainframe technology,' says Mr Holliday.
+A second issue concerns the data. Most banks have moved some way towards a
+customer-oriented environment by developing new database systems, which
+store information under customer name rather than under account number. But
+achieving a workable and accurate system for branch applications is proving
+to be more problematic.
+One of the problems relates the size the bank, according to Mervyn Kelly,
+sales and marketing director for financial applications at computer vendor
+Unisys - 'the larger the organisation, the more difficult it has proved to
+do,' he observes. The big UK high street banks have on average six to ten
+million customers each - 'they have set up the database infrastructure, but
+populating it with the information has proved more difficult than it first
+appeared,' he adds.
+The UK banks operate mortgage, insurance, and stock broking businesses as
+well as traditional branch banking. Each activity is recorded on a different
+database, with the non-traditional activities typically running on a
+Unix-based computer system rather than the proprietary mainframe which runs
+the current accounts database. And each database uses a separate account
+number for the same individual client. According to Mr Holliday, some banks
+have got around the problem by copying the old accounts databases on to a
+relational system such as IBM's DB2. However, the information cannot be
+accurate unless the relational database is updated every night, and this
+creates logistical difficulties.
+'Do you want to trawl through 5m accounts every night? Timescales are tight
+for banking transactions, and the computer will have little time to do this
+additional work, which takes several hours,' says Mr Holliday. Updates are
+usually done at week-ends, when there is more time. Don Lonsdale, an
+independent banking consultant, says that most banks have solved the problem
+by setting up a unique customer number, which operates across all databases:
+'They start with a cheque account details, then they scan the other computer
+records. Where they get a match of address, post code, name and initials,
+they assume it is the same person.'
+But obtaining the matches is not as simple as it sounds. Mike Healy, of
+Innovative Systems, a specialist in information management, says that there
+are 17,000 ways that two customer records can be different from each other
+and still refer to the same person: the date of birth, national insurance
+number, and name could be the same, but there could be a difference of one
+character in the street name. For example, 'Lansdown' Road could be written
+'Lansdowne' or 'Landsdown.'
+The matching process is therefore prone to error, because unlike a human
+being, the computer is not able to take a decision that 'Lansdown' is the
+same as 'Lansdowne' in the context of the address given. It is normal to
+find that a large percentage of entries are thrown out by the machine, for
+manual checking.
+To date, the banks have only used the unique customer number to enable the
+database information to be extracted for direct marketing. The general view
+taken is that if a customer gets three copies of the same mailshot, no harm
+is done. However, they are aware of the need to improve the accuracy, in
+order to use the data in branch office applications.
+Abbey National has had a customer-oriented direct marketing database for two
+years. Each of its 10m customers is identified by a unique internal customer
+number, and the system records all products they have with the bank.
+'We knew that if we took names and addresses from all accounts and compared
+like-with-like, it would not be 100 per cent correct. But that did not
+matter for direct marketing,' says Brian Leary, a director of Abbey
+National. But now Abbey National wants to use the database for customer
+service applications and Mr Leary is wrestling with the issue of improving
+the accuracy - 'we have a residue of not particularly up-to-date data, which
+we have to pull into shape. It's easy to see where we have to go, but it is
+not easy to see how we get to it,' added Mr Leary.
+He has tested software from Innovative Systems which aims to check the level
+of accuracy by running the data through all possible permutations. But even
+if Mr Leary goes ahead with a software check of the entire database, he
+knows that further manual checks will be needed, in order to sort out the
+finer differences with which the computer cannot cope.

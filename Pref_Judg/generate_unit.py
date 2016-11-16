@@ -1,6 +1,11 @@
 from random import randint
 import random
+import csv
+from bs4 import BeautifulSoup
 
+csv_file = "402-fix.csv"
+file_path = "./files/all_401-450/"
+longest_group_len = 6
 
 def get_topic_doc_dict(qrel_file): #dict {topic_i:[doc1,doc2,...], topic_j:[...], ...} 
 								   #will be returned
@@ -30,7 +35,7 @@ def grouping(alpha, a_dict): #dict {topic_i:[[doc1,doc2,...],[...],..], topic_j:
 			a_dict[topic].append([])
 
 		#set the upper limit of each group
-		upper_limit = len(doc_list)/alpha+1
+		upper_limit = len(doc_list)/alpha
 
 		#spread documents in to different groups
 		for doc in doc_list:
@@ -49,7 +54,10 @@ def grouping(alpha, a_dict): #dict {topic_i:[[doc1,doc2,...],[...],..], topic_j:
 
 	return a_dict
 
-
+# Create unit for each group of each topic.
+# Each document will be randomly paired with
+#   _at least_ beta (expected 2*beta) documents 
+#   in the same group 
 def uniting(beta, a_dict):
 	counter = 0
 	pairs_for_topic = []
@@ -90,63 +98,97 @@ def uniting(beta, a_dict):
 
 		print "There are totally "+str(len(pairs_for_topic))+" pairs generated."
 
-
+# Create unit for each group of each topic.
+# Each document will be randomly paired with
+#   _exact_ beta documents in the same group 
 def uniting_2(beta, a_dict):
+	#write csv file head
+	title = ["topic"]
+	for i in range(1, beta*longest_group_len+1):
+		title.append("doc"+str(i))
+
+	write_csv(csv_file, title)
+	
+	#generate pair list
 	for topic in a_dict:
+		i=0
+		print "===topic "+str(topic)+"==="
 		for group in a_dict[topic]:
 			doc_counter={}
+			i+=1;
 
-			list_len = beta*len(group)/2
-			pair_list=[]
-			while(list_len!=len(pair_list)): # the evidence to find the right solution
+			list_len = beta*len(group)/2 # get the expected list length
+			pair_list=[] # reset pair list
+			#while(list_len!=len(pair_list)): # the evidence to find the right solution
 											 # otherwise, try again
-				pair_list=[]
-				for doc in group:
-					doc_counter[doc] = beta
-				pair_list=find_pair_list(doc_counter, group[0:], random.choice(group),[],1)
-				#print pair_list
-				print len(pair_list)
-			print "------topic "+str(topic)+"------"
-			for pair in pair_list:
-				print pair
+			pair_list=[]
+			for doc in group:
+				doc_counter[doc] = beta
+			# find the pair list
+			pair_list=find_pair_list(doc_counter, group[0:], random.choice(group),[],1)
+			
+			print len(pair_list)
+			if(list_len!=len(pair_list)):
+				print "ERROR!"
+			else:#print pair_list
+				print "------group "+str(i)+"------"
+				for pair in pair_list:
+				 	print pair
+
+			# generate row for a unit and write to csv file
+			# generate_row(csv_file, topic, pair_list)
+
 
 
 def find_pair_list(doc_counter, group, ele1, pairs, level):
 	flag=1
 	removed_eles=[]
 	if(ele1 ==(-1)):
-		return pairs
-	elif(doc_counter[ele1]==0):
+		print ">> ele1 is -1.  level: "+str(level)
 		return pairs
 	elif(len(group)==1): #this ele1 is the only left, cannot pair
+		print ">> ele1 is the only left.  level: "+str(level)
 		return pairs
 
 
-	while(flag<10): #at most try 10 times to avoid no solution
-		# print "ele1: "+str(ele1)+"\tlevel: "+str(level)
-		# print group
-		# print "pairs:"+str(pairs)
+	while(1): # keep pairing until return
 
 		# pick a document for pairing
 		ele2 = pick_doc(ele1, doc_counter, group, pairs)
 		flag +=1
-		#
-		if(ele2!=(-1)):
-			#print "ele2 ["+str(ele2)+"] is picked. flag:"+str(flag)
+		
+		
+		if(ele2!=(-1)): # if sucessfully pair with a doc
 			pairs.append(set([ele1,ele2]))
 			doc_counter[ele1] -= 1
 			doc_counter[ele2] -= 1
 			
 			#last pair
 			if((doc_counter[ele1]==0)&(doc_counter[ele2]==0)):
-				# print "pairs returned. \tlevel: "+str(level)
-				# print pairs
-				group+=removed_eles
-				return pairs
 
-							
+				group.remove(ele1)
+				group.remove(ele2)
 
-			#pick one to stay
+				#	This should be the last pair, but if there is something left,
+				#	means, this is not the solution.
+				if(len(dict((key,value) for key, value in doc_counter.iteritems() if value >0))):
+					# Roll back
+					# Remove from the pair list
+					pairs.remove(set([ele1,ele2]))
+					doc_counter[ele1] += 1
+					doc_counter[ele2] += 1
+					group.append(ele1)
+					group.append(ele2)
+					
+					# the pair list will NOT contain the new pair
+					return pairs
+				else:			
+					# last pair
+					# task completed!!!
+					return pairs
+						
+
+			#Not the last pair, so pick one doc to stay
 			replaced = -1
 			if(doc_counter[ele1]==0):
 				#ele1 is removed from group
@@ -176,9 +218,6 @@ def find_pair_list(doc_counter, group, ele1, pairs, level):
 			new_pairs = find_pair_list(doc_counter, group, kept, pairs,level+1)
 			if (len(new_pairs)>pairs_len):
 				# Successfully found
-				# print ">>> pairs:"+str(pairs_len)
-				# print ">>> new list:"+str(new_pairs)
-				# print ">>> level: "+str(level)
 				group+=removed_eles
 				return new_pairs
 			else:
@@ -186,38 +225,45 @@ def find_pair_list(doc_counter, group, ele1, pairs, level):
 				new_pairs = find_pair_list(doc_counter, group, replaced, pairs,level+1)
 				if (len(new_pairs)>pairs_len):
 					# Successfully found
-					# print "new list:"+str(new_pairs)
-					# print "level: "+str(level)
 					group+=removed_eles
 					return new_pairs
 				else:
 					# This pair cannot be formed because of no further solution
-					# ele2 is removed for non-consideration"
-					if(replaced!=(-1)):
-						removed_eles.append(ele2)
-						group.remove(ele2)
-
-					# Roll back
-					doc_counter[ele1] += 1
-					doc_counter[ele2] += 1
-
-					if((ele1 in removed_eles) & (doc_counter[ele1]>0)):
+					# So roll back
+					if((ele1 in removed_eles) & (doc_counter[ele1]==0)):
 						removed_eles.remove(ele1)
 						group.append(ele1)
+					
+					if((ele2 in removed_eles) & (doc_counter[ele2]==0)):
+						removed_eles.remove(ele2)
+						group.append(ele2)
+
+					doc_counter[ele1] += 1
+					doc_counter[ele2] += 1
 
 					# Remove from the pair list
 					pairs.remove(set([ele1,ele2]))
 
-					#no solution for this chosen.
+					# ele2 is removed for non-consideration
+					removed_eles.append(ele2)
+					group.remove(ele2)
+					
+					# if ele1 is only one left in the group
+					# just return the pair list without new pair added
+					if((len(group)==1) & (ele1 in group)): 
+						group+=removed_eles
+						return pairs
 					
 		else:
 			# Totally hopeless. Go back to previous level to cancel
-			# print "not this plan, go back"
-			group+=removed_eles
-			return pairs # the length of pairs will stay the same as passed. 
+			group+=removed_eles # put the removed elements back
+			
 			# no new pair is added.
-
-	return pairs
+			return pairs # the pair list will NOT contain the new pair
+			
+	
+	# print "=======not this plan. Level: "+str(level)
+	# return pairs
 	# 1. successfully find solution and return
 	# 2. tried too many time, flag > 10
 
@@ -242,7 +288,14 @@ def pick_doc(ele1, doc_counter, group, pairs):
 					return -1
 				
 				if(len(group)==1): #just these two remain
-					#print "found element ["+str(ele2)+"] for ["+str(ele1)
+
+					if(len(dict((key,value) for key, value in doc_counter.iteritems() if value >1))):
+						#print "should return NULL"
+						# print str(ele1)+","+str(ele2)
+						# print doc_counter
+						group+=removed_eles
+						return -1
+
 					group+=removed_eles
 					return ele2;
 				else:
@@ -261,4 +314,59 @@ def pick_doc(ele1, doc_counter, group, pairs):
 				group+=removed_eles
 				return ele2;
 
-#uniting_2(4, {'000':[[1,2,3,4,5,6,7]]})
+# Write rows into file_name, _appendly_
+# pairs: [d1,d2],[d2,d3],[d3,d4],...
+# row:
+# topic_id, d1_id, d2_id, d3_id, ... 
+def generate_row(csv_file, topic, pairs):
+	row = [topic]
+	previous_pair = []
+	i=0
+	for pair in pairs:
+		i += 1
+		row.append(pair[0])
+		row.append(pair[1])
+	# 	if (i > 1):
+	# 		if doc1 in previous_pair:
+	# 			#doc1 was the doc that was kept
+	# 			#insert previous pair
+	# 			previous_pair.remove(doc1)
+	# 		else:
+	# 			#doc2 was the doc that was kept
+	# 			#insert previous pair
+	# 			previous_pair.remove(doc2)
+			
+	# 		row.append(previous_pair[0])
+	# 		#row.append(get_doc_content(previous_pair[0])) 
+
+	# 	previous_pair = [doc1, doc2]
+
+	# # last pair
+	# if doc1 in previous_pair:
+	# 	#doc1 was the doc that was kept
+	# 	row.append(doc1)
+	# 	#row.append(get_doc_content(doc1))
+	# 	row.append(doc2)
+	# 	#row.append(get_doc_content(doc2))
+		
+	# else:
+	# 	#doc2 was the doc that was kept
+	# 	row.append(doc2)
+	# 	#row.append(get_doc_content(doc2))
+	# 	row.append(doc1)
+	# 	#row.append(get_doc_content(doc1))
+
+	# write to file
+	#print row
+	write_csv(csv_file, row)
+
+def get_doc_content(doc_id):
+	with open(file_path+doc_id, 'r') as myfile:
+		data = myfile.read().replace('\n', '<\br>')
+	return str(data[0:3000])
+
+def write_csv(csv_file, array_content):
+	with open(csv_file, 'a') as mycsvfile:
+		datawriter = csv.writer(mycsvfile)
+		datawriter.writerow(array_content)
+	mycsvfile.close()

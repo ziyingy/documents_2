@@ -1,0 +1,127 @@
+Ever since science fiction writers began describing their visions of the
+future, the idea of machines that can think has fascinated and disturbed
+people. Today's computers, however impressive their calculating and
+processing power, are far from being electronic brains. But systems designed
+to mimic the brain and recognise patterns in vast amounts of data are
+penetrating deeply into the practical world.
+Called neural networks, they derive from research work first carried out in
+the 1940s. It was only around the mid-1980s, however, that the technology
+came within reach of commercial users. Applications now range from the
+monitoring and control of industrial processes, such as steelmaking, brewing
+or the manufacture of chemicals, to predicting the behaviour of financial
+markets and trends in consumer demand.
+Because of their complexity and the very term neural networks - which tends
+to conjure up the image of a mysterious 'black box' to many businessmen -
+such systems have met with scepticism as well as approval. Some specialists
+prefer not to use the words when talking to customers.
+'We find it generates a lot of initial interest if we say 'neural network','
+says Richard Hoptroff, managing director of London-based Right Information
+Systems, which produces software for commercial use at prices ranging from
+Pounds 7,900. 'But then people believe it's a black box. Yet it's a bundle
+of equations like any other method.'
+These equations are the building blocks for non-linear systems based on
+neurons in the human brain. Since the brain contains about 100bn neurons
+(nerve cells) linked in a network of myriad connections, it can absorb and
+memorise information and images from all the senses in a way computers
+cannot possibly match. Neural networks have only a few hundred or thousand
+neurons (or processing units).
+These are put together in layers, usually three, although more can be used
+in highly advanced systems, and the computers 'learn' by being provided with
+examples. Information is then passed through the layers to provide answers
+to problems which would defy conventional computers - built for high-speed
+calculating rather than selecting patterns from a confusing mass of data -
+and require far more speed in comprehension and analysis than the human
+brain can supply.
+Neural networks do not, however, provide all-purpose solutions to tricky
+problems. Their value depends on the data with which they are fed and how
+effectively the results are used. 'It's not a technology that sweeps
+everything out of the way,' says Ray Browne, head of the neural computing
+programme at the UK's Department of Trade and Industry. 'It's another tool
+in the toolbox.'
+The use of this tool is growing rapidly, according to Frost &amp; Sullivan, the
+US market research company. Up to 1998, the world neural network market is
+expected to expand at a compound rate of 46 per cent a year. Over this
+decade, it said in a report, 'neural networks will permeate almost every
+area of business, industry and science'. Mostly, they will be integrated
+with other applications or systems. 'Neural networks will enable
+breakthroughs in such areas as continuous speech recognition, handwritten
+character recognition, and autonomous vehicles or robots.'
+As well as big names in the electronics industry such as IBM, Fujitsu, NEC,
+Hitachi and Intel, a host of smaller, specialised companies are working on
+neural computers and applications. In many cases, neural networks are
+combined with other types of computer technology such as genetic algorithms
+(copying biological mechanisms to produce evolving solutions) and rule
+induction systems (generating rules for specific tasks).
+In Japan, Fujitsu has developed hybrid systems using fuzzy logic to help
+deal with imprecise data. One such neural fuzzy system has been used to
+build up a bond rating programme for Nikko Securities. Fujitsu also produced
+a neural network system for Nikko to predict the best times to buy and sell
+Tokyo-quoted stocks.
+Both systems yielded a high degree of accuracy. Because of the extra
+analytical dimension provided by neural networks, many banks and financial
+institutions use them as aids to bond, foreign exchange and equity trading
+as well as for more basic tasks such as credit-checking, fraud detection and
+mortgage evaluation.
+Thus much of the recent emphasis has been on applications in finance,
+although many bankers are hesitant about entrusting large sums of money to
+the judgments of a computer. Since it is very hard to work out why a neural
+network comes up with a particular answer or recommendation, this wariness
+is not easily dispelled. Also, new factors can come into play which have not
+been put into the system.
+Even so, financial applications will continue to play an important role in
+this market. Frost &amp; Sullivan expects them to account for 23 per cent of the
+worldwide neural network business in 1998 (against 20 per cent in 1990), by
+which time the total market should exceed Dollars 2bn (Pounds 1.3bn).
+Industrial uses should make up 24 per cent (also 20 per cent in 1990), with
+the defence share falling from 39 per cent to 21 per cent. Among other
+applications, the medical sector is likely to be in the forefront with 7 per
+cent.
+Among the most promising fields for neural network technology are retailing
+and market research. As in banking, those with successful systems tend not
+to want to talk about them. But Paul Freeman, UK-based manager of market
+modelling for Kraft General Foods of the US, says neural networks can be of
+tremendous use in helping decide on the timing of commodity purchases and
+the pricing and marketing of products. 'We build models of things like the
+way in which weather in Germany affects chocolate sales there or the impact
+of coffee prices on consumption.'
+The results of these modelling exercises, combined with other types of
+statistical analysis, are used widely in the group. The latest world coffee
+price increases have clearly changed the outlook for Kraft's brands. 'In
+coffee pricing,' adds Freeman, 'a very very small percentage error can be
+very expensive.' Using historical data, Kraft can work out how past price
+gyrations affected demand and feed this into its neural network models.
+On a narrower front, Radio Rentals uses a neural system devised by Central
+Research Laboratories - both are owned by Thorn EMI of the UK - to ensure
+greater accuracy in targeting customers for special campaigns. By analysing
+customer records, lifestyle and the age of the equipment, it detects which
+people are likely to end their hire contracts for televisions and other
+goods and which are likely to respond to promotions.
+This has led to considerable savings on mailing costs. 'If you're going to
+look at market data analysis and see how to earn money, you have to
+recognise that some improvements can result in a heck of a lot of money,'
+says Jeremy Severwright, business development manager at CRL's advanced
+computing solutions group. 'Sometimes this shows through very quickly.'
+Banks, book clubs and mail order companies are among users who can extract
+more profit from customers by using neural network techniques.
+But these can also be put to more heavyweight uses. One of Fujitsu's
+earliest systems was developed for Nippon Steel to prevent failures in the
+continuous casting process. Kazuo Asakawa, manager of Fujitsu's intelligent
+systems laboratory, foresees the day, some years hence, when neural networks
+will combine with arrays of sensors to control a new generation of
+self-learning robots for the office and home.
+Currently, however, neural network experts are preoccupied with the more
+basic concern that industry should adopt the technology more widely.
+'Industry is not as aware as it should be,' says Suran Goonatilake, a
+research fellow at University College London. In Britain, the DTI has been
+spreading the message through its awareness programme which has spawned a
+number of applications clubs. So although the US and Japan still have the
+lead in this area, European countries are catching up quickly.
+ ----------------------------------------------------------------------
+Forecast growth in neural networks market
+Revenue Growth Rate (%)
+ ----------------------------------------------------------------------
+  1988    89    90    91    92    93    94    95    96    97    98
+   na    22.7  31.7  41.4  52.6  58.8  53.7  47.0  40.0  36.3  37.7
+ ----------------------------------------------------------------------
+Source: Frost &amp; Sullivan
+ ----------------------------------------------------------------------

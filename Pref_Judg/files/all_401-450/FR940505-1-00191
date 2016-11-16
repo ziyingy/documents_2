@@ -1,0 +1,461 @@
+ 
+<!-- PJG STAG 4702 -->
+
+<!-- PJG 0012 frnewline -->
+
+<!-- PJG 0012 frnewline -->
+
+<!-- PJG ITAG l=11 g=1 f=1 -->
+For stationary source categories whose facilities range in size, a cutpoint differentiates point and area sources.
+EPA guidance on emission inventories sets this cutpoint at 10 tpy for VOC sources, and 100 tpy for NO
+<!-- PJG /ITAG -->
+
+<!-- PJG ITAG l=11 g=5 f=2 -->
+X
+<!-- PJG /ITAG -->
+
+<!-- PJG ITAG l=11 g=1 f=1 -->
+ and CO.
+<FOOTCITE>102</FOOTCITE>
+ Point source emissions are calculated by adding estimates of individual source facilities in a category. Area source
+emissions are generally determined by subtracting point sources from a total estimate derived from an emission factor
+assumed for the entire category. Certain source categories are estimated by the State while others are estimated
+by the local air pollution control agency. 
+<!-- PJG 0012 frnewline -->
+
+<!-- PJG 0012 frnewline -->
+
+<!-- PJG /ITAG -->
+
+<FOOTNOTE>
+<FOOTNAME>
+<!-- PJG ITAG l=28 g=1 f=1 -->
+102
+<!-- PJG /ITAG -->
+
+</FOOTNAME>
+<!-- PJG ITAG l=28 g=1 f=1 -->
+See 
+<!-- PJG /ITAG -->
+
+<!-- PJG ITAG l=28 g=1 f=3 -->
+Guidance for Initiating Ozone/CO SIP emission Inventories Pursuant to the 1990 Clean Air Act Amendments
+<!-- PJG /ITAG -->
+
+<!-- PJG ITAG l=28 g=1 f=1 -->
+ (OAQPS, February 13, 1991), page 22. These cutpoints are different from the definition of major stationary source
+used for the New Source Review of RACT regulations. 
+<!-- PJG 0012 frnewline -->
+
+<!-- PJG 0012 frnewline -->
+</FOOTNOTE>
+
+<!-- PJG /ITAG -->
+
+<!-- PJG ITAG l=11 g=1 f=1 -->
+(1) Sacramento. For purposes of this NPRM, EPA relies largely on stationary source emission data provided in CARB's
+November 1992 inventory submittal. This inventory includes VOC and NO
+<!-- PJG /ITAG -->
+
+<!-- PJG ITAG l=11 g=5 f=2 -->
+X
+<!-- PJG /ITAG -->
+
+<!-- PJG ITAG l=11 g=1 f=1 -->
+ estimates for Sacramento, Sutter, Solano, Yolo, Placer and El Dorado counties for 1990, 1999 and 2005. This inventory
+is also similar to the inventory used in the 15 percent plan submitted by the Sacramento APCD in November 1993. EPA has,
+however, made several adjustments to CARB's inventory which are discussed in the technical support document. 
+<!-- PJG 0012 frnewline -->
+
+<!-- PJG 0012 frnewline -->
+The following table summarizes the estimated stationary source emissions used in this NPRM before applying FIP measures:
+
+<!-- PJG 0012 frnewline -->
+
+<!-- PJG /ITAG -->
+
+<TABLE>
+
+<!-- PJG tableformat 5,L2,i1,s100,10,10,10,10  -->
+
+<!-- PJG 0012 frnewline -->
+
+<!-- PJG ITAG l=95 g=1 f=1 -->
+
+<!-- PJG /ITAG -->
+
+<!-- PJG ITAG l=95 g=1 f=4 -->
+Sacramento Stationary Source Baseline Inventories 
+<!-- PJG 0012 frnewline -->
+
+<!-- PJG /ITAG -->
+
+<!-- PJG ITAG l=96 g=1 f=4 -->
+[Tons per summer day in 1999 and 2005] 
+<!-- PJG 007 0150 intable -->
+1&blank;
+<!-- PJG 0012 frnewline -->
+
+<!-- PJG 007 0150 intable -->
+11999 VOC 
+<!-- PJG 007 0150 intable -->
+11999 NO
+<!-- PJG /ITAG -->
+
+<!-- PJG ITAG l=96 g=5 f=2 -->
+X
+<!-- PJG /ITAG -->
+
+<!-- PJG ITAG l=96 g=1 f=1 -->
+ 
+<!-- PJG 007 0150 intable -->
+12005 VOC 
+<!-- PJG 007 0150 intable -->
+12005 NO
+<!-- PJG /ITAG -->
+
+<!-- PJG ITAG l=96 g=5 f=2 -->
+X
+<!-- PJG /ITAG -->
+
+<!-- PJG ITAG l=96 g=1 f=1 -->
+
+<!-- PJG 007 0152 intable -->
+ 
+<!-- PJG 0012 frnewline -->
+
+<!-- PJG 0012 frnewline -->
+
+<!-- PJG /ITAG -->
+
+<!-- PJG ITAG l=01 g=1 f=1 -->
+Fuel combustion 
+<!-- PJG 007 0104 intable -->
+1.3 
+<!-- PJG 007 0104 intable -->
+10.4 
+<!-- PJG 007 0104 intable -->
+1.4
+<!-- PJG 007 0104 intable -->
+11.4 
+<!-- PJG 0012 frnewline -->
+Waste burning 
+<!-- PJG 007 0104 intable -->
+4.4 
+<!-- PJG 007 0104 intable -->
+0.1 
+<!-- PJG 007 0104 intable -->
+4.8 
+<!-- PJG 007 0104 intable -->
+0.2 
+<!-- PJG 0012 frnewline -->
+Architectural coating 
+<!-- PJG 007 0104 intable -->
+15.2 
+<!-- PJG 007 0104 intable -->
+ 
+<!-- PJG 007 0104 intable -->
+17.4 
+<!-- PJG 007 0104 intable -->
+
+<!-- PJG 0012 frnewline -->
+
+<!-- PJG 0012 frnewline -->
+Consumer products 
+<!-- PJG 007 0104 intable -->
+14.3 
+<!-- PJG 007 0104 intable -->
+
+<!-- PJG 007 0104 intable -->
+16.3 
+<!-- PJG 007 0104 intable -->
+
+<!-- PJG 0012 frnewline -->
+
+<!-- PJG 0012 frnewline -->
+Other solvent use: 
+<!-- PJG 0012 frnewline -->
+
+<!-- PJG 0012 frnewline -->
+
+<!-- PJG /ITAG -->
+
+<!-- PJG ITAG l=03 g=1 f=1 -->
+Dry cleaning 
+<!-- PJG 007 0104 intable -->
+2.1 
+<!-- PJG 007 0104 intable -->
+ 
+<!-- PJG 007 0104 intable -->
+2.4 
+<!-- PJG 007 0104 intable -->
+
+<!-- PJG 0012 frnewline -->
+
+<!-- PJG 0012 frnewline -->
+Degreasing 
+<!-- PJG 007 0104 intable -->
+4.5 
+<!-- PJG 007 0104 intable -->
+ 
+<!-- PJG 007 0104 intable -->
+5.0 
+<!-- PJG 007 0104 intable -->
+
+<!-- PJG 0012 frnewline -->
+
+<!-- PJG 0012 frnewline -->
+Other surface coating 
+<!-- PJG 007 0104 intable -->
+17.8 
+<!-- PJG 007 0104 intable -->
+ 
+<!-- PJG 007 0104 intable -->
+19.6 
+<!-- PJG 007 0104 intable -->
+
+<!-- PJG 0012 frnewline -->
+
+<!-- PJG 0012 frnewline -->
+Asphalt paving 
+<!-- PJG 007 0104 intable -->
+2.4 
+<!-- PJG 007 0104 intable -->
+ 
+<!-- PJG 007 0104 intable -->
+2.6 
+<!-- PJG 007 0104 intable -->
+ 
+<!-- PJG 0012 frnewline -->
+Printing 
+<!-- PJG 007 0104 intable -->
+2.3 
+<!-- PJG 007 0104 intable -->
+ 
+<!-- PJG 007 0104 intable -->
+2.5 
+<!-- PJG 007 0104 intable -->
+ 
+<!-- PJG 0012 frnewline -->
+Industrial solvent use 
+<!-- PJG 007 0104 intable -->
+0.9 
+<!-- PJG 007 0104 intable -->
+ 
+<!-- PJG 007 0104 intable -->
+1.0 
+<!-- PJG 007 0104 intable -->
+ 
+<!-- PJG 0012 frnewline -->
+Other 
+<!-- PJG 007 0104 intable -->
+0.2 
+<!-- PJG 007 0104 intable -->
+ 
+<!-- PJG 007 0104 intable -->
+0.2 
+<!-- PJG 007 0104 intable -->
+ 
+<!-- PJG 0012 frnewline -->
+
+<!-- PJG 0012 frnewline -->
+
+<!-- PJG /ITAG -->
+
+<!-- PJG ITAG l=11 g=1 f=1 -->
+Petro process, storage, transfer: 
+<!-- PJG 0012 frnewline -->
+
+<!-- PJG /ITAG -->
+
+<!-- PJG ITAG l=03 g=1 f=1 -->
+Petro marketing 
+<!-- PJG 007 0104 intable -->
+4.2 
+<!-- PJG 007 0104 intable -->
+1.1 
+<!-- PJG 007 0104 intable -->
+4.3 
+<!-- PJG 007 0104 intable -->
+1.1 
+<!-- PJG 0012 frnewline -->
+Petro refining 
+<!-- PJG 007 0104 intable -->
+0.2 
+<!-- PJG 007 0104 intable -->
+0.1 
+<!-- PJG 007 0104 intable -->
+0.2 
+<!-- PJG 007 0104 intable -->
+0.1 
+<!-- PJG 0012 frnewline -->
+Oil &amp; gas extraction 
+<!-- PJG 007 0104 intable -->
+5.1 
+<!-- PJG 007 0104 intable -->
+0.0 
+<!-- PJG 007 0104 intable -->
+5.1 
+<!-- PJG 007 0104 intable -->
+0.0 
+<!-- PJG 0012 frnewline -->
+Other 
+<!-- PJG 007 0104 intable -->
+0.2 
+<!-- PJG 007 0104 intable -->
+0.0 
+<!-- PJG 007 0104 intable -->
+0.2 
+<!-- PJG 007 0104 intable -->
+0.1 
+<!-- PJG 0012 frnewline -->
+
+<!-- PJG 0012 frnewline -->
+
+<!-- PJG /ITAG -->
+
+<!-- PJG ITAG l=11 g=1 f=1 -->
+Industrial processes: 
+<!-- PJG 0012 frnewline -->
+
+<!-- PJG /ITAG -->
+
+<!-- PJG ITAG l=03 g=1 f=1 -->
+Commercial bakeries 
+<!-- PJG 007 0104 intable -->
+1.3 
+<!-- PJG 007 0104 intable -->
+0.0 
+<!-- PJG 007 0104 intable -->
+1.4 
+<!-- PJG 007 0104 intable -->
+0.0 
+<!-- PJG 0012 frnewline -->
+Other 
+<!-- PJG 007 0104 intable -->
+4.6 
+<!-- PJG 007 0104 intable -->
+0.3 
+<!-- PJG 007 0104 intable -->
+5.1 
+<!-- PJG 007 0104 intable -->
+0.4 
+<!-- PJG 0012 frnewline -->
+
+<!-- PJG 0012 frnewline -->
+
+<!-- PJG /ITAG -->
+
+<!-- PJG ITAG l=01 g=1 f=1 -->
+Pesticide application 
+<!-- PJG 007 0104 intable -->
+13.1 
+<!-- PJG 007 0104 intable -->
+ 
+<!-- PJG 007 0104 intable -->
+14.2 
+<!-- PJG 007 0104 intable -->
+
+<!-- PJG 0012 frnewline -->
+
+<!-- PJG 0012 frnewline -->
+Livestock waste 
+<!-- PJG 007 0104 intable -->
+7.2 
+<!-- PJG 007 0104 intable -->
+ 
+<!-- PJG 007 0104 intable -->
+7.9 
+<!-- PJG 007 0104 intable -->
+
+<!-- PJG 0012 frnewline -->
+
+<!-- PJG 0012 frnewline -->
+Misc processes 
+<!-- PJG 007 0104 intable -->
+3.1 
+<!-- PJG 007 0104 intable -->
+0.0 
+<!-- PJG 007 0104 intable -->
+4.3 
+<!-- PJG 007 0104 intable -->
+
+<!-- PJG 0012 frnewline -->
+
+<!-- PJG 0012 frnewline -->
+
+<!-- PJG /ITAG -->
+
+<!-- PJG QTAG 02 -->
+<!-- PJG /QTAG -->
+
+<!-- PJG 0012 frnewline -->
+
+<!-- PJG 007 0162 intable -->
+n,s
+<!-- PJG 0012 frnewline -->
+
+<!-- PJG 0012 frnewline -->
+
+<!-- PJG ITAG l=04 g=1 f=1 -->
+Total 
+<!-- PJG 007 0104 intable -->
+104.2 
+<!-- PJG 007 0104 intable -->
+12.1 
+<!-- PJG 007 0104 intable -->
+115.7 
+<!-- PJG 007 0104 intable -->
+13.4
+<!-- PJG /ITAG -->
+
+</TABLE>
+
+<!-- PJG 0012 frnewline -->
+
+<!-- PJG 0012 frnewline -->
+
+<!-- PJG ITAG l=11 g=1 f=1 -->
+(2) Ventura. EPA and the Ventura County Air Pollution Control District are jointly funding a coordinated SIP and FIP
+modeling effort in order to maximize consistency between these parallel efforts. Thus, for purposes of this NPRM,
+EPA is using Ventura County's 1991 Air Quality Management Plan (1991 AQMP)
+<FOOTCITE>103</FOOTCITE>
+ as the starting point for estimating and projecting emissions from stationary sources in Ventura rather than CARB
+inventories. The 1991 AQMP inventory also provides the starting point for the 15 percent plan submitted by Ventura
+to EPA in November 1993. While the 15 percent plan incorporates a number of modifications to the growth factors, emission
+processing mapping, and other inputs to the 1991 AQMP inventory, EPA was not able to evaluate and incorporate these
+in time for this NPRM. In addition, the 15 percent plan only projects emissions through 1996, and projections are needed
+through 2005 for the FIP. EPA expects, however, that the inventory used for the final FIP attainment demonstration
+will incorporate many of the modifications included in the 15 percent plan. It should be noted that CARB's inventory
+forms the basis of many of the specific source category emissions estimates in Ventura's AQMP and 15 percent inventories.
+
+<!-- PJG 0012 frnewline -->
+
+<!-- PJG 0012 frnewline -->
+
+<!-- PJG /ITAG -->
+
+<FOOTNOTE>
+<FOOTNAME>
+<!-- PJG ITAG l=28 g=1 f=1 -->
+103
+<!-- PJG /ITAG -->
+
+</FOOTNAME>
+<!-- PJG ITAG l=28 g=1 f=1 -->
+Ventura County Air Quality Management Plan, Ventura County Air Pollution Control District, October 1991. 
+<!-- PJG 0012 frnewline -->
+
+<!-- PJG 0012 frnewline -->
+</FOOTNOTE>
+
+<!-- PJG /ITAG -->
+
+<!-- PJG ITAG l=11 g=1 f=1 -->
+The following table presents the 2005 stationary source emission estimates before applying FIP measures. These
+estimates are described further in the technical support document: 
+<!-- PJG 0012 frnewline -->
+
+<!-- PJG /ITAG -->
+
+<!-- PJG /STAG -->

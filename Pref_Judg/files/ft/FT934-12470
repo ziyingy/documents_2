@@ -1,0 +1,96 @@
+THE financial services industry churns out endless reams of paperwork,
+particularly in the insurance and mortgage sectors.
+These are the areas, however, where the bulk of applications can be found
+for document image processing (DIP).
+Apart from improving customer-service efficiency, the industry is also
+beginning to use DIP technology to cut staffing, according Geoff Bedser,
+consultant at the finance division of the Computer Management Group (CMG).
+'If you talk to financial organisations, they will mention the two points in
+the same breath. In practice, the emphasis tends to be on improved
+efficiency,' he says.
+Unlike the computer industry which is increasingly moving towards standards,
+DIP is still a jungle of proprietary systems.
+There are some standards at the lower levels of DIP technology, such as the
+fax format used for the images, but when it comes to the software that does
+clever things like indexing, it is still a case of 'everybody for
+themselves.'
+So when customers choose a particular supplier, they have to be sure from
+the outset that they will not want to switch suppliers later because they
+will be well 'locked in' to an original supplier.
+Most imaging systems now store images using the Group 4 fax standard from
+the Consultative Committee for International Telephony and Telegraphy
+(CCITT), which provides better image compression than its Group 3
+predecessor.
+'That is really all a fax does - like an imaging system, it turns a document
+into a series of digits,' explains Mr Bedser.
+'The main problem with standards is how you actually 'reference' an image on
+a disk. Every supplier has a different indexing approach. In principle, it
+would be quite simple for somebody to convert images from one system to
+another by turning them into faxes - say, through a PC fax card.'
+Most DIP systems scan images at a resolution of 200 dots per inch (200 dpi).
+An A4-page scanned at this resolution in monochrome generates about 4m
+pixels, occupying four megabits of storage, equivalent to half a megabyte of
+data.
+When it was first designed, Group 3 offered a line-by-line compression
+algorithm. Group 4 compares the second scan line with the first, thereby
+achieving a higher level of compression, particularly on certain characters
+with uprights that do not alter from one line to the next. It effectively
+represents the second scan line with how it differs from the first one.
+Group 4 is more efficient, but requires better error-correction because if a
+line is lost in transmission, so is the whole document, whereas because
+Group 3 corrects itself at the end of every line, the worst that can happen
+is one bad line.
+Another commonly adopted standard for DIP is Aldus's Tag Image Format (TIF),
+which allows users to move image files from one system to another. TIF can
+be used to store images compressed in ways other than the fax standard, like
+colour and greyscale images, for example.
+TIF also allows users to scan images in at any resolution. However, doubling
+the scan resolution from 200 dpi to 400 dpi, the print resolution offered by
+most laser printers, quadruples the storage required in theory, although the
+more data is captured the more redundancy it contains, so the compression
+algorithm tends to be more efficient. In practice, therefore, the storage
+requirement would only double.
+'TIF in itself is still only effectively an image format,' says Tony
+Hendley, technical director of Cimtech. 'You still need to describe your
+definition of a document within the system. That's where you get into the
+realms of document architecture standards.'
+The large computer manufacturers such as IBM and Digital Equipment (DEC)
+have defined a standard called Open Document Architecture (ODA). This allows
+users to manage documents in a range of formats.
+Most word-processors use IBM's Document Content Architecture (DCA) as an
+interchange format for exporting documents to other word-processors. ODA is
+the counterpart to DCA for document imaging, but still has some way to go
+before being universally adopted as a standard to replace proprietary
+architectures in DIP systems.
+THE move to client-server computer architectures means that DIP systems can
+now have one server managing the index database and another managing
+document contents, be they images or text files. This will improve
+performance because the types of searches done on the index database are
+different from those done on the storage server.
+'The best analogy is that of a hat-check system where you give your coat to
+a cloakroom attendant and you get a ticket with a number on it. The
+attendant does not know what the coat is or anything about it, and they
+store it as they see fit,' explains Mr Hendley.
+'The storage server operates on that principle. At any point in time, the
+index database will deliver a series of tickets as a result of a search, and
+the storage server will deliver the file.
+'The benefit of having them as separate devices is that you can have many
+companies who specialise in making storage management systems which optimise
+the trade-off between storage cost and speed of retrieval.'
+He recommends that users carry out some form of data modelling exercise in
+advance or use free text indexing systems. Alternatively, they can create an
+abstract of the document.
+If the document is held as a text file, the user can search on any word in
+the document itself. Whether the user has come through a structured search
+or a free text search, the principle is the same - the result is a hit-list
+of unique numbers from which to retrieve files.
+'Most imaging systems use a standard database such as Oracle to hold their
+indexes,' says CMG's Mr Bedser.
+'The fact that it is pointing to an image is where the clever software comes
+into play. Image is a technology which appeals to users, rather than IT
+buffs, but ironically users see it as something which enables them to
+automate their processes and bypass traditional IT professionals.'
+Optical character recognition is now becoming more prevalent because the
+system can then recognise part of the image as being characteristic of the
+document, providing automatic indexing - this is particularly useful in
+legal documents, for example.

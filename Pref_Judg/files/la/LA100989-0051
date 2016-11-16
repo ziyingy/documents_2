@@ -1,0 +1,183 @@
+<P>
+Prompted by technical advances and the need to upgrade their aging early 
+warning networks, military services in the United States and Australia have 
+embarked on ambitious programs to build the first unclassified over-the-horizon 
+radars designed for everyday operation. Using the earth's ionosphere as a giant 
+mirror, the radars can "see" over the horizon, keeping tabs on ships and 
+low-flying airplanes as far as 2,500 miles away. 
+</P>
+<P>
+The U.S. Air Force has begun testing a system in Maine, is finishing another 
+near the California-Oregon border and has further plans for systems in Alaska 
+and in the Midwest. 
+</P>
+<P>
+The U.S. Navy, meanwhile, just tested what it calls a relocatable 
+over-the-horizon radar, designed to be moved as needed during a war to track 
+and assess enemy air and sea forces. It is now being set up on the Aleutian 
+Island of Amchitka, for operation next year. 
+</P>
+<P>
+And the Australian military plans to break ground next year for a network of 
+three over-the-horizon radars for monitoring northern approaches to the 
+continent. 
+</P>
+<P>
+The radars, which can cost a half-billion dollars each, are uniquely suited to 
+diverse military needs, from warning of a bomber attack to monitoring the 
+launch of test missiles deep within the borders of a foreign country. There 
+have even been reports that over-the-horizon radar has promise in detecting 
+stealth aircraft. 
+</P>
+<P>
+But promising civilian applications have also been explored in tracking 
+suspected drug-running aircraft and long-range monitoring of weather and sea 
+conditions. Both take advantage of the vast swath -- 6 million square miles -- 
+that can be covered by a single over-the-horizon radar within about 30 seconds. 
+</P>
+<P>
+Many of the principles behind the new radars were first proven by a pair of 
+experimental Navy radars built in California in the 1960s. The Wide Area 
+Research Facility in the Central Valley and the Sea Echo radar on San Clemente 
+Island are still used for research into new technologies and the ionosphere. 
+</P>
+<P>
+That work is critical because it is the ionosphere -- layers of charged 
+particles blanketing the earth at altitudes between 50 and 300 miles -- that 
+makes the new radars work. Conventional radar waves, which are emitted in 
+frequencies above 200 million cycles per second (200 megahertz), penetrate the 
+ionosphere and continue out into space. 
+</P>
+<P>
+Over-the-horizon radars, on the other hand, use frequencies between 5 and 28 
+megahertz, which are bent and reflected by the ionosphere back toward the 
+Earth's surface hundreds of miles away from the radar. From there, a small 
+portion -- perhaps 1% -- of the radio waves are reflected back toward the 
+ionosphere and then down to the radar, carrying with them the coded imprint of 
+any craft that happens to be within the radar's sweep. Thus the systems are 
+known as over-the-horizon backscatter radars (OTH-B for short). 
+</P>
+<P>
+Depending on the frequency used and the conditions in the ionosphere, the 
+radar's beam might reach the Earth's surface anywhere from 600 to 2,500 miles 
+from the transmitter, If an aircraft happens to be flying within that beam, it 
+too will reflect some radio waves back toward the radar via the ionosphere, 
+regardless of how low the aircraft may be flying. A conventional radar would 
+not see an aircraft sneaking in at a low altitude, because of the Earth's 
+curvature, until it was much closer -- perhaps less than 50 miles away. 
+</P>
+<P>
+In a dimly lit control room in Bangor, Me., operators of the OTH-B would see 
+the aircraft as a small yellow square of light on the screen of a 
+television-type monitor. Powerful computers automatically compare the 
+aircraft's flight path with those of scheduled civilian and military flights. 
+If no match can be found, operators notify the nearest Air Force regional 
+operations control center. 
+</P>
+<P>
+There, based on information from satellites and other sources, officials decide 
+whether to "scramble" -- send out aircraft for a closer look. Since the radar 
+went into initial, limited operation late in 1987, Soviet aircraft have been 
+intercepted 36 times, according to the 24th Air Division, which is responsible 
+for operating the radar. Most of the aircraft are bombers on training flights. 
+Occasionally they fly within 115 miles of Cape Hatteras, N.C., an Air Force 
+spokesman said. 
+</P>
+<P>
+Although the idea behind them is simple, OTH-Bs are among the most 
+sophisticated of radars. When an aircraft flies into their beam, the amount of 
+radio energy the aircraft reflects back to the antennas is minuscule compared 
+to the signal bounced back from the Earth's surface below the craft, typically 
+that of the sea. That surface echo, called clutter, may be 10,000 times 
+stronger than the signal of interest, so finding the signal is a lot like 
+finding the proverbial needle in a haystack. 
+</P>
+<P>
+Making matters worse is the ionosphere itself, which changes radically from 
+year to year as sunspots come and go, from month to month as seasons change, 
+and even from minute to minute at dawn and dusk. Each of these tends to affect 
+one or more of the ionosphere's four layers of charged particles, requiring 
+operators to make adjustments to compensate. Especially troublesome are the 
+sudden ionospheric disturbances caused by solar flares or other events on the 
+sun, which can blind or cripple an OTH-B radar for periods ranging from a few 
+minutes to several hours, according to Jurgen Buchau, a researcher at the 
+Geophysical Laboratory at Hanscom Air Force Base in Massachusetts. (Since the 
+episodes are unpredictable and short-lived, Buchau noted, they are not 
+considered useful to an enemy plotting a surprise attack.) 
+</P>
+<P>
+To cope with those problems, OTH-B radars have enormous antennas and many 
+computers (the Air Force models have 28 apiece) to analyze signals and compare 
+radar tracks with known flight paths. Each of the Air Force units consists of 
+three 4,000-foot transmit antennas and three mile-long receive antennas. To 
+avoid interference, receive and transmit antennas are about 100 miles apart; 
+the West Coast receive site is in Tulelake, Calif., in the northern part of the 
+state, while the transmit site is in Christmas Valley, Ore. 
+</P>
+<P>
+When finished sometime in 1991, the West Coast units will cover a 180-degree 
+arc from Mexico to Alaska, out as far as the Hawaiian Islands. The radar, like 
+its counterpart on the East Coast, is being built for the Air Force by General 
+Electric's Government Electronic Systems Division in Syracuse, N.Y. 
+</P>
+<P>
+To spot targets in a sea of clutter, OTH-B radars make use of the Doppler 
+effect: When a signal from a radar is bounced off a target moving toward the 
+radar, the frequency of the signal that comes back is higher. How much higher 
+depends on how fast the target is moving. OTH-B radars use that frequency shift 
+to distinguish a target from the surface below it. 
+</P>
+<P>
+Air Force officials say the radars have no trouble spotting ordinary bomber 
+aircraft. A more delicate question now is whether they can spot aircraft built 
+with so-called stealth technologies, known as "low-observable" techniques in 
+military jargon. Such aircraft have shapes and exteriors designed to minimize 
+the reflections of waves from conventional radars, which use relatively high 
+frequencies and look up at their targets, rather than down from the ionosphere. 
+</P>
+<P>
+If OTH-B radars can perform well against stealth aircraft, as several radar 
+experts have speculated, the Air Force's B-2 stealth bomber would seem less 
+able to complete its mission of penetrating Soviet airspace. The Soviets 
+already have at least three OTH-B radars, according to open Pentagon reports. 
+</P>
+<P>
+These days, Air Force officials take care when discussing the issue. The head 
+of the Air Force's OTH-B program, Col. John O. Lenz, said: "With this kind of 
+radar, because of the frequencies you're using and the angle at which you look 
+at the target, we present a little bit tougher problem for the designer of 
+offensive low-observable craft. It's simply mathematics." No tests using 
+stealth aircraft have been done and none are planned, Lenz added. 
+</P>
+<P>
+Still, the Department of Defense has become more open since the early days of 
+OTH-B research about three decades ago, when the technology was in its 
+preliminary stage and was not discussed publicly. Since then there have been 
+scattered, unconfirmed reports of various forms of over-the-horizon radar being 
+employed by the United States and Great Britain for spying. 
+</P>
+<P>
+Such military uses have been the mainstay of work on OTH-B radars, but their 
+civilian potential has not been ignored. In 1973, the Navy disclosed that it 
+had used an experimental radar on the Maryland coast to monitor the size and 
+direction of ocean waves over vast areas of the North Atlantic. The wave 
+information let scientists quickly infer the wind patterns above the waves with 
+great accuracy, the Navy said. 
+</P>
+<P>
+The procedure was never put into regular use in the United States, but it has 
+long been used in Australia. Meteorologists there have for years had access to 
+data from an experimental OTH-B radar called Jindalee (the name is aboriginal 
+for bare bones). 
+</P>
+<P>
+And the U. S. radars have not been entirely limited to military uses. Officials 
+from the Drug Enforcement Administration and the Air Force confirmed that the 
+Maine OTH-B radar has been used to track suspected drug-running aircraft over 
+the Caribbean. And that application is likely to become common as the military 
+begins fulfilling its role in government efforts to stem the influx of illegal 
+drugs. Officials of the North American Aerospace Defense Command, which is 
+directing and coordinating surveillance of airborne drug traffickers, recently 
+identified the proposed set of four OTH-B radars as the cornerstone of its 
+future plans against aerial smuggling. 
+</P>

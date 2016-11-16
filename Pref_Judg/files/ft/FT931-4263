@@ -1,0 +1,153 @@
+that is the cost of getting a message through the Post Office's Edipost
+service, launched last October.
+True, the message goes by post - but the service enables even the smallest
+of companies to meet their customers' demands for electronic trading,
+without the set-up and running charges and without even having a computer.
+With Edipost, a DEC Vax computer run by the Post Office is attached to the
+various EDI services and receives orders and other messages sent
+electronically from EDI-users to their suppliers. These are printed and
+posted to Edipost customers by first-class mail.
+The EDI user benefits because its messages are transmitted to another EDI
+user - the Post Office - so the advantages of EDI still apply.
+Each message costs 90p for up to 100 messages a day. The rate goes down to
+40p for several thousand messages. The costs are typically paid by the big
+EDI user and it is then up to that company to decide whether to charge its
+suppliers.
+However, a small company run by a former tomato grower in Norfolk has gone
+two steps further. Meadowhouse Bar-Laser in Stalham has been running a
+two-way postal EDI service for nearly a year and has more than 200 users.
+Here, too, a Meadowhouse computer is linked to EDI services on behalf of its
+customers. The company uses personal computers. Messages are received from
+EDI users and forwarded by post, fax or courier. But Meadowhouse users can
+also send messages to their customers through the service. They can send
+information such as acknowledgement and stock details back to Meadowhouse,
+which enters the data to the EDI service.
+MEADOWHOUSE aims its bureau EDI service both at small firms and at suppliers
+of highly seasonal products, which for example might only trade with a big
+retail company for very short periods.
+Managing director Mr Norman Ashton is reluctant to give sample prices. He
+says charges depend on negotiations with the main partner in the EDI chain,
+typically a big retail group, and on the level of delivery, printing and
+other services required.
+The bureau service has evolved from Meadowhouse's initial EDI business, set
+up in 1986. This has been built round a program package which translates
+received EDI messages not only into data for entry into business systems but
+also into printed working documents such as barcode labels and despatch
+notes.
+The package is sold to EDI users and can also be run as part of the bureau
+service. Prices start at around Pounds 1,500 for the first year and Pounds
+800 for the second year, but this includes connection to an EDI service and
+all data transmission. These prices are based on a personal computer linked
+to the IBM EDI service.
+This whole business was created by accident but has taken off in the last
+three years, with 43 per cent growth last year to a turnover of Pounds 2.3m,
+40 staff and over 1,000 package modules sold.
+It was set up by Mr John Pennell, a tomato grower and now technical
+director. 'He got a computer for his business and got hooked,' says Mr
+Ashton. 'One day he was talking to friend who was working on producing
+barcode labels from EDI data for BHS and felt he could do it better.'
+Mr Pennell now leases his greenhouses to an organic farmer and works
+full-time for Meadowhouse.
+'Software and EDI service companies have focused on producing software which
+converts EDI messages to update business data files,' says Norman Ashton.
+'But small companies typically only want printed orders. So we set out to
+enable small and medium-sized companies to put the EDI data to instant
+business use.'
+Unidoor International is a prime example of such a company. It imports
+leisure-wear sold by high-street retail chains under their own labels. The
+company, based in Dunstable, Kent, was no newcomer to computing, already
+running a management system on a Mips computer. But on the product despatch
+side it was 'drowning in a sea of paper', according to financial director Mr
+Jerry Phillips.
+'Each delivery means producing masses of labels showing product information,
+the number in each box and so on, for every box,' Mr Phillips says. 'Each
+delivery could mean 1,000 labels - and we were producing all this by hand.
+We had 30 people working all day every day and over weekends just to produce
+these labels. When Meadowhouse brought their package to show us, we wouldn't
+let them take it away]'
+Unidoor International now runs the Meadowhouse package and EDI on a Novell
+personal computer network. This includes a laser printer which produces
+barcodes as well as all the product labels.
+Personal computer links are normally the cheapest EDI option for a computer
+user wishing to connect its machine. The leading service providers typically
+base their connection charges on the size of the user's computer. From its
+entry into EDI as a data recipient last year, Unidoor International has
+quickly moved on to gathering information on sales and stocks from some of
+its customers and is looking at sending back invoices - 'EDI has not only
+saved us from drowning but also, through the information exchange with our
+customers, given us closer insight into what is selling,' says Jerry
+Phillips. 'Through EDI, we've become true partners with our customers.'
+Unidoor has no links between PC network and the Mips and Mr Phillips says
+this means there is some duplication and rekeying of information.
+Direct Home Entertainment, which sells a million videos, CDs and computer
+games a year through catalogue shopping companies, has made such a link and
+as a result has cut despatch time from a fortnight or more to 48 hours.
+Previously, orders were received by post.
+This company, with offices in London and a warehouse in Coventry, runs its
+EDI link on a personal computer which is connected in turn to its Nokia
+business computer system. It, too, uses the Meadow-house package to link to
+EDI services and to produce labels.
+'The leisure business is growing very quickly and the number of units we
+despatch has doubled over the last two years,' says managing director Mr
+Jerry Donahue. 'EDI has helped tremendously to handle this growth.'
+After the relatively low-cost entry into EDI through a personal computer
+link, Direct Home Entertainment, too, has quickly expanded its use. It is
+planning to report back via EDI to the catalogue companies on unfilled
+orders, so that customers can be informed as soon as possible. Previously,
+such orders stayed on the company's system until they could be met.
+Another personal computer EDI-user, sweets manufacturer Needlers, has gone
+still further with its links. This company, with a Pounds 20m turnover and
+based in Hull, again used the cheap option of a personal computer link to
+get into EDI. Computer manager Mr Neil Dean says that, like other companies,
+Needlers was 'pretty strongly encouraged' into EDI by Tesco, a big customer
+committed to electronic trading, (see pages 15-16).
+Meanwhile, Needlers was running its financial, manufacturing and
+distribution software on an IBM AS/400 minicomputer using the Business 400
+package from JBA.
+'We were printing orders received by EDI into the PC and then keying the
+information into the AS/400,' Mr Neal says. 'This was OK for one customer's
+orders but we could see others going this way and manual keying would be out
+of the question for 20 or 30 lots of orders.
+'In addition it would not have been economic to upgrade the PC software
+package to handle links to different services every time we added an
+electronic trading partner.'
+Needlers therefore went back to its business software supplier, JBA, and
+added the company's EDI software module to its package. This was a
+considerable investment: this module alone starts at Pounds 4,500, depending
+on the computer size; in addition the Tradanet EDI service used by Tesco
+charges more for links from machines bigger than a PC.
+Needlers now links directly into EDI services from the AS/400, with the JBA
+software handling the transfer of trading data from the services into the
+main database.
+This enhancement happened last autumn - and the investment has proved
+worthwhile. Since then, Needlers has gone live on EDI with five retail
+chains and expects to be up to 20 by the end of the year. Mr Neal hopes to
+move to EDI with suppliers but Needlers does not have the resources to
+handle this at present as it concentrates on establishing links with its
+customers.
+All these EDI users and suppliers illustrate the different ways that small
+and medium-sized concerns - even one-man bands - can move into EDI. As Jerry
+Phillips at Unidoor International puts it: 'These days it makes no sense for
+anyone of any size not to go to EDI.'
+*****
+SUPPLIER PROFILES
+Meadowhouse MEADOWHOUSE BAR-LASER, a privately-owned UK company formed in
+1986, is based in Stalham, Norfolk, with 40 staff.
+Products and services: pedigree range of software, handling connection to
+EDI services, message conversion, printing of barcodes and documents from
+EDI data; also bureau EDI service.
+Turnover: 1991, Pounds 1.6m; 1992, Pounds 2.3m.
+Price: Typically, Pounds 1,500-Pounds 1,700 in the first year, including
+software, installation, training and all EDI network charges (based on IBM
+network charges); Pounds 800 in the second year, including network charges,
+software support and upgrades.
+Number of users: over 1,000 Pedigree modules sold.
+*****
+JBA International
+JBA International was formed in the UK in 1981. An IBM authorised software
+house (business partner in IBM parlance); support centres worldwide; 800
+staff; turnover Pounds 35m.
+Product: Business 400, a business package including modules covering
+accounting, manufacturing, distribution and so on.
+Number of users: 1,500 users of Business 400 worldwide; 400 in the UK; 40 UK
+users of the EDI module.

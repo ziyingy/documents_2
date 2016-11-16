@@ -1,10 +1,10 @@
 import read_generate_doc
 import generate_unit
 
-qrel_file = "data/sormunen_qrels/sormunen_qrels_copy"
+qrel_file = "data/sormunen_qrels/sormunen_qrels_copy2"
 collection_files = "data/collections/latimes"
 
-alpha = 11 #group number
+alpha = 1 #group number
 beta = 4  #pairs for each document in the group
 		  #make sure it is even
 

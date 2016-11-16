@@ -1,0 +1,597 @@
+ 
+<!-- PJG STAG 4700 -->
+
+<TABLE>
+
+<!-- PJG tableformat 7,L2,i1,s50,7,7,7,7,7,7 -->
+
+<!-- PJG 0012 frnewline -->
+
+<!-- PJG ITAG l=95 g=1 f=1 -->
+
+<!-- PJG /ITAG -->
+
+<!-- PJG ITAG l=95 g=1 f=4 -->
+VOC Emission Inventory Summary
+<!-- PJG 0012 frnewline -->
+
+<!-- PJG /ITAG -->
+
+<!-- PJG ITAG l=96 g=1 f=4 -->
+[Tons per day]
+<!-- PJG 0012 frnewline -->
+
+<!-- PJG 0012 frnewline -->
+
+<!-- PJG 007 0150 intable -->
+1&blank;
+<!-- PJG 0012 frnewline -->
+
+<!-- PJG 007 0150 intable -->
+11990
+<!-- PJG 0012 frnewline -->
+
+<!-- PJG 007 0150 intable -->
+11993
+<!-- PJG 0012 frnewline -->
+
+<!-- PJG 007 0150 intable -->
+11996
+<!-- PJG 0012 frnewline -->
+
+<!-- PJG 007 0150 intable -->
+11999
+<!-- PJG 0012 frnewline -->
+
+<!-- PJG 007 0150 intable -->
+12002
+<!-- PJG 0012 frnewline -->
+
+<!-- PJG 007 0150 intable -->
+12004
+<!-- PJG 0012 frnewline -->
+
+<!-- PJG 007 0152 intable -->
+
+<!-- PJG 0012 frnewline -->
+
+<!-- PJG 0012 frnewline -->
+
+<!-- PJG /ITAG -->
+
+<!-- PJG ITAG l=01 g=1 f=4 -->
+Point 
+<!-- PJG 007 0104 intable -->
+12.46 
+<!-- PJG 007 0104 intable -->
+10.05 
+<!-- PJG 007 0104 intable -->
+10.15 
+<!-- PJG 007 0104 intable -->
+10.57 
+<!-- PJG 007 0104 intable -->
+11.03 
+<!-- PJG 007 0104 intable -->
+10.67
+<!-- PJG 0012 frnewline -->
+
+<!-- PJG 0012 frnewline -->
+Area 
+<!-- PJG 007 0104 intable -->
+164.50 
+<!-- PJG 007 0104 intable -->
+162.68 
+<!-- PJG 007 0104 intable -->
+164.10 
+<!-- PJG 007 0104 intable -->
+165.37 
+<!-- PJG 007 0104 intable -->
+167.86 
+<!-- PJG 007 0104 intable -->
+169.74
+<!-- PJG 0012 frnewline -->
+
+<!-- PJG 0012 frnewline -->
+Mobile 
+<!-- PJG 007 0104 intable -->
+85.03 
+<!-- PJG 007 0104 intable -->
+65.37 
+<!-- PJG 007 0104 intable -->
+68.40 
+<!-- PJG 007 0104 intable -->
+72.70 
+<!-- PJG 007 0104 intable -->
+76.39 
+<!-- PJG 007 0104 intable -->
+79.18
+<!-- PJG 007 0162 intable -->
+n,d
+<!-- PJG 0012 frnewline -->
+
+<!-- PJG 0012 frnewline -->
+
+<!-- PJG /ITAG -->
+
+<!-- PJG ITAG l=04 g=1 f=4 -->
+Total 
+<!-- PJG 007 0104 intable -->
+261.99 
+<!-- PJG 007 0104 intable -->
+238.10 
+<!-- PJG 007 0104 intable -->
+242.65 
+<!-- PJG 007 0104 intable -->
+248.64 
+<!-- PJG 007 0104 intable -->
+255.28 
+<!-- PJG 007 0104 intable -->
+259.59
+<!-- PJG /ITAG -->
+
+</TABLE>
+
+<!-- PJG 0012 frnewline -->
+
+<!-- PJG 0012 frnewline -->
+
+<TABLE>
+
+<!-- PJG tableformat 7,L2,i1,s50,7,7,7,7,7,7 -->
+
+<!-- PJG 0012 frnewline -->
+
+<!-- PJG 0012 frnewline -->
+
+<!-- PJG 0012 frnewline -->
+
+<!-- PJG 0012 frnewline -->
+
+<!-- PJG 0012 frnewline -->
+
+<!-- PJG 0012 frnewline -->
+
+<!-- PJG 0012 frnewline -->
+
+<!-- PJG 0012 frnewline -->
+
+<!-- PJG 0012 frnewline -->
+
+<!-- PJG 0012 frnewline -->
+
+<!-- PJG ITAG l=95 g=1 f=4 -->
+NO
+<!-- PJG /ITAG -->
+
+<!-- PJG ITAG l=95 g=5 f=2 -->
+X
+<!-- PJG /ITAG -->
+
+<!-- PJG ITAG l=95 g=1 f=1 -->
+
+<!-- PJG /ITAG -->
+
+<!-- PJG ITAG l=95 g=1 f=4 -->
+ Emission Inventory Summary
+<!-- PJG 0012 frnewline -->
+
+<!-- PJG /ITAG -->
+
+<!-- PJG ITAG l=96 g=1 f=4 -->
+[Tons per day]
+<!-- PJG 0012 frnewline -->
+
+<!-- PJG 0012 frnewline -->
+
+<!-- PJG 007 0150 intable -->
+1&blank;
+<!-- PJG 0012 frnewline -->
+
+<!-- PJG 007 0150 intable -->
+11990
+<!-- PJG 0012 frnewline -->
+
+<!-- PJG 007 0150 intable -->
+11993
+<!-- PJG 0012 frnewline -->
+
+<!-- PJG 007 0150 intable -->
+11996
+<!-- PJG 0012 frnewline -->
+
+<!-- PJG 007 0150 intable -->
+11999
+<!-- PJG 0012 frnewline -->
+
+<!-- PJG 007 0150 intable -->
+12002
+<!-- PJG 0012 frnewline -->
+
+<!-- PJG 007 0150 intable -->
+12004
+<!-- PJG 0012 frnewline -->
+
+<!-- PJG 007 0152 intable -->
+
+<!-- PJG 0012 frnewline -->
+
+<!-- PJG 0012 frnewline -->
+
+<!-- PJG 0012 frnewline -->
+
+<!-- PJG /ITAG -->
+
+<!-- PJG ITAG l=01 g=1 f=4 -->
+Point 
+<!-- PJG 007 0104 intable -->
+3.55 
+<!-- PJG 007 0104 intable -->
+3.74 
+<!-- PJG 007 0104 intable -->
+3.93 
+<!-- PJG 007 0104 intable -->
+4.15 
+<!-- PJG 007 0104 intable -->
+4.28 
+<!-- PJG 007 0104 intable -->
+4.39
+<!-- PJG 0012 frnewline -->
+
+<!-- PJG 0012 frnewline -->
+Area 
+<!-- PJG 007 0104 intable -->
+0.18 
+<!-- PJG 007 0104 intable -->
+0.18 
+<!-- PJG 007 0104 intable -->
+0.18 
+<!-- PJG 007 0104 intable -->
+0.18 
+<!-- PJG 007 0104 intable -->
+0.18 
+<!-- PJG 007 0104 intable -->
+0.18
+<!-- PJG 0012 frnewline -->
+
+<!-- PJG 0012 frnewline -->
+Mobile 
+<!-- PJG 007 0104 intable -->
+89.22 
+<!-- PJG 007 0104 intable -->
+78.86 
+<!-- PJG 007 0104 intable -->
+83.60 
+<!-- PJG 007 0104 intable -->
+83.83 
+<!-- PJG 007 0104 intable -->
+81.35 
+<!-- PJG 007 0104 intable -->
+82.24
+<!-- PJG 007 0162 intable -->
+n,d
+<!-- PJG 0012 frnewline -->
+
+<!-- PJG 0012 frnewline -->
+
+<!-- PJG /ITAG -->
+
+<!-- PJG ITAG l=04 g=1 f=4 -->
+Total 
+<!-- PJG 007 0104 intable -->
+92.95 
+<!-- PJG 007 0104 intable -->
+82.78 
+<!-- PJG 007 0104 intable -->
+87.71 
+<!-- PJG 007 0104 intable -->
+88.16 
+<!-- PJG 007 0104 intable -->
+85.81 
+<!-- PJG 007 0104 intable -->
+86.81
+<!-- PJG /ITAG -->
+
+</TABLE>
+
+<!-- PJG 0012 frnewline -->
+
+<!-- PJG 0012 frnewline -->
+
+<!-- PJG 0012 frnewline -->
+
+<TABLE>
+
+<!-- PJG tableformat 7,L2,i1,s50,7,7,7,7,7,7 -->
+
+<!-- PJG 0012 frnewline -->
+
+<!-- PJG ITAG l=95 g=1 f=4 -->
+CO Emission Inventory Summary
+<!-- PJG 0012 frnewline -->
+
+<!-- PJG /ITAG -->
+
+<!-- PJG ITAG l=96 g=1 f=4 -->
+[Tons per day]
+<!-- PJG 0012 frnewline -->
+
+<!-- PJG 0012 frnewline -->
+
+<!-- PJG 007 0150 intable -->
+1&blank;
+<!-- PJG 0012 frnewline -->
+
+<!-- PJG 007 0150 intable -->
+11990
+<!-- PJG 0012 frnewline -->
+
+<!-- PJG 007 0150 intable -->
+11993
+<!-- PJG 0012 frnewline -->
+
+<!-- PJG 007 0150 intable -->
+11996
+<!-- PJG 0012 frnewline -->
+
+<!-- PJG 007 0150 intable -->
+11999
+<!-- PJG 0012 frnewline -->
+
+<!-- PJG 007 0150 intable -->
+12002
+<!-- PJG 0012 frnewline -->
+
+<!-- PJG 007 0150 intable -->
+12004
+<!-- PJG 0012 frnewline -->
+
+<!-- PJG 007 0152 intable -->
+
+<!-- PJG 0012 frnewline -->
+
+<!-- PJG 0012 frnewline -->
+
+<!-- PJG /ITAG -->
+
+<!-- PJG ITAG l=01 g=1 f=4 -->
+Point 
+<!-- PJG 007 0104 intable -->
+1.00 
+<!-- PJG 007 0104 intable -->
+1.05 
+<!-- PJG 007 0104 intable -->
+1.10 
+<!-- PJG 007 0104 intable -->
+1.15 
+<!-- PJG 007 0104 intable -->
+1.20 
+<!-- PJG 007 0104 intable -->
+1.22
+<!-- PJG 0012 frnewline -->
+
+<!-- PJG 0012 frnewline -->
+Area 
+<!-- PJG 007 0104 intable -->
+32.54 
+<!-- PJG 007 0104 intable -->
+32.58 
+<!-- PJG 007 0104 intable -->
+32.61 
+<!-- PJG 007 0104 intable -->
+32.65 
+<!-- PJG 007 0104 intable -->
+32.68 
+<!-- PJG 007 0104 intable -->
+32.70
+<!-- PJG 0012 frnewline -->
+
+<!-- PJG 0012 frnewline -->
+Mobile 
+<!-- PJG 007 0104 intable -->
+624.97 
+<!-- PJG 007 0104 intable -->
+497.74 
+<!-- PJG 007 0104 intable -->
+514.10 
+<!-- PJG 007 0104 intable -->
+531.51 
+<!-- PJG 007 0104 intable -->
+560.27 
+<!-- PJG 007 0104 intable -->
+583.27
+<!-- PJG 007 0162 intable -->
+n,d
+<!-- PJG 0012 frnewline -->
+
+<!-- PJG 0012 frnewline -->
+
+<!-- PJG /ITAG -->
+
+<!-- PJG ITAG l=04 g=1 f=4 -->
+Total 
+<!-- PJG 007 0104 intable -->
+658.51 
+<!-- PJG 007 0104 intable -->
+531.37 
+<!-- PJG 007 0104 intable -->
+547.81 
+<!-- PJG 007 0104 intable -->
+565.31 
+<!-- PJG 007 0104 intable -->
+594.15 
+<!-- PJG 007 0104 intable -->
+617.19
+<!-- PJG /ITAG -->
+
+</TABLE>
+
+<!-- PJG 0012 frnewline -->
+
+<!-- PJG 0012 frnewline -->
+
+<!-- PJG 0012 frnewline -->
+
+<!-- PJG ITAG l=83 g=1 f=4 -->
+B. Demonstration of Maintenance_Projected Inventories
+<!-- PJG 0012 frnewline -->
+
+<!-- PJG 0012 frnewline -->
+
+<!-- PJG 0012 frnewline -->
+
+<!-- PJG 0012 frnewline -->
+
+<!-- PJG 0012 frnewline -->
+
+<!-- PJG /ITAG -->
+
+<!-- PJG ITAG l=11 g=1 f=4 -->
+Total VOC, NO
+<!-- PJG /ITAG -->
+
+<!-- PJG ITAG l=11 g=5 f=2 -->
+X
+<!-- PJG /ITAG -->
+
+<!-- PJG ITAG l=11 g=1 f=1 -->
+, and CO emissions were projected from the 1990 base year out to 2004. These projected inventories were prepared in
+accordance with EPA guidance. Refer to EPA's TSD prepared for this notice for more in-depth details regarding the
+projected inventory for the Raleigh/Durham area.
+<!-- PJG 0012 frnewline -->
+
+<!-- PJG 0012 frnewline -->
+On January 12, 1994, the State of North Carolina submitted supplemental projection inventories. The State recalculated
+growth rates to include 1992 Vehicle Miles Traveled (VMT) data received in late 1993 from the North Carolina Department
+of Transportation. The projections indicate that VOC, NO
+<!-- PJG /ITAG -->
+
+<!-- PJG ITAG l=11 g=5 f=2 -->
+x
+<!-- PJG /ITAG -->
+
+<!-- PJG ITAG l=11 g=1 f=1 -->
+, and CO emissions remain under the 1990 baseline emission inventory from 1990 through 2004. EPA believes that the
+emissions projections demonstrate that the area will continue to maintain the O
+<!-- PJG /ITAG -->
+
+<!-- PJG ITAG l=11 g=5 f=2 -->
+3
+<!-- PJG /ITAG -->
+
+<!-- PJG ITAG l=11 g=1 f=1 -->
+ NAAQS because this area achieved attainment through VOC controls and reductions. The projected emission inventories
+were submitted in the SAMS format.
+<!-- PJG 0012 frnewline -->
+
+<!-- PJG 0012 frnewline -->
+
+<!-- PJG /ITAG -->
+
+<!-- PJG ITAG l=83 g=1 f=1 -->
+C. Verification of Continued Attainment
+<!-- PJG 0012 frnewline -->
+
+<!-- PJG 0012 frnewline -->
+
+<!-- PJG /ITAG -->
+
+<!-- PJG ITAG l=11 g=1 f=1 -->
+Continued attainment of the O
+<!-- PJG /ITAG -->
+
+<!-- PJG ITAG l=11 g=5 f=2 -->
+3
+<!-- PJG /ITAG -->
+
+<!-- PJG ITAG l=11 g=1 f=1 -->
+ NAAQS in the Raleigh/Durham area depends, in part, on the State of North Carolina's efforts toward tracking indicators
+of continued attainment during the maintenance period. The State of North Carolina's contingency plan is triggered
+by two indicators, an air quality violation or the periodic emissions inventory exceeding the baseline emission
+inventory by more than 10%. As stated in the maintenance plan, the NCDEHNR will be developing these periodic emissions
+inventories every three years beginning in 1996. These periodic inventories will help to verify continued attainment.
+Refer to the TSD prepared for this notice for a more complete discussion of the indicators the State is tracking and
+the contingency measures.
+<!-- PJG 0012 frnewline -->
+
+<!-- PJG 0012 frnewline -->
+
+<!-- PJG /ITAG -->
+
+<!-- PJG ITAG l=83 g=1 f=1 -->
+D. Contingency Plan
+<!-- PJG 0012 frnewline -->
+
+<!-- PJG 0012 frnewline -->
+
+<!-- PJG /ITAG -->
+
+<!-- PJG ITAG l=11 g=1 f=1 -->
+The level of VOC and NO
+<!-- PJG /ITAG -->
+
+<!-- PJG ITAG l=11 g=5 f=2 -->
+x
+<!-- PJG /ITAG -->
+
+<!-- PJG ITAG l=11 g=1 f=1 -->
+ emissions in the Raleigh/Durham area will largely determine its ability to stay in compliance with the O
+<!-- PJG /ITAG -->
+
+<!-- PJG ITAG l=11 g=5 f=2 -->
+3
+<!-- PJG /ITAG -->
+
+<!-- PJG ITAG l=11 g=1 f=1 -->
+ NAAQS in the future. Despite the State's best efforts to demonstrate continued compliance with the NAAQS, the ambient
+air pollutant concentrations may exceed or violate the NAAQS. Therefore, the State of North Carolina has provided
+contingency measures with a schedule for implementation in the event of a future O
+<!-- PJG /ITAG -->
+
+<!-- PJG ITAG l=11 g=5 f=2 -->
+3
+<!-- PJG /ITAG -->
+
+<!-- PJG ITAG l=11 g=1 f=1 -->
+ air quality problem. The plan contains a contingency to implement pre-adopted additional control measures such
+as Reasonable Available Control Technology (RACT) level control for not previously controlled VOC sources, Stage
+II vapor control for gasoline dispensing facilities, and new source permit requirements for VOC and NO
+<!-- PJG /ITAG -->
+
+<!-- PJG ITAG l=11 g=5 f=2 -->
+x
+<!-- PJG /ITAG -->
+
+<!-- PJG ITAG l=11 g=1 f=1 -->
+ emissions to include emission offsets, Lowest Achievable Emission Rate (LAER) level control, and permit applicability.
+These pre-adopted additional measures will be implemented within 45 days of the date the State certifies to EPA that
+the air quality data which demonstrates a violation of the O
+<!-- PJG /ITAG -->
+
+<!-- PJG ITAG l=11 g=5 f=2 -->
+3
+<!-- PJG /ITAG -->
+
+<!-- PJG ITAG l=11 g=1 f=1 -->
+ NAAQS is quality assured. The plan also contains a secondary trigger that will apply where no actual violation of the
+NAAQS has occurred. The secondary trigger is an exceedance of the baseline emissions inventory by more than 10%. On
+the occurrence of the secondary trigger, the State will commence, within 60 days of the trigger, regulation development
+and adoption of measures amending the State vehicle inspection and maintenance (I/M) program, extending coverage
+of the I/M program, extending and/or lowering vapor pressure limits for gasoline, extending geographic coverage
+of RACT controls, transportation control measures, and RACT level control for NO
+<!-- PJG /ITAG -->
+
+<!-- PJG ITAG l=11 g=5 f=2 -->
+x
+<!-- PJG /ITAG -->
+
+<!-- PJG ITAG l=11 g=1 f=1 -->
+. A complete description of these contingency measures and their triggers can be found in the TSD prepared for this
+notice. EPA finds that the contingency measures provided in the State of North Carolina submittal meet the requirements
+of section 175A(d) of the CAA.
+<!-- PJG 0012 frnewline -->
+
+<!-- PJG 0012 frnewline -->
+
+<!-- PJG /ITAG -->
+
+<!-- PJG /STAG -->

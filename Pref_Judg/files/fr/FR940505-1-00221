@@ -1,0 +1,355 @@
+ 
+<!-- PJG STAG 4702 -->
+
+<!-- PJG 0012 frnewline -->
+
+<TABLE>
+
+<!-- PJG tableformat 3,L2,i1,s50,xs55,10 -->
+
+<!-- PJG 0012 frnewline -->
+
+<!-- PJG 0012 frnewline -->
+
+<!-- PJG 0012 frnewline -->
+
+<!-- PJG ITAG l=95 g=1 f=1 -->
+
+<!-- PJG /ITAG -->
+
+<!-- PJG ITAG l=95 g=1 f=4 -->
+Proposed Optional Certification and In-Use Composite NMHC Standards for Enhanced ILEVs
+<!-- PJG 0012 frnewline -->
+
+<!-- PJG 007 0150 intable -->
+1Vehicle class 
+<!-- PJG 0012 frnewline -->
+
+<!-- PJG 007 0150 intable -->
+1Category 
+<!-- PJG 0012 frnewline -->
+
+<!-- PJG 007 0150 intable -->
+1Composite
+<!-- PJG /ITAG -->
+
+<!-- PJG ITAG l=95 g=5 f=1 -->
+a
+<!-- PJG /ITAG -->
+
+<!-- PJG ITAG l=95 g=1 f=1 -->
+ NMHC
+<!-- PJG 0012 frnewline -->
+
+<!-- PJG 007 0120 intable -->
+(g/mi)
+<!-- PJG 007 0152 intable -->
+
+<!-- PJG 0012 frnewline -->
+
+<!-- PJG 0012 frnewline -->
+
+<!-- PJG /ITAG -->
+
+<!-- PJG ITAG l=01 g=1 f=1 -->
+LDVs &amp; LDTs (0&hyph;3750 lbs LVW)
+<!-- PJG 007 0104 intable -->
+Enhanced
+<!-- PJG 007 0104 intable -->
+0.10
+<!-- PJG 0012 frnewline -->
+
+<!-- PJG 0012 frnewline -->
+
+<!-- PJG /ITAG -->
+
+<!-- PJG ITAG l=22 g=1 f=1 -->
+&blank;
+<!-- PJG 007 0104 intable -->
+Transitional
+<!-- PJG 007 0104 intable -->
+0.15
+<!-- PJG 0012 frnewline -->
+
+<!-- PJG 0012 frnewline -->
+
+<!-- PJG /ITAG -->
+
+<!-- PJG ITAG l=01 g=1 f=1 -->
+LDTs (3751&hyph;5750 lbs LVW)
+<!-- PJG 007 0104 intable -->
+Enhanced
+<!-- PJG 007 0104 intable -->
+0.13
+<!-- PJG 0012 frnewline -->
+
+<!-- PJG 0012 frnewline -->
+
+<!-- PJG /ITAG -->
+
+<!-- PJG ITAG l=22 g=1 f=1 -->
+&blank;
+<!-- PJG 007 0104 intable -->
+Transitional
+<!-- PJG 007 0104 intable -->
+0.17
+<!-- PJG /ITAG -->
+
+<!-- PJG QTAG 02 -->
+<!-- PJG /QTAG -->
+
+<!-- PJG 007 0162 intable -->
+s 
+<!-- PJG 0012 frnewline -->
+
+<!-- PJG 0012 frnewline -->
+
+<!-- PJG 0012 frnewline -->
+
+<!-- PJG 007 0163 intable -->
+2
+<!-- PJG ITAG l=21 g=1 f=1 -->
+&blank;Medium-duty vehicles (Test Weight (lbs)
+<!-- PJG /ITAG -->
+
+<!-- PJG ITAG l=21 g=5 f=1 -->
+b
+<!-- PJG /ITAG -->
+
+<!-- PJG ITAG l=21 g=1 f=1 -->
+)
+<!-- PJG /ITAG -->
+
+<!-- PJG QTAG 02 -->
+<!-- PJG /QTAG -->
+
+<!-- PJG 007 0163 intable -->
+0
+<!-- PJG 007 0162 intable -->
+s
+<!-- PJG 0012 frnewline -->
+
+<!-- PJG 0012 frnewline -->
+
+<!-- PJG ITAG l=01 g=1 f=1 -->
+0&hyph;3750
+<!-- PJG 007 0104 intable -->
+Enhanced
+<!-- PJG 007 0104 intable -->
+0.14
+<!-- PJG 0012 frnewline -->
+
+<!-- PJG 0012 frnewline -->
+
+<!-- PJG /ITAG -->
+
+<!-- PJG ITAG l=22 g=1 f=1 -->
+&blank;
+<!-- PJG 007 0104 intable -->
+Transitional
+<!-- PJG 007 0104 intable -->
+0.18
+<!-- PJG 0012 frnewline -->
+
+<!-- PJG 0012 frnewline -->
+
+<!-- PJG /ITAG -->
+
+<!-- PJG ITAG l=01 g=1 f=1 -->
+3751&hyph;5750
+<!-- PJG 007 0104 intable -->
+Enhanced
+<!-- PJG 007 0104 intable -->
+0.16
+<!-- PJG 0012 frnewline -->
+
+<!-- PJG 0012 frnewline -->
+
+<!-- PJG /ITAG -->
+
+<!-- PJG ITAG l=22 g=1 f=1 -->
+&blank;
+<!-- PJG 007 0104 intable -->
+Transitional
+<!-- PJG 007 0104 intable -->
+0.20
+<!-- PJG 0012 frnewline -->
+
+<!-- PJG 0012 frnewline -->
+
+<!-- PJG /ITAG -->
+
+<!-- PJG ITAG l=01 g=1 f=1 -->
+5751&hyph;8500
+<!-- PJG 007 0104 intable -->
+Enhanced
+<!-- PJG 007 0104 intable -->
+0.17
+<!-- PJG 0012 frnewline -->
+
+<!-- PJG 0012 frnewline -->
+
+<!-- PJG /ITAG -->
+
+<!-- PJG ITAG l=22 g=1 f=1 -->
+&blank;
+<!-- PJG 007 0104 intable -->
+Transitional
+<!-- PJG 007 0104 intable -->
+0.23
+<!-- PJG 0012 frnewline -->
+
+<!-- PJG 0012 frnewline -->
+
+<!-- PJG /ITAG -->
+
+<!-- PJG ITAG l=01 g=1 f=1 -->
+8501&hyph;10,000
+<!-- PJG 007 0104 intable -->
+Enhanced
+<!-- PJG 007 0104 intable -->
+0.19
+<!-- PJG 0012 frnewline -->
+
+<!-- PJG 0012 frnewline -->
+
+<!-- PJG /ITAG -->
+
+<!-- PJG ITAG l=22 g=1 f=1 -->
+&blank;
+<!-- PJG 007 0104 intable -->
+Transitional
+<!-- PJG 007 0104 intable -->
+0.25
+<!-- PJG 0012 frnewline -->
+
+<!-- PJG 0012 frnewline -->
+
+<!-- PJG /ITAG -->
+
+<!-- PJG ITAG l=01 g=1 f=1 -->
+10,001&hyph;14,000
+<!-- PJG 007 0104 intable -->
+Enhanced
+<!-- PJG 007 0104 intable -->
+0.22
+<!-- PJG 0012 frnewline -->
+
+<!-- PJG 0012 frnewline -->
+
+<!-- PJG /ITAG -->
+
+<!-- PJG ITAG l=22 g=1 f=1 -->
+&blank;
+<!-- PJG 007 0104 intable -->
+Transitional
+<!-- PJG 007 0104 intable -->
+0.30 
+<!-- PJG 007 0146 intable -->
+
+<!-- PJG /ITAG -->
+
+<!-- PJG ITAG l=22 g=5 f=1 -->
+a
+<!-- PJG /ITAG -->
+
+<!-- PJG ITAG l=22 g=1 f=1 -->
+Exhaust NMHC emissions plus evaporative hydrocarbon emissions determined according to the equation presented
+earlier in Appendix I.A.2.a. 
+<!-- PJG 007 0146 intable -->
+
+<!-- PJG /ITAG -->
+
+<!-- PJG ITAG l=22 g=5 f=1 -->
+b
+<!-- PJG /ITAG -->
+
+<!-- PJG ITAG l=22 g=1 f=1 -->
+Test weight is the average of curb weight and GVWR.
+<!-- PJG /ITAG -->
+
+</TABLE>
+
+<!-- PJG 0012 frnewline -->
+
+<!-- PJG 0012 frnewline -->
+
+<!-- PJG ITAG l=11 g=1 f=1 -->
+EPA is proposing that the enhanced ILEV fleet program be applicable to only vehicles purchased by covered fleet operators
+in the South Coast due to the fact that even with all the additional emission controls being proposed today, the South
+Coast is still not projected to in compliance with the ozone NAAQS by 2010. EPA requests comment on extending the enhanced
+ILEV fleet program to the other two FIP areas. EPA also requests comment on whether the program should be revised to
+ensure that vehicle turnover does not become artificially low in response to the enhanced ILEV fleet program but rather
+remains at or near current levels.
+<!-- PJG 0012 frnewline -->
+
+<!-- PJG 0012 frnewline -->
+
+<!-- PJG /ITAG -->
+
+<!-- PJG ITAG l=83 g=1 f=1 -->
+B. Enhanced In-Use Compliance Program for Heavy-duty Vehicles
+<!-- PJG 0012 frnewline -->
+
+<!-- PJG 0012 frnewline -->
+
+<!-- PJG /ITAG -->
+
+<!-- PJG ITAG l=81 g=1 f=1 -->
+1. Applicability
+<!-- PJG 0012 frnewline -->
+
+<!-- PJG 0012 frnewline -->
+
+<!-- PJG /ITAG -->
+
+<!-- PJG ITAG l=11 g=1 f=1 -->
+EPA is proposing that the enhanced heavy-duty vehicle program be applied to all new engines used in on-highway vehicles
+over 14,000 pounds GVWR, beginning in model year 1999. All such heavy-duty vehicles offered for sale or registered
+exclusively in California will need to comply with the enhanced vehicle standards described in the sections which
+follow. (As described in the section on 49-state vehicles, importation of heavy-duty vehicles not complying with
+the requirement of this program is prohibited after 1999.) Requirements that apply to multi-state registered vehicles
+are discussed later, in section B(7). The enhanced vehicle program would, as an option, allow manufacturers to certify
+engines for use in MDVs of GVWR between 8,500 and 14,000 pounds to engine-based standards, similar to the approach
+taken in California's program. However, such vehicles would need to meet all of the requirements of the enhanced heavy-duty
+vehicle program described in the sections below.
+<!-- PJG 0012 frnewline -->
+
+<!-- PJG 0012 frnewline -->
+The application of the enhanced heavy-duty vehicle program on a statewide basis is considered necessary because
+of the large volume of heavy-duty vehicle traffic flow into and out of the areas covered by the FIP. Any program requiring
+usage of enhanced vehicles only in the FIP areas would be extremely difficult to implement and enforce. Also, EPA is
+concerned about the emissions from HDVs from other states operating in the FIP areas, and about the potential for an
+increase in this interstate traffic due to higher costs associated with enhanced HDVs. This issue is addressed in
+section B(6).
+<!-- PJG 0012 frnewline -->
+
+<!-- PJG 0012 frnewline -->
+As with light-duty vehicles, EPA is interested in the possibility of achieving earlier inventory reductions by phasing
+in new vehicle emission standards sooner. The inventory reduction achieved by earlier implementation could reduce
+the rate at which heavy-duty vehicle turnover would have to occur. Therefore, in addition to requesting comment on
+the program proposed below, EPA requests comment on an earlier phase-in, requiring a portion of the 1998 model year
+heavy-duty vehicles sold to meet the enhanced vehicle requirements.
+<!-- PJG 0012 frnewline -->
+
+<!-- PJG 0012 frnewline -->
+
+<!-- PJG /ITAG -->
+
+<!-- PJG ITAG l=81 g=1 f=1 -->
+2. Authority
+<!-- PJG 0012 frnewline -->
+
+<!-- PJG 0012 frnewline -->
+
+<!-- PJG /ITAG -->
+
+<!-- PJG ITAG l=11 g=1 f=1 -->
+As explained above, in promulgating a FIP under section 110(c) of the Act, EPA may take any actions that the state could
+take and EPA believes that it, acting on behalf of California in the context of a FIP, may adopt a motor vehicle program
+or supplement California's own motor vehicle program provided that EPA's actions would satisfy the criteria of section
+209(b) for a waiver of federal preemption. These criteria are discussed above in the context of the enhanced light-duty
+vehicle program. 
+<!-- PJG /ITAG -->
+
+<!-- PJG /STAG -->
