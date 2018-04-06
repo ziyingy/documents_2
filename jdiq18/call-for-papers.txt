@@ -1,0 +1,90 @@
+CALL FOR PAPERS
+Special issue on Reproducibility in Information Retrieval
+ACM Journal of Data and Information Quality (ACM JDIQ)
+https://protect-au.mimecast.com/s/bZ83B4i8oap7Sl?domain=jdiq.acm.org
+
+
+** Guest editors **
+
+Nicola Ferro, University of Padua, Italy, ferro@dei.unipd.it
+Norbert Fuhr, University of Duisburg-Essen, Germany, norbert.fuhr@uni-due.de
+Andreas Rauber, Technical University of Vienna, Austria, rauber@ifs.tuwien.ac.at
+
+
+** Aim **
+
+Information Retrieval is a discipline that has been strongly rooted in
+experimentation since its inception. Experimental evaluation has always
+been a strong driver for IR research and innovation, and these activities
+have been shaped by large scale evaluation campaigns such as TREC, CLEF,
+NTCIR and FIRE.
+
+IR systems are getting more and more complex. They need to cross language
+and media barriers; they span from unstructured, to semi-structured to
+highly structured data; and they are faced with diverse and complex
+user information needs, search tasks, and societal challenges. As
+a consequence, evaluation and experimentation, which has remained a
+fundamental element, has in turn become increasingly sophisticated
+and challenging.
+
+In this context, repeatability, reproducibility, and generalizability
+of experiments and results cannot be taken for granted. Indeed we need
+to emphasize these aspects as  key requirements, if we wish to continue
+to reliably and durably advance research and technology in the field. In
+turn, we need to actively pursue them as a core part of our experimental
+methodology and practice.  In this special issue of JDIQ, we aspire
+to provide an overview of innovative research at the intersection of
+information retrieval and data quality, from theory to practice, with
+a focus on challenges, solutions, and experiences in reproducibility of
+IR experimental results.
+
+
+** Topics **
+
+Specific topics within the scope of the call include, but are not limited
+to, the following:
+- Analysis of reproducibility challenges in system-oriented evaluation.
+- Analysis of reproducibility challenges in user-oriented evaluation.
+- General reproducibility frameworks for IR.
+- Lessons learned in reproducing third-party experiments.
+- Reproducibility of query results.
+- Reproducibility challenges on private or proprietary data.
+- Reproducibility challenges on ephemeral data, like streaming data, tweets,
+etc.
+- Reproducibility challenges on online experiments, e.g., A/B testing.
+- Reproducibility in evaluation campaigns.
+- Evaluation infrastructures and Evaluation as a Service (EaaS).
+- Experiment data management, data curation, and data quality.
+- Data models, semantic or not, for IR experimental data.
+- Reproducible experimental workflows: tools and experiences.
+- Quality of IR experimental data.
+- Data Citation: citing experimental data, dynamic data sets, samples, and
+statistical analyses.
+
+
+** Expected contributions **
+
+We welcome the following two types of contributions:
+- Research manuscripts reporting mature results [25+ pages].  
+- Experience papers that report on lessons learned from addressing
+specific issues towards improved quality and reproducibility of
+experimental results [12+ pages plus an optional appendix].
+
+If this is an extension of prior published work, then submitted
+manuscripts must contain at least 30% new material, and the significant
+new contributions must be clearly identified in the introduction.
+
+Submission guidelines with Latex (preferred)
+or Word templates are available here:
+https://protect-au.mimecast.com/s/Jb1zBJSXQkdMcM?domain=jdiq.acm.org
+
+
+** Important dates **
+
+- Initial submission:			Friday September 8, 2017
+		[extended to October 6 in second post on 30 August]
+- First review:				Thursday December 7, 2017
+- Revised manuscripts:  		Friday March 9, 2018
+- Second review:        		Friday May 11, 2018
+- Camera-ready manuscripts:  		Friday July 13, 2018
+- Publication:             		Late October 2018

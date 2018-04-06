@@ -1,0 +1,39 @@
+\begin{algorithmic}[1]
+\State
+  {\bf{function}} $\var{decode\_packedANS\_block}(\var{bytes}[], B, \ell)$:
+\State $\var{state} \leftarrow \mbox{final encoding \var{state} for this block}$
+\State
+  $b \leftarrow 0$
+    \Comment{offset within \var{bytes}}
+\For{$j \leftarrow 0$ {\bf{to}} $B-1$}
+  \State
+    $\var{syms}[j] \leftarrow
+	\var{decode\_ANS}(\var{bytes}, b, \var{ANSframe}[\ell], \var{state})$
+	  %% \Comment{Decode ANS values in reverse order}
+\EndFor
+\For{$j \leftarrow 0$ {\bf{to}} $B-1$}
+  \If{$\var{syms}[j] \le  2^8$} 
+    \State {\bf{continue}}
+      \Comment{$\var{syms}[j]$ is now final}
+  \EndIf
+  \State $\var{syms}[j]
+	\leftarrow ((\var{syms}[j]-2^8) {\mbox{\,\tt{<<}}\,} 8)
+	+ \var{bytes}[b{\mbox{\tt{++}}}]$
+  \If{$\var{syms}[j] \le 2^{16}$} 
+    \State {\bf{continue}}
+      \Comment{$\var{syms}[j]$ is now final}
+  \EndIf
+  \State $\var{syms}[j]
+	\leftarrow ((\var{syms}[j]-2^{16}) {\mbox{\,\tt{<<}}\,} 8)
+	+ \var{bytes}[b{\mbox{\tt{++}}}]$
+  \If{$\var{syms}[j] \le 2^{24}$} 
+    \State {\bf{continue}}
+      \Comment{$\var{syms}[j]$ is now final}
+  \EndIf
+  \State $\var{syms}[j]
+	\leftarrow ((\var{syms}[j]-2^{24}) {\mbox{\,\tt{<<}}\,} 8)
+	+ \var{bytes}[b{\mbox{\tt{++}}}]$
+\EndFor
+\State
+  {\bf return} $\var{syms}[0\ldots B-1]$
+\end{algorithmic}

@@ -1,0 +1,55 @@
+\begin{tabular}{cc c SSS c ScS[round-precision=3]}
+\toprule
+\multirow{2}{*}{Metric}
+	& \multirow{2}{*}{Correlation}
+		&& \multicolumn{3}{c}{Count of cases}
+					&& {\multirow{2}{*}{Kendall's $\tau$}}
+						& {\multirow{2}{*}{$p$}}
+							& {\multirow{2}{*}{%
+							   Average $\rbpp$}}
+\\
+\cmidrule{4-6}
+		&&& {${}<0.8$}
+			& {${}<0.9$}
+				& {${}\ge0.9$}
+\\
+\midrule
+\ap
+	& Kendall's $\tau$
+		&&23
+			&110
+				&116
+					&&0.659174413217799
+						&<0.0001
+							&0.957666666666667
+
+\\
+\ap
+	& \rbo
+		&&36
+			&90
+				&123
+					&&0.594574046712544
+						&< 0.0001
+							&0.953469879518072
+\\
+\ndcg
+	& Kendall's $\tau$
+		&&58
+			&131
+				&60
+					&&0.508680820946417
+						&< 0.0001
+							&0.95625702811245
+\\
+\ndcg
+	& \rbo
+		&&99
+			&95
+				&55
+					&&0.459399736169317
+						&< 0.0001
+							&0.943232931726908
+\\
+\bottomrule
+\end{tabular}

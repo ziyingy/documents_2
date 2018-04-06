@@ -1,0 +1,76 @@
+\section{Conclusions}
+\label{sec-conclusions}
+
+We have used a number of approaches to allow estimations to be made
+of the reliability of the scores developed by recall-based
+effectiveness metrics.
+The standard approach to estimate the reliability of a
+system-versus-system comparison is to use a paired $t$-test, on the
+assumption that any imprecision in the scores will show up as a
+higher $p$-value, and hence lower confidence in the outcome of the
+experiment.
+The results presented in Section~\ref{sec-measurement} show that this
+presumption is not necessary reliable.
+In experiments in which uniform-depth pooling arrangements are
+systematically degraded, it is not the case that $p$-values uniformly
+rise to indicate a loss of confidence.
+Rather, in a surprising fraction of cases, the $p$-values
+{\emph{decrease}} as the metric measurement is made less precise.
+
+We have also considered the residuals that are computed when a
+utility-based metric is used, focusing on {\rbp}.
+We have demonstrated that the system orderings induced by
+recall-based metrics such as {\ap} and {\ndcg} can be quite closely
+approximated by {\rbp} using relatively high persistence constants
+$\rbpp\approx0.98$.
+When $\rbpp=0.98$, pooling to depth $d=100$ gives rise to residuals
+that account for $\rbpp^d \approx 0.13$ of the weight of the metric;
+and hence, if the metric score summed over the within-pool documents
+is (say) $0.3$, then the unjudged documents might lift the score to
+$0.43$.
+In practice such large jumps are uncommon, but as we have shown in
+Section~\ref{sec-measurement}, they can definitely occur as
+shallow-pool judgments are extended to deeper-pool evaluations.
+
+In the absence of the bounds provided by residuals, we have sought to
+anticipate the behavior of recall-based metrics as judgment pools are
+deepened, and demonstrated that {\ap} and {\ndcg} scores tend to
+decrease as uncertainty is removed.
+We also sought a connection between the extent of any particular
+$\ap$ or $\ndcg$ score change as the judgments were deepened, and the
+size of the approximating $\rbp$ residual associated with the
+shallower evaluation, but found only weak correlations.
+This lack might be caused by factors that we have not controlled for
+in our analysis, or it might be that residuals -- like statistical
+$p$-values, as we have also considered in our experiments -- have
+little connection with metric consistency.
+
+Overall, our experiments have demonstrated an important limitation of
+the current IR evaluation process: statistical significance tests do
+not consistently reflect the degree of uncertainty in per-topic point
+estimates that can arise from the presence of unjudged documents in a
+ranked results list.
+Moreover, based on the relationships we have documented between
+high-$\rbpp$ $\rbp$ scores and recall-based metrics such as $\ap$ and
+$\ndcg$, those uncertainties can be non-trivial.
+When weighted-precision metrics such as $\rbp$ are used, we thus
+argue that residuals should always be presented in addition to
+statistical test values, as a secondary indicator of score
+consistency.
+For recall-based metrics, where score behavior is less predictable,
+no clear relationship with residuals was established.
+Nevertheless, as an adjunct to statistical significance tests, we
+still recommend that researchers provide information in regard to a
+high-$\rbpp$ $\rbp$ residuals, to help the reader assess the
+reliability of their results.
+Where such residuals cannot be computed for some reason, we recommend
+as an absolute minimum that authors be encouraged to report the
+fraction of unjudged documents among the top $k$ documents for each
+topic, for some appropriate value of $k$ (perhaps the limit on the
+evaluation dopth, such as when $\ndcg@k$ is being computed), as a
+routine part of their experimental results presentation.
+
+These steps will substantially enhance awareness of the issues
+caused by finite-judgment processes, and promote clearer
+understanding of the measurement uncertainties that may be present in
+effectiveness-based experimental evaluation results.

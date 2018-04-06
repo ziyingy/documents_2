@@ -1,0 +1,532 @@
+\section{Effectiveness Metrics}
+\label{sec-metrics}
+
+We now summarize a number of topics that form the background of our
+experimental evaluation.
+
+\subsection{Effectiveness measurement in ranked lists}
+
+A very wide range of effectiveness metrics have been proposed for
+assigning a single numeric score to a ranked list of judged
+documents.
+Traditional set-based metrics such precision (the fraction of
+documents retrieved that are relevant) and recall (the fraction of
+relevant documents retrieved) have fallen out of favor, with
+top-weighted mechanisms that are better suited to ranked sets now
+preferred.
+Two broad classes have emerged, those that are {\emph{recall-based}},
+and those that are {\emph{utility-based}}; see {\citet{moffat13airs}}
+for more in regard to these categories, and for a set of seven
+further orthogonal properties that allow the contrasting properties
+of different metrics to be considered.
+
+Dominant among the first recall-based group of metrics are
+{\emph{average precision}} ($\ap$) and {\emph{normalized discounted
+cumulative gain}} ($\ndcg$) {\citep{jk02acmtois}}.
+{\citet{sakai04ntcir}} describes another recall-based metric, the
+$\qmeasure$, which is a weighted blend of $\ap$ and $\ndcg$; and
+$\rprec$, the precision at depth $R$, where $R$ is the number of
+relevant documents for that topic, is a fourth recall-based metric.
+{\citet{moffat13airs}} brings together details of how all of these
+are computed.
+
+In the second category, the utility-based group, there are similarly
+a range of metrics.
+Rank-biased precision ($\rbp$) is one typical example of this genre
+{\citep{mz08acmtois}}.
+Given a {\emph{persistence parameter}}, denoted here as $\rbpp$,
+$\rbp$ is computed as a weighted sum of relevance at ranks.
+In particular, if the relevance ranking is an ordered list
+$\rvec=\langle r_1, r_2, r_3,\ldots\rangle$, with $0\le r_i\le 1$ the
+(binary or fractional-valued) relevance associated with the document
+at depth $i$ in the ranking, then in an ideal sense,
+\begin{equation}
+\rbp(\rvec, \rbpp)
+	= (1-\rbpp)\cdot\sum_{i=1}^{\infty} r_i \cdot \rbpp^{(i-1)} \,.
+	\label{eqn-rbp-ideal}
+\end{equation}
+This definition assumes that relevance values are known for all
+documents, which is impractical.
+However, a key attribute of $\rbp$ -- and all other
+weighted-precision metrics -- is that when the judgments are
+incomplete, it is possible to compute a {\emph{residual}}, the sum of
+the weights associated with unjudged documents.
+If $J$ is the set of ranks at which documents have been ranked, then
+the ideal computation of Equation~\ref{eqn-rbp-ideal} is replaced by
+\begin{equation}
+\rbp(\rvec, \rbpp, J)
+	= (1-\rbpp)\cdot\sum_{i\in J} r_i \cdot \rbpp^{(i-1)} \,,
+	\label{eqn-rbp-inpractice}
+\end{equation}
+and the residual is computed as
+\begin{equation}
+\rbpres(\rvec, \rbpp, J)
+	= (1-\rbpp)\cdot\sum_{i\not\in J} \rbpp^{(i-1)} \,.
+	\label{eqn-rbp-residual}
+\end{equation}
+We will make extensive use of residuals as a way of quantifying the
+measurement uncertainty.
+For example, if some set of judgments $J$ and relevance sequence
+$\rvec$ are such that $\rbp(\rvec,\rbpp)=0.2$ and
+$\rbpres(\rvec,\rbpp)=0.001$, the score of $0.2$ is relatively ``final'' and
+cannot shift by much if more of the documents were to be judged.
+On the other hand, if $\rbpres(\rvec,\rbpp)=0.1$, then care needs to
+be taken when interpreting the corresponding $\rbp$ score -- it might
+become substantially larger than $0.2$ when more judgments are
+carried out.
+
+The residual is the maximal additional score that could be achieved
+if every unjudged document $i\not\in J$ was fully relevant and had
+$r_i=1$.
+If $X$ is the true, or ``full knowledge'' $\rbp$ value according to
+Equation~\ref{eqn-rbp-ideal} and assuming that the relevance ranking
+is completely defined, then Equations~\ref{eqn-rbp-inpractice}
+and~\ref{eqn-rbp-residual} can be used to bound $X$ when the
+judgments are incomplete:
+\[
+	\rbp(\rvec,\rbpp, J)
+	\le
+	X
+	\le
+	\rbp(\rvec,\rbpp, J) + \rbpres(\rvec,\rbpp, J) \, .
+\]
+In particular, if $J=\{1,2,\ldots,d\}$ as a result of pooled-to-$d$
+relevance judgments, then the properties of the geometric sequence
+provide an upper bound on the $\rbp$ residual:
+$\rbpres(\rvec,\rbpp,J)\le\rbpp^d$ {\citep{mz08acmtois}}.
+
+Other utility-based metrics of interest are {\emph{reciprocal rank}}
+(\rr), {\emph{expected reciprocal rank}} (\err) {\citep{cmzg09cikm}},
+and precision itself.
+{\citet{mbst17acmtois}} describe further weighted-precision metrics
+and the assumptions that they correspond to in terms of a user
+sequentially scanning an ordered list of document summaries.
+Residuals can be computed for all of these metrics by taking $r_i=1$
+for $i\not\in J$, and these similarly provide an upper bound on the
+uncertainty in the measured score.
+
+In related work, {\citet{robertson06cikm}} proposes that the
+geometric mean of per-topic scores be preferred to the arithmetic
+mean, and suggests the use of $\gmap$ (see also {\citet{rm09adc}}) as
+an aggregate of $\ap$ scores.
+Note that $\gmap$ is not a metric in its own right, and is an
+aggregation mechanism rather than a scoring mechanism, and the same
+over-all-topics system ordering can be generated by defining
+$\log\ap$ to be the ``metric'', and then aggregating in the usual
+manner by computing the arithmetic mean.
+
+
+\subsection{Comparing effectiveness metrics}
+
+Needless to say, effectiveness metrics behave differently in terms of
+the pairwise system relativities they induce, and hence also in terms
+of the multi-system orderings that they generate.
+{\emph{Shallow}} metrics are strongly top-focused, and place
+substantial emphasis on relevance values near the head of the
+ranking.
+{\emph{Deep}} metrics place less emphasis at the head of the ranking,
+so as to be able to spread influence further down the ranking.
+That means that when large numbers of documents are relevant,
+recall-based metrics are automatically ``deep''; on the other hand,
+for topics that have smaller pools of relevant documents,
+recall-based metrics provide shallower evaluations.
+Compared to this, $\rr$ is a shallow metric regardless of the number
+of relevant documents, and, as an extreme example, precision at depth
+$1000$ is always a very deep metric.
+
+One of the features of $\rbp$ is that the choice of the parameter
+$\rbpp$ gives rise to different effective depths to the evaluation,
+varying from very shallow to very deep.
+In particular, the expected viewing depth in the $\rbp$ user model is
+given by $1/(1-\rbpp)$, which is $2$ when $\rbpp=0.5$, is $10$ when
+$\rbpp=0.9$, and is $100$ when $\rbpp=0.99$.
+That means that for information needs such as navigational web search
+a small value of $\rbpp$ might be appropriate, matching the user's
+expectations from the search and likely behavior during the search.
+In other applications, for example when a large pool of relevant documents is
+required in response to an informational query, a high value of
+$\rbpp$ is likely to be more suitable.
+In the TREC-8 Ad-Hoc Track relevance judgments that were mentioned
+earlier, the topics exhibit exactly this type of diversity, ranging
+between $6$ relevant documents and $347$ relevant documents, with a
+median of $70.5$ and a mean of $94.6$.
+For the 1998 TREC-7 experiments {\citep{vh98trec}}, also involving
+$50$ topics, the range was similarly $7$ to $361$ relevant documents
+per topic, with a median of $60$ and a mean of $93.5$.
+
+%% mulga: awk -f count-rel.awk qrels.401-450.trec8.adhoc | col 5 | histo
+%%     6-   21 |1111111111
+%%    22-   37 |1111
+%%    38-   53 |11111
+%%    54-   69 |111111
+%%    70-   85 |1111
+%%    86-  101 |1
+%%   102-  117 |111
+%%   118-  133 |1111
+%%   134-  149 |11
+%%   150-  165 |111
+%%   166-  181 |111
+%%   182-  197 |
+%%   198-  213 |1
+%%   214-  229 |1
+%%   230-  245 |
+%%   246-  261 |
+%%   262-  277 |
+%%   278-  293 |1
+%%   294-  309 |1
+%%   310-  325 |
+%%   326-  341 |
+%%   342-  347 |1
+%% 50 values; min=6.0; max=347.0; mean=94.6; median=70.5; sd=79.2
+%% mulga: awk -f count-rel.awk qrels.351-400.trec7.adhoc | col 5 | histo
+%%     7-   23 |1111111111
+%%    24-   40 |11111111
+%%    41-   57 |111111
+%%    58-   74 |111
+%%    75-   91 |111
+%%    92-  108 |11111
+%%   109-  125 |11
+%%   126-  142 |1
+%%   143-  159 |111
+%%   160-  176 |
+%%   177-  193 |11
+%%   194-  210 |11
+%%   211-  227 |1
+%%   228-  244 |
+%%   245-  261 |1
+%%   262-  278 |1
+%%   279-  295 |
+%%   296-  312 |
+%%   313-  329 |
+%%   330-  346 |1
+%%   347-  361 |1
+%% 50 values; min=7.0; max=361.0; mean=93.5; median=60.0; sd=84.4
+
+When only one system's rankings are available, there is no reason --
+nor any sensible way of doing it -- to compare metrics on a per-topic
+or averaged basis, since it is clear that the scores that the metrics
+give are incomparable.
+For example, there need not be any connection between the $\ap$ score
+for a particular run for a particular topic and the $\rbp$ score using
+some value of $\rbpp$; both are alternative functions that take the
+particular ranked list and the relevance value associated with each
+item in the list as an inputs, and produce a single numerical score as
+an output.
+The difference in scores arises due to the set of underlying
+assumptions of how these fundamental inputs should be considered to
+give an understanding of search effectiveness, and the choices that are
+made to operationalize these assumptions.
+%But when multiple systems have all processed the set of topics, the
+%situation changes.
+%Section~\ref{sec-measurement} explores that idea further.
+
+\subsection{Comparing system scores across topic sets}
+\label{sec-comparing-system-scores-across-topics}
+
+In a typical information retrieval experiment, the key comparison of
+interest is the relative effectiveness of a {\emph{pair}} of systems
+where one is considered to be a {\emph{baseline}} system, and the
+other is an {\emph{experimental}} system that incorporates some
+change to the retrieval process.
+For a chosen test collection, and a chosen effectiveness metric (or
+sometimes a set of metrics), scores are first calculated for each
+topic.
+These individual scores are then aggregated, usually using the
+arithmetic mean, into a single overall effectiveness score for each
+system, and the system that achieves the higher score can be viewed
+as being ``better'' than the other system.
+
+The two mean effectiveness scores are often analyzed further using a
+statistical significance test, to give the researcher confidence that
+the observed differences are not due to chance alone.
+A range of statistical tests have been used in IR research, and there
+has been ongoing debate about which are the most
+suitable~\citep{smucker07sigir}.
+In a recent systematic review of IR literature appearing in ACM SIGIR
+and TOIS from 2006--2015, {\citet{sakai17sigir}} reported that the
+paired $t$-test is by far the most widely used procedure (66\% and 61\%
+of papers in SIGIR and TOIS that used a statistical test) followed by
+the Wilcoxon signed rank test (20\% and 23\%, respectively).
+
+The paired $t$-test is used to evaluate the null hypothesis that two
+dependent samples represent two populations with the same mean
+values~\citep{sheskin97book}; rejecting the null hypothesis therefore
+gives confidence that the two samples are likely to be from populations
+with different mean values.
+In test collection-based IR experiments, a paired test is typically
+appropriate since the same set of search topics is evaluated using both
+systems that are to be compared.
+The test procedure results in a $p$-value which gives the probability
+of observing the obtained result, or something more extreme, under the
+null hypothesis.
+This value can then be compared to a pre-determined significance
+level, and if the $p$-value is less than or equal to this level, the
+outcome is deemed to be statistically significant~\citep{sakai17sigir}.
+Overall, the smaller the $p$-value, the higher the confidence that the
+measured difference is real rather than occurring by chance.
+
+It is important to note that a significance test is carried out based
+on per-topic performance scores derived using a particular
+effectiveness metric.
+If the same pair of systems is re-evaluated using a different metric,
+the outcome of the significance test may be different.
+This observation leads to one dimension by which effectiveness metrics
+can be compared, their {\emph{discriminative power}}, which is defined
+as the proportion of all possible pairwise comparisons that were found
+to be statistically significant at a particular significance
+threshold~\cite{sakai06sigir}.
+If one metric leads to a greater proportion of observed significant
+differences, it is said to have greater discriminative power than
+the other.
+
+\subsection{Comparing system rankings}
+
+Pooled judgments usually arise as a consequence of experimentation in
+which a suite of systems are implicitly or explicitly being compared.
+The judgments are used to compute per-topic per-system metric scores,
+and then those scores are averaged across topics to obtain system
+average scores.
+Finally, those mean system scores can be used to order the systems
+from ``best'' to ``worst''.
+If some metric $\metric{M}_1$ gives one ordering of the systems, and
+a second metric $\metric{M}_2$ gives rise to another ordering, it is
+then natural to ask how alike or different $\metric{M}_1$ and
+$\metric{M}_2$ are in terms of the system orderings that they induce.
+
+We employ two different methods for comparing pairs of system
+orderings.
+The first approach is to compute the well-known Kendall's $\tau$
+coefficient.
+Each matched pair of items in the two $n$-element lists is either
+{\emph{concordant}}, and appears in the same relative order in both
+lists, or is {\emph{discordant}}, and appears reversed.
+Kendall's $\tau$ subtracts the number of discordant pairs from the
+number of concordant pairs, and then normalizes by $n(n-1)/2$, to
+obtain a value between $-1$ (one list is the reverse of the other) and
+$+1$ (the two lists have the elements in exactly the same order).
+Kendall's $\tau$ treats all pairs identically, and places as much
+emphasis on disorder at the bottom of the lists as it does at the top.
+%% {\citet{ss07sigir}} express some reservations about the use of Kendall's
+%% $\tau$, but their methodology seems likely to have been flawed.
+%% {\falk{A recent paper by {\citet{ferro17acmtois}} investigates
+%% correlations of system orderings, and claims to support the
+%% observation from {\citet{ss07sigir}} (but, as with the previous
+%% paper, the claim is based on empirical observation after removing
+%% part of the data set, so more than one factor may have changed, as
+%% the original paper already cautions...)}}
+
+The second correlation we compute is the {\emph{rank-biased overlap}}
+(\rbo) between the lists {\citep{wmz10acmtois}}.
+Like its companion $\rbp$, $\rbo$ is a top-weighted measure, and
+depending on the exact value used for its parameter $\rbpp$, places
+increased emphasis on swaps that occur near the top of the lists.
+In addition, $\rbo$ has a range of other properties
+{\citep{wmz10acmtois}}.
+Because it is an overlap measure, $\rbo$ is zero when the two lists
+are disjoint, and $1.0$ when they are identical.
+In terms of interpretation, the parameter $\rbpp$ is again a
+persistence adjustment, and $\rbo$ computes the expected fraction of
+items observed to appear in both lists by a randomized user when
+their probability of examining (only) prefixes of length $x$ in the
+lists is given by $\mbox{Pr}(x=d) = (1-\rbpp)\rbpp^{d-1}$.
+
+We note that various alternative top-weighted correlation measures
+have been proposed, including the {\emph{AP correlation}} ($\tauap$),
+which is based on a probabilistic interpretation of the Average
+Precision effectiveness metric~{\citep{yas08sigir}}.
+However, in a recent empirical analysis of the factors that influence
+the correlation between evaluation metrics, {\citet{ferro17acmtois}}
+concludes that while $\tauap$ and Kendall's $\tau$ might lead to
+different absolute correlation values for system rankings, both lead
+to consistent assessments in this context; we therefore report
+Kendall's $\tau$ in our experimental results.
+%% {\alistair{Note and dismiss other approaches:
+%% {\citet{carterette09sigir}}.}}
+
+\subsection{Reliability of pooling and effectiveness measurement}
+
+Observing that it is not feasible to obtain exhaustive human
+relevance judgments for a query over a large collection of
+documents, {\citet{spark1975report}} proposed a technique called
+{\emph{pooling}} whereby independent searches should be carried out
+to obtain more broadly based relevance judgments that would be
+available for a single system.
+In evaluation campaigns such as TREC, it is usual for a set of
+participating systems to be considered, and the union of their
+returned documents to be judged; where this number exceeds the
+available budget for judging, the depth to which the contributing
+systems can recommend documents is constrained to a fixed
+rank~\citep{vh05trecbook}.
+The pooling process ensures that all systems that contribute to the
+pool are treated consistently, since they all have an equal
+opportunity to contribute to the set of documents that will be
+judged.
+However, when the same test collection is used to evaluate a new
+system that did not contribute to the pool, it is likely that some
+number of previously unjudged documents will be returned.
+The conservative default approach in IR experimentation is to treat
+any unjudged documents as if they are not relevant.
+However, this introduces a potential bias against new systems.
+There has therefore been extensive investigation into the reusability
+of test collections.
+
+An analysis of the early TREC collections was carried out
+by {\citet{zobel98sigir}} through ``leave one out'' experiments,
+where a system was re-evaluated after first removing any documents
+that were uniquely contributed to the pool by that system,
+effectively making them unjudged.
+The analysis led to the conclusion that existing test collections can
+be used to fairly evaluate new systems, while cautioning that the
+absolute performance of a system may be underestimated, and warning
+that researchers should consider the number of unjudged documents
+that new systems return.
+
+{\citet{bv04sigir}} investigated the impact of incomplete judgments on
+the newer TREC-8, TREC-10 and TREC-12 test collections by progressively
+removing a randomly selected percentage of the full available qrels.
+The analysis demonstrated that as judgments become less complete, the
+Kendall's $\tau$ correlations between system orderings obtained using
+the full and reduced judgment sets begin to deteriorate.
+The authors also proposed a new metric, {\bpref}, and demonstrated that
+it retains a higher correlation than other metrics such as {\ap} as
+relevance judgments are removed.
+
+{\citet{sakai07sigir}} proposed the use of {\emph{condensed}}
+versions of the standard {\qmeasure}, {\ap} and {\ndcg} metrics,
+where unjudged documents are removed from the ranked list before the
+metric scores are calculated, and demonstrated that these are more
+effective than {\bpref} in terms of both Kendall's $\tau$ rank
+correlation and discriminative power.
+This analysis was extended by {\citet{sk08inforet}} to further TREC
+and NTCIR collections, showing that the condensed metrics should be
+preferred over their non-condensed original formulations where
+unjudged items are present in ranked lists, and again concluded that
+they outperform {\bpref}, as well as {\rbp}, in terms of
+discriminative power and correlation with full-judgment system
+rankings.
+Like the earlier work of {\citet{bv04sigir}},
+{\citeauthor{sk08inforet}} employ relevance judgments that are
+randomly reduced to as little as $10$\% of their original size,
+measuring the effect of the reduction on system score correlation and
+metric discrimination power.
+
+%% \falk{...
+%% Which of the many, many other papers cited below deal specifically
+%% with unjudged documents?
+%% I think we should mention those in a sentence or two, since that's
+%% directly related to this work...
+%% } 
+%% 
+%% \falk{...
+%% And then just briefly outline some of the other issues with test
+%% collections (have attempted that below)...
+%% And then ignore the rest!}
+
+In addition to the issue of unjudged documents when re-using a test
+collection, other factors that may potentially bias results have also
+been studied.
+As test collections continued to increase in size, concerns about the
+pool being a representative sample arose again, with
+{\citet{bdsv07irj}} reporting a favoring of documents that contain
+query terms in the title, and presenting a risk that new systems that
+use wholly different retrieval approaches may not be evaluated fairly
+with such a test collection.
+
+A further factor that may impact on the reliability of test
+collection-based evaluation of IR systems are the relevance
+judgments themselves.
+Relevance is a complex concept that may include static aspects such
+as the topical content of a document, and dynamic aspects such
+as novelty~{\citep{mizzaro07jasist}}.
+To avoid these complexities, relevance judgments for test
+collections typically focus on the topical ``aboutness'' relation
+between a query and a document, and require that each document be
+judged independently on its own merits.
+Despite this, human assessors may still disagree on whether
+particular documents are in fact relevant for an information need.
+{\citet{voorhees2000ipm}} investigated the impact of such
+disagreements on system effectiveness evaluations by comparing the
+extent to which system orderings are affected when using different
+sets of relevance judgments made by expert assessors and by
+students.
+The analysis demonstrated that although individual relevance
+judgments may vary, system rankings are robust to such differences,
+with a Kendall's $\tau$ correlation of around $0.9$.
+Attributes of the human assessors -- in particular, whether they
+authored a search topic statement or not, and their level of
+knowledge about the search topic -- have also been found to impact on
+the consistency of test collections {\citep{bcstvy08sigir}}.
+
+We note that a range of alternative approaches for the construction
+of test collections have been proposed in the literature, including:
+minimal test collections, where documents are selected for judging
+based on their ability to discriminate systems
+{\citep{cas06sigir,mwz07sigir,carterette07sigir}}; using machine
+learning classification techniques trained on judged documents to
+predict the relevance of unjudged documents {\citep{bcys07sigir}};
+and using online learning techniques to determine which documents are
+most likely to be relevant and should therefore be
+judged~{\citep{aps03cikm}}.
+Recent work by {\citet{lpb17ipm}} and
+{\citet{llpzh17sac,lplpzh17ecir}} has continued to explore
+non-uniform pooling strategies.
+However, uniform fixed-depth pooling remains in wide use, and was the
+basis for the construction of the TREC collections that we use here.
+Reflecting that pattern, in our experiments in this work we use
+fixed-depth pooling only, with uniform selection to a range of depths
+$d'$ as a way to deterministically create reduced judgment sets, rather
+than via random removal.
+
+There has also been work undertaken in terms of metric evaluation
+depth, as distinct from judgment pooling depth {\citep{wmz10evia}}.
+For utility-based metrics such as {\rbp}, relative system scores tend
+to be stable as the evaluation is deepened, because scores are
+non-decreasing.
+But for truncated recall-based metrics, extended evaluation beyond
+the pooling depth may lead to substantial changes in system ordering
+{\citep{lmc16irj}}.
+
+%\alistair{Remaining things that might get cited somewhere in this section
+%or might get dropped:
+% FNS: now dropped!
+%{\citet{wcc12cikm}} 2012,
+%{\citet{soboroff14evia}} 2014,
+%{\citet{fs15ecir}} 2015,
+%{\citet{brs15ictir}} 2015,
+%{\citet{tdc15irj}} 2015,
+%{\citet{park16adcs}} 2016,
+% covered above {\citet{zobel98sigir}} 1998,
+% about evaluation measure stability, not directly relevant
+%{\citet{bv00sigir}} 2000, 
+% covered above {\citet{voorhees2000ipm}} 2000,
+% about topic set size and its relation to retrieval error, not
+% directly relevant{\citet{vb02sigir}} 2002, 
+% alternative approach to pooling, covered above{\citet{aps03cikm}} 2003,
+% poster pointing out that if there few relevant documents (for e.g.
+% topic distillation) then more topics are needed to achieve evaluation
+% stability {\citet{soboroff04sigir}} 2004,
+% looks at t-tests vs Wilcoxon tests, and suggests including assessor
+% effort when comparing measures, not directly relevant {\citet{sz05sigir}} 2005,
+% covered above {\citet{cas06sigir}} 2006,
+% covered above {\citet{bdsv07irj}} (first version was in SIGIR 2006),
+% extension of minimal test collections also adding in probability of relevance, 
+% covered above {\citet{carterette07sigir}} 2007,
+% covered above {\citet{bcys07sigir}} 2007,
+% covered above {\citet{sakai07sigir}} 2007,
+% covered above {\citet{bcstvy08sigir}} 2008,
+% covered above {\citet{sk08inforet}} 2008,
+% sounds possibly relevant but not available through a free PDF, bad
+% luck for them! {\citet{ya08kis}} 2008,
+% assessor errors, not directly relevant {\citet{cs10sigir}} 2010,
+%% {\citet{wmz10evia}} 2010,, done
+%% {\citet{lplpzh17ecir}} 2017, done
+%% {\citet{lmc16irj}} 2016, done
+%% {\citet{lpb17ipm}} 2017, done
+%}
+
+Given this extensive range of prior work as context, we arrive at a
+critical question that we consider in this paper: with utility-based
+metrics, the residual provides an (albeit, pessimistic) upper limit
+on the extent of measurement uncertainty in a computed system score.
+Is there any such equivalent that can be inferred in connection with
+recall-based metrics such as {\ap} and {\ndcg}?

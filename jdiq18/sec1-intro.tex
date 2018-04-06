@@ -1,0 +1,95 @@
+\section{Introduction}
+\label{sec-intro}
+
+One way of evaluating and comparing the effectiveness of document
+retrieval systems is via a batch (or {\emph{offline}}) evaluation.
+Batch evaluation approaches make use of three resources: a set of
+documents (the {\emph{collection}}) felt to be a representative
+subset of the larger search context; a set of topics (detailed
+{\emph{information need statements}}, or terse bag-of-word
+{\emph{queries}}) felt to be representative subset of the larger
+search context; and a set of {\emph{relevance judgments}} (referred
+to as {\emph{qrels}}, for short) which indicate which of the
+documents are relevant to which of the queries
+{\citep{sanderson10fntir}}.
+Relevance status is determined by human assessors, and is typically
+measured using an ordinal scale with two (``binary'') or more
+(``graded'') relevance levels.
+
+When the collection is large, it is all but impossible to form
+comprehensive judgments, and normally only a subset of the documents
+are judged for each of the topics.
+One common way for a subset to be identified is via a process known
+as {\emph{pooling}}, where a number of separate (and possibly also
+independent) retrieval systems all execute the queries, and the union
+of their top-$d$ answer sets is formed, for some suitable value of $d$.
+For example, in the NIST-sponsored TREC-8 experiments carried out in
+1999, a total of $129$ systems
+%% (of which $116$ were ``automatic'' runs, and another $13$ were ``manual'')
+were involved (with some research groups submitting multiple
+systems), pools to depth $d=100$ were formed using a subset of $71$
+of those runs relative to a set of $50$ topics, and a total of
+$86{,}830$ judgments were carried out {\cite{vh99trec}}.
+Of that average of $1736.6$ judgments made per topic, an average of
+$94.6$ documents per topic were deemed relevant by the NIST
+assessors, or around $5.4$\% of judged documents.
+
+The relevance judgments formed by pooling are then used as an input
+to one or more {\emph{effectiveness metrics}}, mechanisms that take a
+ranked list of documents and a qrels file, and compute a numeric
+score that indicates the relative quality of that ranking.
+The critical expectation is that rankings that are ``good'' will
+receive high scores; rankings that are ``bad'' will receive low
+scores; and hence that systems can compared based on their average
+scores, or based on the use of a statistical test in regard to their
+computed scores across the set of topics.
+But such comparisons between systems are vulnerable to a number of
+possible confounds, including whether or not the chosen effectiveness
+metrics correspond to attributes of the rankings that are observable
+by the users of the retrieval system and hence correspond to user
+satisfaction; whether or not the process for eliciting judgments is
+stable and consistent; and so on.
+
+Our investigation in this paper revisits the question of whether or
+not the pooling process yields relevance judgments that are
+sufficiently comprehensive to allow recall-based metrics to be
+accurately computed.
+Such metrics are usually regarded as being ``deep'', with influence
+accrued from a relatively high number of documents in each ranking.
+Estimating the reliability of such evaluations is an area of
+investigation that has a long history, discussed in more detail in
+Section~\ref{sec-metrics}.
+The lens we employ here to shed new light on this question is that of
+{\emph{residuals}}, the fraction of the metric weight that is
+associated with unjudged documents when a weighted-precision metric
+such as {\rbp} (rank-biased precision) {\citep{mz08acmtois}} is used
+to score the rankings.
+It is not possible to compute residuals for recall-based metrics such
+as {\ap} and {\ndcg} directly, because they are not monotonically
+bounded in the presence of uncertainty. That is, as additional documents are
+judged the score of such metrics may increase or
+decrease~\citep{mz08acmtois}.
+However, it {\emph{is}} possible to ask a two-part question: (1)
+which value (or values) of the {\rbp} parameter $\rbpp$ yield system
+orderings closest to the system ordering associated with $\ap$ and/or
+$\ndcg$, and how close are those system orderings; and then, (2) how
+big are the $\rbp$ residuals when that value of $\rbpp$ is used.
+That is, we estimate the residuals, or score uncertainties,
+associated with deep recall-based metrics, via a ``best match''
+$\rbp$ parameter.
+
+To create varying residual levels and hence varying levels of
+measurement uncertainty, we compute shallow pools as subsets of the
+standard relevance judgments, and compute the effect increased
+uncertainty has on both metric score and on system separability via
+standard statistical tests.
+Our results show that the $p$-values associated with (for example)
+the Student $t$-test are uncorrelated with measurement uncertainty as
+represented by weighted-precision residuals, leading to the
+conclusion that low $p$-values alone should be regarded as only
+partial evidence of any particular system relativity.
+That is, we argue that claims made in regard to system performance
+should be accompanied by residual measurements via a matched
+weighted-precision metric, to provide reassurance that the results
+are unlikely to be vulnerable to uncertainty caused by unjudged
+documents.

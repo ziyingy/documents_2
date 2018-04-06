@@ -1,0 +1,887 @@
+\section{Measurement of Reliability}
+\label{sec-measurement}
+
+\subsection{Datasets and methodology}
+
+We make extensive use of resources that have been compiled by the
+NIST-sponsored TREC initiative, see {\citet{vh05trecbook}} for
+details of this long-running endeavor.
+In each round of TREC experimentation a set of system runs were
+developed by research groups at universities and commercial
+organizations, using a defined collection of documents and a set of
+$50$ or more topics, and submitted for evaluation.
+Some subset of those runs were then pooled to create judgments, with
+the subset typically selected so as to ensure that all of the
+research groups that had created the runs had approximately the same
+number of runs contributing to the pool.
+Those judgment were then used to compute effectiveness scores for
+each system for each topic, and then aggregate (usually arithmetic
+mean) scores for each system.
+A number of metrics were used in connection with each round of
+experimentation, notably including average precision (\ap) in all
+three of the newswire collections we use here: the TREC-7 Ad-Hoc
+Track and topics 351--400; the TREC-8 Ad-Hoc Track and topics
+401--450; and the TREC-13 Robust Track and topics 301--450, plus
+topics 601--700, excluding topic 672.\footnote{There were no relevant
+documents identified by the pooling process for this topic, which
+means that recall-based effectiveness metrics cannot be computed.}
+
+Table~\ref{tbl-datasets} lists a range of parameters for each of
+those three different TREC experimentation rounds, including the
+number of topics, the total number of systems, the number of those
+that were pooled, the average number of documents judged per topic,
+and the average number of those judgments in which the document was
+determined to be relevant.
+Note that in each experimentation cycle around $5$--$6$\% of
+documents judged were deemed to be relevant.
+Note also that the 2004 TREC13 Robust Track judgments were an amalgam
+of fresh judgments that year and judgments compiled in several
+previous years {\citep{voorhees04trec,voorhees04trecrobust}}, and is
+why two of the entries are marked as ``n/a''.
+
+In all of these three experimental rounds, the per-system final
+reports provide effectiveness scores in terms of recall, precision at
+a range of depths, $\rprec$, and $\ap$.
+The latter, aggregated across topics via the arithmetic mean, is
+probably regarded as being the dominant assessment.
+In the 2004 TREC-13 Robust Track, an adjusted $\gmap$ metric
+{\citep{robertson06cikm}} was also considered, with
+$\epsilon=0.00001$ added to each raw score before the averaging
+process, and then subtracted again from the computed average
+{\citep{voorhees04trecrobust}}.
+
+\begin{table}[t]
+\centering
+\input{tbl-datasets.tex}
+\mycaption{TREC collections and qrels used in experimentation.
+The values for documents judged and relevant documents are per-topic
+averages.
+The second to last row gives the average (across systems and topics)
+rank at which the first unjudged document appears in each run.
+The last row gives the number of systems that generated a run of at
+least $50$ documents for every topic {\emph{and}} had every document
+judged down to at a rank of at least depth $50$.
+\label{tbl-datasets}}
+\aftertabspace
+\end{table}
+
+Noting the observations of {\citet{ymt16airs}}, we re-sorted all of
+the submitted runs associated with these three tracks, with the
+correct ordering also generated when documents scores were represented
+using exponential notation (column five in each run).
+Ties on score were decided according to the assigned rank at the
+time the run was constructed (column four in the submitted file) with
+a sort by document identifier the final step to ensure that the
+ordering was deterministic.{\footnote{{\tt{sort -k1,1n -k5,5gr -k4,4n
+-k3,3}}, with the final ``{\tt{-k3,3}}'' component not a deciding
+factor in any of the runs.}}
+This ensures that documents are considered in order of decreasing
+score as specified by the implementors of each system.
+Re-sorting resulted in different orderings for some subset of the
+topics for the great majority of systems, for all three collections.
+The numbers presented in Table~\ref{tbl-datasets} and in the
+remainder of this work are in all cases with respect to the re-sorted
+runs, and all further references to run and rank cut-offs within runs
+are based strictly on the resultant ordering, with no further
+attention paid to the scores and ranks embedded in the runs provided
+by the participating research groups.
+
+The last row of Table~\ref{tbl-datasets} reports the number of
+{\emph{deeply-judged systems}}, defined as systems for which every
+topic in the test set gave rise to a run containing at least fifty
+documents, and where as a minimum every document in the first fifty
+was judged for every topic.
+The discrepancy between this value and the nominal number of systems
+pooled as reported in the track overviews
+{\citep{vh98trec,vh99trec,voorhees04trecrobust}} arises because some
+of the pooled systems generated a short run of fewer than fifty
+documents for at least one of the topics.
+The zero value reported in this dimension for the TREC-13 collection
+is a consequence of the multi-year process used to create the qrels
+file -- clearly it was not possible for the TREC-13 systems to
+contribute to the prior-year pools that generated the judgments for
+the $200$ carry-over topics.
+When restricted to the $49$ new topics created, pooled, and judged in
+2004, there are $52$ deeply-judged systems (and a total of $42$ systems
+that contributed to the pool).
+%% voorhees04trecrobust.pdf:
+%% "The new topics were judged by creating pools from three runs per
+%% group and using the top 100 documents per run."
+
+Where a run of length $k$ had every document in it judged (including
+in the case of short runs), the document at rank $k+1$ was deemed to
+be the first one unjudged for the purposes of computing the average
+depth of the first unjudged document values, shown in the
+second-to-last row.
+
+\subsection{Behavior of RBP}
+
+\begin{figure}
+\centering
+\includegraphics[scale=\graphscale]%
+	{graphs/17-09-05/trec7_score_res_noF.pdf}
+\includegraphics[scale=\graphscale]%
+	{graphs/17-09-05/trec2004_score_res_noF.pdf}
+\mycaption{TREC-7 (left) and TREC-13 Robust (right), distribution of
+{\rbp} scores and residuals as a function of $\rbpp$.
+Each box/whisker element reflects the set of scores attained over all
+systems and all topics for that value of $\rbpp$.
+The horizontal scale is determined by the logarithm of the expected
+depth, $1/(1-\rbpp)$, with the labeled values of $\rbpp$
+corresponding respectively to expected depths of $2$, $5$, $10$,
+$20$, $50$, $100$, and $200$ documents.
+\label{fig-rbpscore}}
+\end{figure}
+
+Figure~\ref{fig-rbpscore} shows typical patterns of $\rbp$ scores and
+residuals for two TREC collections.
+Each plotted element represents the range of $\rbp$ scores (blue) and
+$\rbp$ residuals (red) over all systems and all topics.
+When $\rbpp$ is small, the evaluation is shallow and focused on a
+relatively small number of documents at the top of the rankings, and
+hence the residuals are also small.
+Measured $\rbp$ scores are also quite high, because on average the
+systems are able to bring relevant documents into the top few
+positions in the ranking.
+
+However, as the parameter $\rbpp$ increases, the extent of
+uncertainty in the measurements also increases, because a smaller
+fraction of the assessment weight is near the top of each ranking,
+and hence a smaller fraction of the documents involved in the
+assessment were pooled and hence judged.
+At the same time, the $\rbp$ scores decrease, partly because of the
+unavailability of all of the needed judgments, and partly because the
+systems are not as good at placing relevant documents into position
+(say) $50$ as they are into position one.
+Unsurprisingly, in all three of the collections (the TREC-8 graph is
+similar), the residual exceeds the measured $\rbp$ score once
+$\rbpp\approx 0.99$ and the expected depth of the evaluation is
+approximately $100$, the pooling depth.
+
+There is no sense in which the $\rbp$ residual should be thought of
+as being a ``confidence interval''.
+Rather, it is an optimistic estimate of how much the measured
+score could increase were all unjudged documents to be relevant.
+A more measured estimate, but perhaps still a relatively generous
+one, would be to suppose that if the unjudged documents were to be
+judged, they would be found relevant at roughly the same $5$--$6$\%
+rate as the documents in the pooled set.
+If this were the case, then a reasonable supposition might be that
+the ``true'' $\rbp$ score was similarly $2.5$--$3$\% larger than the
+measured score when $\rbpp=0.99$, since that is (broadly speaking)
+the cross-over point at which score and residual are equal.
+{\citet{lmc17sigir}} have explored mechanisms for generating
+estimates of relevance for unjudged documents, based on their
+positions in runs and the relevance labels of the judged documents in
+the same runs.
+
+\subsection{Estimating {\rbpp} for other metrics}
+
+Given that the $\rbp$ residual can be bounded above if both the
+parameter $\rbpp$ and the pooling depth are known
+{\citep{mz08acmtois}}, a natural question is to ask whether there are
+particular values of the $\rbp$ $\phi$ parameter that correspond
+closely to other metrics -- in particular, to recall-based ones.
+
+\begin{figure}[t]
+\centering
+\includegraphics[scale=\graphscale]%
+	{graphs/17-09-05/trec7_res_tau.pdf}
+\includegraphics[scale=\graphscale]%
+	{graphs/17-09-05/trec2004_res_tau.pdf}
+\mycaption{TREC-7 (left) and TREC-13 Robust (right), Kendall's $\tau$
+correlation between the final system orderings induced by $\rbp$ and
+a range of $\rbpp$ parameters, and six other metrics, plotted as a
+function of the average $\rbp$ residual (see
+Figure~\ref{fig-rbpscore}).
+Each point corresponds to one value of $\rbpp$, from $0.5$ on the
+left through to $0.995$ on the right, and with corresponding expected
+evaluation depths varying from $2$ to $200$, respectively, noted
+across the top of each of the two graphs.
+%% \alistair{If bored: go to {\url{http://colorbrewer2.org/}} to get a
+%% mix of colors that work well together.}
+\label{fig-metrics-vs-rbp}}
+\end{figure}
+
+The two panes in Figure~\ref{fig-metrics-vs-rbp} plot values of
+Kendall's $\tau$, comparing the overall system orderings created by a
+range of standard reference metrics with the orderings generated when
+$\rbp$ is used to score the systems, across a range of $\rbp$
+parameters.
+The horizontal axis reflects the mean $\rbp$ residual across systems
+and topics, with each marked point on each curve corresponding to one
+of the values of $\phi$ plotted in Figure~\ref{fig-rbpscore}.
+The corresponding expected viewing depths are listed across the top
+of the graph.
+The region of highest Kendall's $\tau$ for each of the plotted curves
+shows the range of $\rbpp$ for which $\rbp$ yields a system ordering
+closest to that generated by the corresponding reference metric.
+For example, $\rbp$ is most like $\precision@10$ when
+$\phi\approx0.9$ and the expected viewing depth in the $\rbp$ user
+model is $10$.
+The four recall-based metrics that are plotted -- $\rprec$,
+$\recall@1000$, $\ap@1000$, and $\ndcg@1000$ -- all have deeper
+evaluation patterns, and have their maximum correlation with $\rbp$
+when $\rbpp$ is higher, with several of them peaking when
+$\rbpp=0.99$ (with the same pattern evident in a third plot for
+TREC-8, not included here).
+%% \alistair{Would also like to be able to say: Similar overall patterns
+%% of behavior arose when $\rbo$ was used as the rank correlation
+%% coefficient.}
+
+The relationships shown in Figure~\ref{fig-metrics-vs-rbp} are not
+unexpected.
+That $\rr$ and $\precision@10$ are shallow effectiveness metrics, and
+that $\ap$ and $\ndcg$ are deep effectiveness metrics, is well
+understood.
+It is also known that high values of $\rbpp$ correspond to deep
+evaluation {\citep{mz08acmtois}}.
+Nevertheless, Figure~\ref{fig-metrics-vs-rbp} provides evidence to
+suggest how deep {\ap}, {\ndcg}, and {\rprec} actually are; and more
+importantly, shows that ``{\ap}-like'', ``{\ndcg}-like'', and
+``{\rprec}-like'' evaluations correspond to (typically) $\rbpp$
+values of (looking at the upper axis) $0.98$ or more, and hence
+$\rbp$-based residuals of (looking at the lower axis) $0.1$ or more.
+
+{\citet{voorhees2000ipm}} analyzed the effect that using different
+human relevance judgments can have on system ranking correlations.
+Comparing judgments from TREC assessors versus university students,
+the results showed Kendall's $\tau$ correlations in the range from
+$0.87$ to $0.95$ between rank orderings of systems that participated in
+TREC-6 for different combinations of judgments.
+This further suggests that the level of correlation observed in our
+data is high, and that any remaining discrepancies are likely to be
+no greater than what might be observed by taking into account human
+variation in relevance assessments.
+%Voorhees concluded
+%that a value of $\tau \ge 0.9$ was an indication that the rankings
+%should be considered equivalent, which a level of $\tau < 0.8$ was an
+%indication of noticeable changes in rankings. Based on these thresholds,
+%aside from Recall@1000 on the TREC-7 collection, it is
+%possible to find a $\phi$ value which leads to a maximum correlation
+%between RBP and each other metric where rankings would be considered to
+%be not noticeably changed.
+
+\subsection{RBP parameter variation as a function of $R$}
+
+In Figure~\ref{fig-metrics-vs-rbp} the system orderings used to
+compute the correlations were based on mean scores, computed by
+averaging each of two metrics across the same set of topics.
+That led to a single $\tau$ correlation score as each pair of metrics
+was compared, where $\rbp$ becomes a ``different'' metric each time
+$\rbpp$ is changed.
+But it is also possible to generate a separate system ordering for
+each topic in the test collection, and compute per-topic correlation
+coefficients.
+
+
+\begin{figure}
+\centering
+\begin{tabular}{cc}
+\includegraphics[scale=\graphscale]%
+	{graphs/17-09-08/trec2004_rel_p.pdf}
+&
+\includegraphics[scale=\graphscale]%
+	{graphs/17-09-08/trec2004_rel_p_RBO.pdf}
+\\[-1.5ex]
+\scriptsize (a) Choosing $\rbp$'s $\rbpp$ to maximize $\tau$ relative to $\ap$
+	& \scriptsize (b) Choosing $\rbp$'s $\rbpp$ to maximize $\rbo$ relative to $\ap$
+\\[0.5ex]
+\includegraphics[scale=\graphscale]%
+	{graphs/17-09-08/trec2004_rel_p_NDCG.pdf}
+&
+\includegraphics[scale=\graphscale]%
+	{graphs/17-09-08/trec2004_rel_p_NDCG_RBO.pdf}
+\\[-1.5ex]
+\scriptsize (c) Choosing $\rbp$'s $\rbpp$ to maximize $\tau$ relative to $\ndcg$
+	& \scriptsize (d) Choosing $\rbp$'s $\rbpp$ to maximize $\rbo$
+		relative to $\ndcg$
+\\[0.5ex]
+\end{tabular}
+\mycaption{TREC-13 Robust, relationship between $R$, the number of
+known relevant documents (horizontal axis) for a topic, and the
+per-topic value of $\rbpp$ that maximizes a rank-correlation
+coefficient, for two different correlation coefficients and two
+different recall-based metrics.
+In the top row, the reference metric is $\ap$ in both panes; in the
+second row it is $\ndcg$.
+Kendall's $\tau$ is used as the correlation coefficient in the left
+column, and $\rbo$ is used in the right column.
+One point is plotted for each of the $249$ topics in each of the four
+panes.
+\label{fig-rbpparam-vs-R}}
+\end{figure}
+
+Figure~\ref{fig-rbpparam-vs-R} shows the results of carrying out such
+an experiment.
+To generate each of the four scatter plots, a reference metric was
+selected, $\ap$ or $\ndcg$, and then the topics were processed one by
+one.
+For each topic, all of the systems were scored using the chosen
+metric and the relevance judgments, and a system ranking generated
+based on those single-topic scores.
+The same systems were then scored for that topic using $\rbp$, with a
+search over the $\rbpp$ parameter space carried out from
+$\rbpp=0.500$ to $\rbpp=0.999$ in $0.001$ increments.
+Across the values of $\rbpp$, the one that gave the system ordering
+with the greatest correlation score relative to the ordering of the
+reference metric was noted, together with the correlation
+coefficient.
+In the case of ties of coefficient, the smallest maximizing $\rbpp$
+was the one that was noted.
+The set of maximizing $\rbpp$ values (vertical axis) was then plotted
+as a function of the number of relevant documents for that topic
+(horizontal axis), with the strength of each individual correlation
+indicated by the color of the plotted dot.
+The four panes in the figure cover two metrics, $\ap$ and $\ndcg$,
+and two correlation coefficients, Kendall's $\tau$ and $\rbo$.
+
+The clear pattern that emerges from the top two graphs, based on
+seeking to ``fit'' against {\ap}, is that when $R$, the number of
+known relevant documents for that topic, is small, then the ``most
+similar'' $\rbp$-based ordering is also achieved when $\rbpp$ is
+relatively small.
+Conversely, when $R$ is large for a topic, then the $\rbp$-based
+system ordering is closest to that of $\ap$ when $\rbpp$ is large.
+A similar outcome results when {\ndcg} is used as the reference
+metric (the two lower panes), with, for the most part, small values
+of $R$ best fitted by choosing small values of the $\rbp$ parameter
+$\rbpp$.
+Table~\ref{tbl-tautautau} summarizes the plotted relationships,
+giving Kendall's $\tau$ correlation coefficients and significance
+values for the four sets of points plotted in
+Figure~\ref{fig-rbpparam-vs-R} (the $\tau$ of the $\tau$'s); together
+with a summary of the correlation score distribution, in effect
+counting the number of plotted points of each color in each of the
+four graphs.
+Table~\ref{tbl-tautautau} also lists the average (over all $249$
+topics) value of $\rbpp$ for each of the four situations reported.
+
+\begin{table}
+\centering
+\input{tbl-tautautau.tex}
+\caption{Strength of correlations between two recall-based reference
+metrics and $\rbp$ when $\rbpp$ is chosen to maximize the
+relationship on a per-topic basis, using the $249$ topics of the
+TREC-13 Robust collection.
+The final column shows the average (over topics) value of maximizing
+$\rbpp$ for that configuration of metric and correlation measure.
+\label{tbl-tautautau}}
+\end{table}
+
+Note that these outcomes are not intended to be construed as an
+argument that {\rbp} should be used with a value of $\rbpp$ that is
+determined on a topic by topic basis as a function of $R$.
+That would then suggest -- as is the case with all recall-based
+metrics -- a user model in which the user was aware of $R$ prior to
+having seen any of the ranking, which is unrealistic.
+Rather, the user's primary influence in determining their behavior is
+the total volume of relevance they seek to identify, the relevance
+target $T$ proposed by {\citet{mts13cikm,mbst17acmtois}}.
+Our purpose in this section has been to show that if we wish to
+closely match the behavior of recall-based metrics with utility-based
+ones so as to be able to estimate residual-like error limits for the
+recall-based metrics, we should do so based on a knowledge of $R$.
+
+
+\subsection{Adding uncertainty via reduced qrels}
+
+The next experiment adds imprecision to each system-topic score, by
+supposing that only a subset of the judgment pool is available when
+evaluating each topic.
+We are interested in exploring the connection between residual -- and
+by implication, the fidelity of the measured score -- and the ability
+of the measurement regime to separate systems.
+One way of quantifying the latter is via statistical test, and the
+$p$-value that is then generated.
+
+To create reduced judgment sets that equally disadvantage all
+systems, we start with the set of deeply-judged systems (see
+Table~\ref{tbl-datasets}), and apply a set of artificial pooled
+judgment depths of $d'=\{10,20,30,40,50\}$.
+For example, in the case of the TREC-7 collection, the runs of the
+$65$ deeply-judged systems, across $50$ topics, were then top-$10$
+filtered, top-$20$ filtered, and so on through until top-$50$
+filtered, and in each of the five cases, those selected documents'
+entries (and only those entries) were extracted from the NIST qrels
+file to make a reduced qrels file.
+The same procedure was also applied to the TREC-8 and TREC-13
+submitted system runs and qrels.
+The result is a set of qrels files in which all pooled systems were
+given demonstrably equal opportunity to provide documents and have
+them judged.
+
+\begin{table}[t]
+\centering
+\input{tbl-reduced.tex}
+\mycaption{Reduced qrels files when the deeply-judged runs (see
+Table~\ref{tbl-datasets}) and their top-$d'=50$ ranks are pooled.
+The last four rows provide aggregates across all topics and all
+systems, covering, respectively: the number of distinct
+topic-document pairs in the reduced pool; the number of those
+documents that were relevant according to the NIST qrels; the number
+of those that were members of the pool as a result of being nominated
+by a single system; and the number of those ``single nomination''
+documents that were judged relevant.
+The TREC-13 columns refer to topics $651$--$700$ (minus topic $672$) only.
+\label{tbl-reduced}}
+\aftertabspace
+\end{table}
+
+Table~\ref{tbl-reduced} provides information in connection with
+the $d'=50$ qrels files.
+For example, in the case of TREC-7, the top-$50$ for each of the
+$65\times50$ system-topic combinations
+($65\times50\times50=162{,}500$ documents in total) resulted in a
+reduced set of $33{,}870$ unique documents that retained their labels
+into the reduced qrels file; of those, $3121$ documents had been
+previously judged to be relevant.
+Each qrels file was then further processed to identify the number of
+systems that had nominated each of the documents.
+The number of documents with only a single nomination (over the set
+of deeply-judged systems) is also shown in Table~\ref{tbl-reduced},
+along with the number of that subset that were judged relevant.
+Note that in the case of the TREC-13 Robust Track, this experiment
+was restricted to the matching set of judged topics, $651$--$700$,
+not including topic $672$.
+The smaller number of deeply-judged systems for this collection means
+that there is a correspondingly smaller number of documents judged
+per topic.
+
+\begin{table}[t]
+\centering
+\input{tbl-relodds.tex}
+\mycaption{Probability of a document being judged relevant, as a
+function of the number of systems that nominated it (the document's
+{\emph{multiplicity}}) into a pool formed to a depth of $d'=30$.
+Documents that appear in the top-$30$ of more than half the pooled
+systems (the $33$+ band for TREC-7 and TREC-8) have a higher than
+$50$:$50$ chance of being relevant.
+The TREC-13 columns refer to topics $651$--$700$ only.
+\label{tbl-relodds}}
+\aftertabspace
+\end{table}
+
+Table~\ref{tbl-relodds} decomposes a different reduced qrels file,
+with $d'=30$, according to the number of different systems
+that nominated each document; and calculates conditional
+probabilities of relevance as observed in the reduced qrels file.
+There is a clear pattern here that the greater the number of systems
+that had any particular document in their top $d'=30$, the greater
+the chance of that document being deemed relevant by the NIST
+assessors.
+If only a single system nominates a document, the observed
+probability of being relevant is around $3$\%, but if $33$ or more of
+the pooled systems include that document in their top-$50$, that
+probability is around $50$\%.
+Similar data for $d'=10$ and $d'=20$ shows even higher conditional
+probabilities, while for $d'=40$ and $d'=50$ the probabilities are
+lower compared to those for $d'=30$.
+The same trend of probabilities also occurs for other cutoffs $d'$.
+
+\begin{figure}
+\centering
+\includegraphics[scale=\graphscale]%
+        {graphs/17-10-05/trec7_rel_reduced_box.pdf}
+\includegraphics[scale=\graphscale]%
+	{graphs/17-10-05/trec13_rel_reduced_box.pdf}
+\mycaption{TREC-7 (left) and TREC-13 Robust (right, topics
+$651$--$700$ minus $672$), the number of documents and the number of
+relevant documents in the reduced pools, both on a per-topic basis.
+Note the logarithmic vertical scale.
+\label{fig-reducedpools}}
+\end{figure}
+
+Figure~\ref{fig-reducedpools} shows the range of pools sizes across
+topics, and as the pooling depth $d'$ varies.
+Each pair of box/whisker elements reflects the distribution of pool
+sizes at that pooling depth, and the corresponding distribution of
+relevant documents, as identified by runs associated with the
+deep-judged systems.
+As the pool depth $d'$ increases, so too does the number of documents
+in the pool.
+The number of relevant documents identified as the pool is extended
+also increases, but at a slower rate, and the declining rate of
+discovery can be used as a basis for estimating $R$, the total number
+of relevant documents for each topic {\cite{zobel98sigir}}.
+
+\begin{figure}
+\centering
+\includegraphics[scale=\graphscale]%
+        {graphs/17-10-05/trec7_score_change_box.pdf}
+\includegraphics[scale=\graphscale]%
+	{graphs/17-10-05/trec13_score_change_box.pdf}
+\mycaption{TREC-7 (left) and TREC-13 Robust (right), evolving score
+differences across combinations of systems and topics for {\ap},
+{\ndcg}, and {\rbp} ($\rbpp=0.98$), in each case relative to a
+reference point established by the corresponding $d'=50$ score for
+that system-topic combination.
+Only the deeply-judged systems are used.
+\label{fig-metricchange}}
+\end{figure}
+
+Figure~\ref{fig-metricchange} shows how depth of judgments affects
+metric score for three different metrics.
+Rank-biased precision scores -- and any other weighted-precision
+approach -- of necessity are non-decreasing as the judgment pools are
+extended.
+That is, the scores obtained through the use of any particular qrels
+file cannot be greater than the scores obtained after further judgments
+are added.
+But {\ap} and {\ndcg} scores typically (but not monotonically)
+{\emph{decrease}} as judgment pools are deepened.
+This divergent behavior occurs because recall-based metrics include a
+normalization by $R$, the number of relevant documents that have been
+identified for that topic (or a function of it in the case of
+{\ndcg}), and $R$ is non-decreasing as pools are deepened.
+Moreover, the slowing rate at which relevant documents are
+encountered in any particular run as documents are considered at
+deeper depths means that growth in the ``numerator'' component of the
+recall-based metrics is insufficient to overcome their
+``denominator'' factors, and computed scores decline.
+
+Figure~\ref{fig-pvalues} then shows the effect that pooling depth
+$d'$ has on the computed system relativities.
+To form each of the distributions reflected by box/whisker elements,
+each possible pair of deeply-judged systems (for example, in the case
+of TREC-7, there were $65\times64/2=2080$ such pairs) was treated as
+being a ``system comparison'' over the topic set (in the case of
+TREC-7, $50$ topics) using one of the reduced qrels sets, and the
+Student $t$-test was applied to the set of paired metric scores to
+generate a $p$-value.
+The set of $p$-values is then plotted as a distribution.
+The discrimination ratio reported by some authors (see
+Section~\ref{sec-comparing-system-scores-across-topics}) is the
+fraction of those $p$-values that are less than some fixed value,
+typically $0.05$.
+Table~\ref{tbl-discrim} quantifies those discrimination ratios.
+Note that there was a small number of instances in which where pairs
+of submitted systems from the same research group generated exactly
+the same set of scores, and $p$-values were not computable.
+The three system pairs in this category have been excluded from all
+of the results presented in this section.
+
+\begin{figure}
+\centering
+\includegraphics[scale=\graphscale]%
+        {graphs/17-10-02/trec7_p_values_box.pdf}
+\includegraphics[scale=\graphscale]%
+	{graphs/17-10-02/trec13_p_values_box.pdf}
+\mycaption{TREC-7 (left) and TREC-13 Robust (right, topics
+$651$--$700$, minus topic $672$), the distribution of $p$-values
+arising from a Student $t$ test when every possible pair of
+deeply-judged systems is compared, using $\rbp$ (with $\rbpp=0.98$)
+$\ndcg$, and $\ap$.
+The corresponding discrimination ratios are the fractions of these
+sets of $p$-values that are less than $0.05$, marked by the dashed
+line, and listed in Table~\ref{tbl-discrim}.
+\label{fig-pvalues}}
+\end{figure}
+
+\begin{table}
+\centering
+\input{tbl-discrim.tex}
+\caption{Measured discrimination ratios: the percentage of
+deeply-judged system pairs for which the Student's $t$-test gives a
+value $p\le0.05$.
+\label{tbl-discrim}}
+\end{table}
+
+As can be seen in Figure~\ref{fig-pvalues} and
+Table~\ref{tbl-discrim}, the two recall-based metrics have higher
+discrimination ratios than does {\rbp}, even when a relatively high
+value of $\rbpp$ is used.
+The relationship between {\ap} and {\ndcg} is less clear cut.
+What is perhaps surprising in Table~\ref{tbl-discrim} is that
+discrimination ratios do not uniformly increase with pooling depth
+$d'$.
+There is a small consistent gain when shifting from $d'=10$ to
+$d'=20$, but thereafter the ratios are stable for the most part.
+That is, adding further evidence to a system-versus-system comparison
+(in the form of deeper judgments) does not necessarily lead to a
+greater degree of statistical confidence in the outcome.
+
+
+\subsection{Consistent discrimination}
+
+A key concern that then arises is the extent to which the set of
+system pairs that are found to be significant is the same at each
+pooling depth $d'$.
+To explore that question, we form sets of {\emph{five-point
+sequences}}, where each of the five points in each sequence is
+characterized by a value of $d'$, and the five values in the sequence
+are one of:
+\begin{itemize}[leftmargin=5mm]
+\item
+measured {\ap}, {\ndcg}, or {\rbp} score, with one five-point
+sequence for each system-topic combination;
+\item
+computed $p$-value for system-versus-system comparisons using {\ap},
+{\ndcg}, or {\rbp}, with one five-point sequence for each possible
+pair of systems.
+\end{itemize}
+Evaluating the data via a large set of five-point sequences means
+that all other factors except for pooling depth are held constant
+through the course of each sequence, and permits more detailed
+analysis of trends than simply comparing, for example, the
+distributions involved via their means and variation.
+
+The Kendall's $\tau$ values that can be attained for a five-point
+sequence are $-1.0, -0.8, -0.6, \ldots, 0.8, 1.0$.
+There are (only) $5!=120$ possible permutations involved, with one of
+them yielding $\tau=1.0$ (and another one yielding $\tau=-1.0$); four
+of them giving a $\tau$ value of $0.8$; nine giving $\tau=0.6$;
+fifteen giving $\tau=0.4$; twenty giving $\tau=0.2$; and $22$ giving
+a $\tau$ value of zero.
+We determine trends in some value of interest as $d'$ increases by
+calculating the frequency profile of the $\tau$ values generated
+across a set of five-point sequences, and comparing with what would
+be expected if random permutations were occurring.
+
+Figure~\ref{fig-fivers} uses this approach to examine trends in $p$
+values generated by system-versus-system comparisons as $d'$
+increases.
+The distribution of $\tau$ values is strongly bimodal, with peaks at
+both $-1.0$ and $+1.0$ each covering (in the case of {\ap}) around
+$20\%$ of the system pair combinations.
+That is, for around $20$\% of system-topic pairs, there is a strict
+pattern of $p$-values decreasing as $d'$ increases, which might be regarded
+as an expected output -- more data would normally be expected to lead
+to greater confidence for separating systems.
+But in another $20$\% of cases, the exact reverse holds: more
+``data'' being provided leads to strictly {\emph{reduced}} confidence
+in the outcome of the system-versus-system comparison.
+An even greater fraction of the system pairs fall into this latter
+category when the metric employed is {\rbp}.
+As already noted, if the five-point sequences were random, we would
+expect each of the two extreme groups to cover less than $1$\% of the
+sequences.
+
+\begin{figure}
+\centering
+\includegraphics[scale=\graphscale]%
+        {graphs/17-10-05/trec7_tau_p_d_ap.pdf}
+\includegraphics[scale=\graphscale]%
+	{graphs/17-10-05/trec7_tau_p_d_rbp98.pdf}
+%% \includegraphics[scale=\graphscale]%
+%% 	{graphs/17-09-26/tau_of_each_pair_rbp980.pdf}
+%% \includegraphics[scale=\graphscale]%
+%% 	{graphs/17-09-26/tau_of_each_pair_rbp995.pdf}
+\mycaption{Kendall's $\tau$ values computed across $2{,}080$ system
+pair comparisons for the $65$ deeply-judged TREC-7 systems, showing
+the relationship between the $p$-value generated by a $t$ test and
+the pooling depth $d'$.
+Each $\tau$ value is computed across five values of $d'$ and the
+corresponding $p$-values for a single system-versus-system pair,
+interpreted as a five-point sequence.
+Metrics are {\ap} (left), and $\rbp$ with $\rbpp=0.98$ (right).
+The upper section of each bar shows the count of system pairs for
+which all five values were greater than $\alpha=0.05$; the middle
+section in each bar indicates the number of system pairs for which
+the five-point $p$-value sequences straddle $\alpha=0.05$; and the
+lower segment counts system pairs where all five values were less
+than $\alpha=0.05$.
+\label{fig-fivers}}
+\end{figure}
+
+Of particular interest in regard to Table~\ref{tbl-discrim} and
+Figure~\ref{fig-fivers} is to determine which of the five-point
+sequences reflect ambiguous outcomes in regard to statistical
+significance.
+We will say that a five-point sequence of $p$-values
+{\emph{straddles}} a fixed value $\alpha$ (such as $\alpha=0.05$) if
+the minimum value in the range of the sequence is less than $\alpha$,
+and the largest value in the range is greater than $\alpha$.
+If a system-versus-system five-point sequence straddles
+$\alpha=0.05$, it implies that one choice of $d'$ might lead to a
+conclusion of there being a significant relationship between the two
+systems, while another choice of pool depth could lead to that
+conclusion not being adopted.
+
+The middle segment in each of the elements in Figure~\ref{fig-fivers}
+shows the distribution of $\tau$ values associated with the
+five-point sequences that straddle $\alpha=0.05$.
+These also occur primarily at the two extremes, further clouding the
+issue.
+Nor do the extremes represent different parts of the overall spectrum
+of $p$-values -- for {\ap}, in the left-hand pane, both $\tau=-1.0$
+and $\tau=+1.0$ have approximately the same fraction of
+``statistically different'' system-versus-system outcomes (the lower
+segment in each bar).
+
+\begin{figure}[t]
+\centering
+\begin{tabular}{cc}
+\includegraphics[scale=\graphscale]%
+        {graphs/17-10-05/trec7_ap_res_scorediff.pdf}
+	& \includegraphics[scale=\graphscale]%
+	        {graphs/17-10-05/trec13_ap_res_scorediff.pdf}
+\\[-1.5ex]
+\scriptsize (a) TREC-7, {\ap} score movements, $\tau=\num{0.103603}$
+	& \scriptsize (b) TREC-13 Robust, {\ap} score movements, $\tau=\num{0.185824}$
+\\[0.5ex]
+\includegraphics[scale=\graphscale]%
+        {graphs/17-10-05/trec7_ndcg_res_scorediff.pdf}
+	& \includegraphics[scale=\graphscale]%
+	        {graphs/17-10-05/trec13_ndcg_res_scorediff.pdf}
+\\[-1.5ex]
+\scriptsize (c) TREC-7, {\ndcg} score movements, $\tau=\num{0.167265}$
+	& \scriptsize (d) TREC-13 Robust, {\ndcg} score movements, $\tau=\num{0.136217}$
+\\[0.5ex]
+\includegraphics[scale=\graphscale]%
+        {graphs/17-10-05/trec7_rbp_res_scorediff.pdf}
+	& \includegraphics[scale=\graphscale]%
+	        {graphs/17-10-05/trec13_rbp_res_scorediff.pdf}
+\\[-1.5ex]
+\scriptsize (e) TREC-7, {\rbp} score movements, $\tau=\num{-0.101193}$
+	& \scriptsize (f) TREC-13 Robust, {\rbp} score movements, $\tau=\num{-0.217955}$
+\\[0.5ex]
+\end{tabular}
+%% \includegraphics[scale=\graphscale]%
+%%         {graphs/17-09-05/trec7_score_diff_distribution.pdf}
+%% \includegraphics[scale=\graphscale]%
+%% 	{graphs/17-09-05/trec2004_score_diff_distribution.pdf}
+\mycaption{Score movements as a function of residual ($\rbpp=0.98$)
+for $d'\in\{10,20,30,40\}$, relative to judgments based on $d=50$, as
+a function of the residual in the run at depth $d'$ when
+$\rbpp=0.98$, computed on a per-system per-topic basis.
+Three metrics (rows) and two collections (columns) are illustrated; positive values on
+the vertical axis indicate computed metric scores for system-topic
+combinations at shallow depths $d'<50$ that are greater than the
+corresponding $d'=50$ score.
+The colors indicate different values of $d'$.
+\label{fig-connectdots}}
+\end{figure}
+
+
+\subsection{Back to residuals}
+
+Having observed that system-topic scores for recall-based metrics are
+affected in different ways as a result of judgments being added to a
+pool, and that the strength of a system-versus-system multi-topic
+comparisons can shift in a quite unpredictable manner as judgment
+pools are deepened, we return to {\rbp}-based residuals, and examine
+one further question: the strength (if any) of the relationship
+between the residual associated with a run, and the score movement
+that takes place if more documents are judged.
+In this experiment, we consider each system-topic combination, and
+take the corresponding $d'=50$ score as a reference point, regarding
+it as being the ``closest to final'' score that we can compute over
+the set of deeply-judged systems.
+For each of the other $d'\in\{10,20,30,40\}$ values, we then compute
+the difference between the score at that depth and the score at
+$d'=50$ (the same differential that was plotted in overall terms in
+Figure~\ref{fig-metricchange}), and plot a point based on the
+computed $\rbp$ residual for that run ($\rbpp=0.98$).
+The resultant scatter-plots -- covering three metrics and two
+collections -- are shown in Figure~\ref{fig-connectdots}.
+
+
+In all six of the panes, larger values of $d'$ (indicated by the four
+different colored points) lead to both smaller $\rbp$ residuals and a
+correspondingly smaller range of score differences relative to the
+$d'=50$ evaluation.
+The two recall-based metrics {\ap} and {\ndcg} both behave in broadly
+the same way, with the majority of the score differences positive,
+but a minority negative.
+That is, in most cases, adding judgments will decrease the measured
+scores.
+In contrast, the weighted-precision metric $\rbp$ (in the final two
+panes) of necessity has strictly non-positive score differences.
+Kendall's $\tau$ correlation coefficients for the first four panes
+are all positive, but relatively small, and there is only a weak
+relationship between residual and score difference in terms of
+expected outcomes.
+In the case of {\rbp} the $\tau$ values are less than zero, but again
+relatively small.
+
+It is perhaps surprising that there is no substantial correlation
+between $\rbp$ residual and score changes for and of $\rbp$, {\ap},
+or {\ndcg}.
+A possible explanation for this is that the system-topic combinations
+with high residuals are ones that were ``unusual'' in some way, and
+as a result had selected a high fraction of documents that were
+unlabeled by other systems.
+This in turn indicates a lower conditional probability of finding
+relevant documents (see Table~\ref{tbl-relodds}), and hence that runs
+with high residuals are also more likely to be low-scoring ones, for
+which large score differences are unlikely to occur as the pool is extended.
+To test this effect, we also computed $\tau$ correlations when,
+rather than arithmetic score difference, the second coordinate (y-axis) was
+the relative score difference: the ratio of the metric score at
+depths $d'<50$ to the corresponding score at $d'=50$.
+For the six conditions illustrated in Figure~\ref{fig-connectdots},
+all of the correlations became stronger: in order (a) to (f), they
+were $\num{0.245315}$, $\num{0.237960}$, $\num{0.226384}$,
+$\num{0.144621}$, $\num{-0.180065}$ and $\num{-0.288077}$.
+(Note that in the case of TREC-7 a total of $140$ system-topic
+instances were not used in this computation, because no relevant
+documents were identified in the top $d'=50$ ranks; and in the case
+of TREC-13, $56$ system-topic instances were removed.)
+That is, the correlations are all mildly stronger if score ratios are
+used rather than score differences.
+
+
+
+%% \subsection{Score uncertainty in practice}
+%% 
+%% \begin{table}[t]
+%% \centering
+%% \input{tbl-trec13groups.tex}
+%% \caption{TREC-13 Robust track, $249$ queries in total broken into
+%% five groups and then used independently as the basis for system
+%% orderings, with the correlation between system orderings measured
+%% using Kendall's $\tau$ and using $\rbo$.
+%% The first four topic sets have $50$ topics each, the last group has
+%% $49$.
+%% \label{tbl-trec13groups}}
+%% \end{table}
+%% 
+%% Table~\ref{tbl-trec13groups}
+%% \alistair{Make use of the fact that the TREC-13 Robust runs were
+%% against topics from previous years, and hence the pooling is quite
+%% different in each group.
+%% Then look at average residual size in the groups of topics,
+%% scatter-plot with each dot one system, and axes showing the residual
+%% size on the two groups of topics?
+%% Somehow connect residual over the subgroups with $\tau$ shifts and/or
+%% $p$ shifts?
+%% } 
+%% 
+%% 
+%% \subsection{Retain or delete...?}
+%% 
+%% \begin{figure}
+%% \centering
+%% \includegraphics[scale=\graphscale]%
+%%         {graphs/17-09-05/trec7_score_diff_distribution.pdf}
+%% \includegraphics[scale=\graphscale]%
+%% 	{graphs/17-09-05/trec2004_score_diff_distribution.pdf}
+%% \mycaption{TREC-7 (left) and TREC-13 Robust (right), distribution of
+%% system average score differences when system-topic scores are
+%% generated by $\rbp$ with a range of $\rbp$ parameters $\rbpp$.
+%% \label{fig-scorediffs}}
+%% \end{figure}
+%% 
+%% Figure~\ref{fig-scorediffs} compares the distribution of system score
+%% differences and the average $\rbp$ residuals.
+%% Each curve represents a single value of $\rbpp$, and plots the
+%% cumulative fraction of the average inter-system scores that were
+%% smaller than the given value on the horizontal axis.
+%% {\falk{Why plot the cumulative (increasing trend) rather than just the
+%% actual (decreasing trend) scores? It makes the graph somewhat
+%% unintuitive (I was starting at it again for a long time today, wondering
+%% why it seemed to show that as the difference in RBP went up, the \% of
+%% systems with that difference also went up...)}}
+%% For example, with $\rbpp=0.5$, for TREC-7 $0.4$ of the inter-system
+%% scores, considering all pairs of systems, were less than
+%% approximately $0.08$.
+%% For large values of $\rbpp$ most of the system differences are small,
+%% a consequence of the compressed score range over which the $\rbp$
+%% scores occur, shown in Figure~\ref{fig-rbpscore}.
+%% 
+%% Each of those curves is then annotated to show where (on the
+%% horizontal axis) the average $\rbp$ residual
+%% (Figure~\ref{fig-rbpscore}) associated with that test environment
+%% occurs; then those points are connected.
+

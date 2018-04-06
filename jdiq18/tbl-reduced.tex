@@ -1,0 +1,75 @@
+\newcommand{\tabent}[1]{\makebox[22mm][c]{#1}}
+\begin{tabular}{l SSS}
+\toprule
+\multirow{2}{*}{Dimension}
+	& \multicolumn{3}{c}{Collection}
+\\
+\cmidrule{2-4}
+	& {\tabent{TREC-7 Ad-Hoc}}
+		& {\tabent{TREC-8 Ad-Hoc}}
+			& {\tabent{TREC-13 Robust}}
+\\
+\midrule
+Topics
+	& 50
+		& 50
+			& 49
+\\
+Systems
+	& 65
+		& 67
+			& 52
+\\
+Documents, judged
+	& 33870
+		& 40238
+			& 17509
+\\
+Documents, relevant
+	& 3121
+		& 3175
+			& 1576
+\\
+Single-vote documents, judged
+	& 15943
+		& 24149
+			& 5597
+\\
+Single-vote documents, relevant
+	& 639
+		& 731
+			& 147
+\\
+\bottomrule
+\end{tabular}
+%%
+%% TREC-7
+%% awk -f make-reduced-qrels.awk trec7-deepruns.txt trec7.adhoc.loc/input* qrels.351-400.trec7.adhoc > trec7-reduced-qrels.txt
+%% etc, see README.txt
+%% 
+%% systems in pool :      65
+%% total docs      : 4900042
+%% total votes     :  162500
+%% total unique    :   33870
+%% rel. retained   :    3121
+%% single votes    :   15943
+%% rel. singles    :     639
+%%
+%% TREC-8
+%%
+%% systems in pool :      67
+%% total docs      : 6284293
+%% total votes     :  167500
+%% total unique    :   40238
+%% rel. retained   :    3175
+%% single votes    :   24149
+%% rel. singles    :     731
+%%
+%% TREC-13, topics 651-700
+%% systems in pool :      43
+%% total docs      : 25129994
+%% total votes     :  537500
+%% total unique    :   15403
+%% rel. retained   :    1528
+%% single votes    :    5022
+%% rel. singles    :     145
